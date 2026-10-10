@@ -1,0 +1,9 @@
+# Configuration selected by nested cross-validation on benchmark v2 (realistic text) — see
+# docs/tuning_protocol.md and results/tuning/REPORT.md. All 5 outer folds chose forced full transport
+# with alpha = 2; on clean text (v1) partial transport with lam_u = 1.0 was chosen instead.
+seed: 13
+ccst:
+  lam_s_align: 0.05   # sign-aware tie-breaking (docs/tiebreak_protocol.md, adopted by the pre-registered rule)
+  partial: false
+  alpha: 2.0
+  lam_u: 0.6

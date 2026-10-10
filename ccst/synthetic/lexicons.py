@@ -1,0 +1,247 @@
+"""Domain vocabularies for the controlled-transformation benchmark (proposal Sec. 7.2, stratum 1).
+
+Each domain supplies interventions (source slots), quantities (mediator / outcome slots), synonym
+sets (for disjoint-vocabulary paraphrases), and scope conditions: populations / systems, dose or
+intensity, time horizons, environments and study designs. ``category`` plays the role of the
+arXiv / PubMed subject label used for S_domain.
+"""
+
+DOMAINS: dict[str, dict] = {
+    "clinical": {
+        "category": "med.cardiometabolic",
+        "interventions": {
+            "statin therapy": ["statin treatment"], "metformin treatment": ["metformin therapy"],
+            "vitamin D supplementation": ["cholecalciferol supplementation"], "aerobic exercise": ["endurance training"],
+            "sodium restriction": ["salt reduction"], "aspirin therapy": ["acetylsalicylic acid therapy"],
+            "beta-blocker therapy": ["beta-adrenergic blockade"], "insulin therapy": ["insulin treatment"],
+            "omega-3 supplementation": ["fish oil supplementation"], "caloric restriction": ["energy restriction"],
+        },
+        "quantities": {
+            "LDL cholesterol": ["low-density lipoprotein cholesterol"], "arterial plaque formation": ["atherosclerotic plaque buildup"],
+            "systolic blood pressure": ["systolic arterial pressure"], "insulin resistance": ["insulin insensitivity"],
+            "hepatic glucose output": ["liver glucose production"], "systemic inflammation": ["inflammatory burden"],
+            "endothelial function": ["vascular endothelial function"], "platelet aggregation": ["platelet clumping"],
+            "bone mineral density": ["bone density"], "oxidative stress": ["oxidative damage"],
+            "myocardial infarction": ["heart attack"], "glycated hemoglobin": ["HbA1c"], "body weight": ["body mass"],
+            "resting heart rate": ["resting pulse"], "muscle damage": ["myopathy"], "renal function": ["kidney function"],
+            "arterial stiffness": ["vascular stiffness"], "cardiac output": [], "triglyceride concentration": [],
+            "fracture rate": [],
+        },
+        "populations": ["adult patients", "elderly patients", "infants", "children", "pregnant women", "mice"],
+        "dose": {"fmt": "{n} mg daily", "base": [10, 20, 40]},
+        "times": ["6 weeks", "8 weeks", "2 years", "3 years", "10 days"],
+        "envs": ["in a clinical setting", "in vitro", "in a community setting"],
+        "designs": ["randomized controlled trial", "prospective cohort study"],
+        "sim_design": "simulation study",
+        "method": "We conducted a {design} in {population} receiving {action} at {dose} for {time} {env}.",
+        "sim_claim": "Simulations showed that",
+        "field": "cardiometabolic",
+    },
+    "cellbio": {
+        "category": "q-bio.CB",
+        "interventions": {
+            "kinase inhibitor treatment": ["kinase blockade"], "growth factor stimulation": ["mitogen stimulation"],
+            "gene knockdown": ["gene silencing"], "heat shock": ["thermal stress"], "hypoxia exposure": ["oxygen deprivation"],
+            "antioxidant treatment": ["antioxidant exposure"], "glucose deprivation": ["glucose starvation"],
+            "cytokine stimulation": ["interleukin stimulation"], "rapamycin treatment": ["mTOR inhibition"],
+        },
+        "quantities": {
+            "receptor phosphorylation": ["receptor activation state"], "transcription factor activity": ["transcriptional activity"],
+            "protein aggregation": ["protein misfolding"], "autophagy flux": ["autophagic activity"],
+            "apoptosis rate": ["programmed cell death"], "cell proliferation": ["cell division rate"],
+            "mitochondrial respiration": ["oxidative phosphorylation"], "ROS production": ["reactive oxygen species generation"],
+            "chaperone expression": ["heat shock protein expression"], "inflammatory signaling": ["proinflammatory signaling"],
+            "cell migration": ["cell motility"], "DNA damage": ["genotoxic damage"], "ATP synthesis": [],
+            "lipid accumulation": [], "membrane permeability": [], "calcium influx": [],
+        },
+        "populations": ["cultured fibroblasts", "hepatocytes", "mice", "rats", "neurons"],
+        "dose": {"fmt": "{n} mg/L", "base": [1, 2, 5]},
+        "times": ["24 hours", "48 hours", "14 days", "21 days", "2 hours"],
+        "envs": ["in vitro", "in vivo"],
+        "designs": ["controlled experiment", "observational study"],
+        "sim_design": "computational model",
+        "method": "We performed a {design} on {population}, applying {action} at {dose} for {time} {env}.",
+        "sim_claim": "The model predicts that",
+        "field": "cell signaling",
+    },
+    "security": {
+        "category": "cs.CR",
+        "interventions": {
+            "network segmentation": ["network partitioning"], "intrusion detection": ["intrusion monitoring"],
+            "patch deployment": ["software patching"], "multi-factor authentication": ["two-factor authentication"],
+            "connection throttling": ["request throttling"], "honeypot deployment": ["decoy deployment"],
+            "anomaly detection": ["outlier detection"], "traffic encryption": ["transport encryption"],
+            "firewall filtering": ["packet filtering"], "host quarantine": ["host isolation"],
+        },
+        "quantities": {
+            "malware propagation": ["malware spread"], "lateral movement": ["lateral traversal"],
+            "attack surface": ["exposure surface"], "false alarm rate": ["false positive rate"],
+            "detection latency": ["detection delay"], "credential theft": ["credential compromise"],
+            "service availability": ["service uptime"], "packet loss": ["packet drops"],
+            "data exfiltration": ["data leakage"], "network throughput": ["network bandwidth"],
+            "incident response time": ["response delay"], "system recovery": ["service restoration"],
+            "phishing success": [], "alert volume": [], "privilege escalation": [], "botnet growth": [],
+        },
+        "populations": ["enterprise networks", "home networks", "small networks", "large networks", "industrial networks"],
+        "dose": {"fmt": "{n} requests per second", "base": [100, 200, 500]},
+        "times": ["24 hours", "48 hours", "12 months", "18 months", "6 hours"],
+        "envs": ["in a testbed", "in production deployments"],
+        "designs": ["controlled experiment", "measurement study"],
+        "sim_design": "simulation study",
+        "method": "We conducted a {design} on {population}, applying {action} at {dose} over {time} {env}.",
+        "sim_claim": "Simulations showed that",
+        "field": "network security",
+    },
+    "control": {
+        "category": "eess.SY",
+        "interventions": {
+            "feedback gain tuning": ["controller gain tuning"], "droop control": ["droop regulation"],
+            "model predictive control": ["receding horizon control"], "battery storage dispatch": ["battery dispatch"],
+            "load shedding": ["load curtailment"], "adaptive damping": ["adaptive damping control"],
+            "demand response": ["demand-side management"], "feedforward compensation": ["feedforward correction"],
+        },
+        "quantities": {
+            "frequency deviation": ["frequency error"], "voltage overshoot": ["voltage overshoot magnitude"],
+            "settling time": ["convergence time"], "tracking error": ["reference tracking error"],
+            "oscillation amplitude": ["oscillation magnitude"], "actuator saturation": ["actuator clipping"],
+            "stability margin": ["robustness margin"], "power loss": ["power dissipation"],
+            "energy consumption": ["energy use"], "grid congestion": ["line congestion"],
+            "renewable curtailment": ["renewable spillage"], "control effort": ["actuation effort"],
+            "phase lag": [], "peak load": [], "thermal stress": [], "disturbance rejection": [],
+        },
+        "populations": ["small microgrids", "large microgrids", "industrial robots", "home robots"],
+        "dose": {"fmt": "{n} kW", "base": [5, 10, 20]},
+        "times": ["10 minutes", "30 minutes", "6 months", "12 months", "2 hours"],
+        "envs": ["in a testbed", "in field deployments"],
+        "designs": ["controlled experiment", "field study"],
+        "sim_design": "simulation study",
+        "method": "We conducted a {design} on {population}, applying {action} at {dose} over {time} {env}.",
+        "sim_claim": "Simulations showed that",
+        "field": "power systems",
+    },
+    "ecology": {
+        "category": "q-bio.PE",
+        "interventions": {
+            "predator reintroduction": ["predator restoration"], "nitrogen fertilization": ["nitrogen enrichment"],
+            "habitat fragmentation": ["habitat loss"], "invasive species removal": ["invader removal"],
+            "prescribed burning": ["controlled burning"], "fishing pressure": ["harvest pressure"],
+            "pollinator supplementation": ["pollinator augmentation"], "grazing exclusion": ["herbivore exclusion"],
+        },
+        "quantities": {
+            "herbivore density": ["herbivore abundance"], "plant biomass": ["vegetation biomass"],
+            "biodiversity": ["species diversity"], "soil nitrogen": ["soil nitrogen content"],
+            "algal blooms": ["algal growth"], "dissolved oxygen": ["oxygen saturation"],
+            "fish recruitment": ["juvenile fish survival"], "seed dispersal": ["seed spread"],
+            "pollination rate": ["pollination success"], "predation pressure": ["predation intensity"],
+            "nutrient cycling": ["nutrient turnover"], "canopy cover": ["tree cover"], "soil erosion": [],
+            "carbon sequestration": [], "insect abundance": [], "water clarity": [],
+        },
+        "populations": ["temperate forests", "tropical forests", "arctic lakes", "tropical lakes"],
+        "dose": {"fmt": "{n} kg/ha", "base": [20, 50, 80]},
+        "times": ["2 years", "3 years", "3 weeks", "4 weeks", "5 years"],
+        "envs": ["in field conditions", "in a greenhouse"],
+        "designs": ["field experiment", "observational study"],
+        "sim_design": "agent-based model",
+        "method": "We conducted a {design} in {population}, applying {action} at {dose} over {time} {env}.",
+        "sim_claim": "The model predicts that",
+        "field": "community ecology",
+    },
+    "economics": {
+        "category": "q-fin.EC",
+        "interventions": {
+            "interest rate hikes": ["monetary tightening"], "fiscal stimulus": ["government spending expansion"],
+            "minimum wage increases": ["wage floor increases"], "trade tariffs": ["import duties"],
+            "credit easing": ["lending relaxation"], "capital requirements": ["bank capital rules"],
+            "tax cuts": ["tax reductions"], "quantitative easing": ["asset purchase programs"],
+        },
+        "quantities": {
+            "household consumption": ["consumer spending"], "inflation": ["price growth"],
+            "unemployment": ["joblessness"], "credit supply": ["loan supply"], "asset prices": ["asset valuations"],
+            "business investment": ["capital expenditure"], "bank lending": ["loan origination"],
+            "exchange rate volatility": ["currency volatility"], "export volume": ["export output"],
+            "wage growth": ["earnings growth"], "default risk": ["credit risk"], "housing demand": ["home demand"],
+            "savings rate": [], "public debt": [], "productivity growth": [], "market liquidity": [],
+        },
+        "populations": ["low-income countries", "high-income countries", "small firms", "large firms"],
+        "dose": {"fmt": "{n} basis points", "base": [25, 50, 75]},
+        "times": ["3 months", "6 months", "10 years", "8 years", "2 weeks"],
+        "envs": ["during a recession", "during an expansion"],
+        "designs": ["prospective cohort study", "cross-sectional survey"],
+        "sim_design": "computational model",
+        "method": "We conducted a {design} of {population}, studying {action} of {dose} over {time} {env}.",
+        "sim_claim": "The model predicts that",
+        "field": "macroeconomics",
+    },
+}
+
+VERBS = {
+    "increases": {"active": ["increases", "increased", "raises", "elevated", "boosts", "amplified", "enhances"],
+                  "passive": ["increased", "elevated", "raised", "amplified", "enhanced"]},
+    "decreases": {"active": ["reduces", "reduced", "lowers", "decreased", "attenuates", "diminished", "suppresses"],
+                  "passive": ["reduced", "lowered", "decreased", "attenuated", "suppressed"]},
+    "enables": {"active": ["enables", "activated", "triggers", "facilitated", "promotes", "induced"],
+                "passive": ["activated", "triggered", "facilitated", "promoted", "induced"]},
+    "inhibits": {"active": ["inhibits", "blocked", "prevents", "impeded", "inhibited", "blocks"],
+                 "passive": ["blocked", "inhibited", "prevented", "impeded"]},
+}
+NEG_VERB = {"increases": "increase", "decreases": "reduce", "enables": "activate", "inhibits": "inhibit"}
+OPPOSITE = {"increases": "decreases", "decreases": "increases", "enables": "inhibits", "inhibits": "enables"}
+WRAPPERS = ["We found that {s}.", "Our results show that {s}.", "{S}.", "{S}.", "{S}.", "In addition, {s}."]
+
+# ----------------------------------------------------------------------------- benchmark v2 (realism)
+# Written as a domain author would phrase them (docs/benchmark_v2_preregistration.md); deliberately not
+# checked against the context parser.
+POPULATION_PARAPHRASE = {
+    "adult patients": ["adults", "adult participants", "patients aged 30 to 60 years"],
+    "elderly patients": ["older adults", "patients aged 70 years and older", "geriatric patients"],
+    "infants": ["newborns", "babies under one year of age"],
+    "children": ["school-age children", "paediatric patients"],
+    "pregnant women": ["expectant mothers", "women during pregnancy"],
+    "mice": ["murine models", "laboratory mice"],
+    "cultured fibroblasts": ["fibroblast cultures", "primary fibroblasts"],
+    "hepatocytes": ["liver cells", "hepatocyte cultures"],
+    "rats": ["Wistar rats", "rodents"],
+    "neurons": ["cortical neurons", "neuronal cultures"],
+    "enterprise networks": ["corporate networks", "enterprise IT networks"],
+    "home networks": ["residential networks", "household networks"],
+    "small networks": ["small-scale networks", "small office networks"],
+    "large networks": ["large-scale networks", "carrier-grade networks"],
+    "industrial networks": ["industrial control networks", "factory networks"],
+    "small microgrids": ["small-scale microgrids", "community microgrids"],
+    "large microgrids": ["large-scale microgrids", "utility-scale microgrids"],
+    "industrial robots": ["factory robots", "industrial manipulators"],
+    "home robots": ["household robots", "domestic robots"],
+    "temperate forests": ["temperate woodlands", "temperate forest stands"],
+    "tropical forests": ["tropical rainforests", "tropical forest plots"],
+    "arctic lakes": ["high-latitude lakes", "polar lakes"],
+    "tropical lakes": ["lakes in the tropics", "tropical freshwater lakes"],
+    "low-income countries": ["developing economies", "poorer countries"],
+    "high-income countries": ["advanced economies", "wealthy countries"],
+    "small firms": ["small businesses", "small and medium enterprises"],
+    "large firms": ["large corporations", "big companies"],
+}
+POPULATION_SUBGROUP = {  # natural narrowing of the base population (nested, still comparable)
+    "adult patients": "obese adult patients", "elderly patients": "elderly patients with hypertension",
+    "cultured fibroblasts": "senescent cultured fibroblasts", "hepatocytes": "primary human hepatocytes",
+    "enterprise networks": "large enterprise networks", "home networks": "small home networks",
+    "small microgrids": "small rural microgrids", "large microgrids": "large industrial microgrids",
+    "temperate forests": "old-growth temperate forests", "tropical forests": "lowland tropical forests",
+    "low-income countries": "low-income countries in Africa", "high-income countries": "high-income countries in Europe",
+}
+DOSE_PARAPHRASE = {"clinical": "{n} mg per day", "cellbio": "{n} mg per liter", "security": "{n} req/s",
+                   "control": "{n} kilowatts", "ecology": "{n} kilograms per hectare", "economics": "{n} bp"}
+ENV_PARAPHRASE = {
+    "in a clinical setting": "in hospital", "in vitro": "in cell culture", "in a community setting": "in the community",
+    "in vivo": "in living animals", "in a testbed": "in a laboratory testbed",
+    "in production deployments": "in live production networks", "in field deployments": "in operational field sites",
+    "in field conditions": "under natural field conditions", "in a greenhouse": "in greenhouse trials",
+    "during a recession": "during an economic downturn", "during an expansion": "during a boom period",
+}
+DESIGN_PARAPHRASE = {
+    "randomized controlled trial": "randomised placebo-controlled trial", "prospective cohort study": "longitudinal cohort",
+    "controlled experiment": "controlled laboratory experiment", "observational study": "observational survey",
+    "measurement study": "empirical measurement campaign", "field study": "field deployment study",
+    "field experiment": "manipulative field experiment", "cross-sectional survey": "cross-sectional analysis",
+}
+NUMBER_WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 8: "eight", 10: "ten", 12: "twelve",
+                14: "fourteen", 18: "eighteen", 21: "twenty-one", 24: "twenty-four", 30: "thirty", 48: "forty-eight"}

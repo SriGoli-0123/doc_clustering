@@ -1,0 +1,51 @@
+# Default hyper-parameters. Every key mirrors a field in ccst/config.py.
+# These defaults were set a priori, before any evaluation, and were never tuned on test folds.
+# Nested-CV selection (`python -m ccst tune`, results/tuning/) prefers lam_u = 1.0 on clean text and full
+# transport with alpha = 2 on realistic text (configs/realistic.yaml); those are reported, not silently adopted.
+# lam_s_align was added by item 3 under a pre-registered decision rule (docs/tiebreak_protocol.md).
+seed: 13
+
+ccst:
+  lam_s_align: 0.05   # sign-aware tie-breaking (docs/tiebreak_protocol.md, adopted by the pre-registered rule)
+  lam_x: 0.25
+  lam_r: 1.0
+  lam_c: 0.25
+  lam_g: 0.2
+  lam_u: 0.6
+  alpha: 1.0
+  lam_e: 1.0
+  lam_t: 0.5
+  lam_s: 1.0
+  lam_excl: 0.75
+  lam_tau: 0.2
+  lam_q: 0.2
+  partial: true
+  solver: cg
+  max_iter: 60
+  n_init: 2
+
+context:
+  weights: {population: 1.0, dose: 1.0, time: 1.0, environment: 1.0, design: 0.5, other: 0.5}
+  material: [population, dose, time, environment, design, other]
+  unknown_value: 0.5
+
+extraction:
+  spacy_model: en_core_web_sm
+  embed_model: sentence-transformers/all-MiniLM-L6-v2
+  concept_distance_threshold: 0.30
+  max_mechanisms: 24
+
+relation:
+  calibration: temperature
+  risk_target: 0.10
+
+index:
+  k_sem: 10
+  k_mech: 10
+  k_ctx: 5
+  explore: 2
+
+topics:
+  k_grid: [10, 20, 30, 50]
+  gibbs_iters: 400
+  perplexities: [15, 30, 50]

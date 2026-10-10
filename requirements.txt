@@ -1,0 +1,26 @@
+# Tested with Python 3.12 on macOS (Apple M4, MPS) — CUDA / CPU work too.
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+pandas>=2.0
+matplotlib>=3.7
+networkx>=3.0
+POT>=0.9.4
+gensim>=4.3
+spacy>=3.7
+sentence-transformers>=2.6
+transformers>=4.40
+torch>=2.1
+numba>=0.58
+rank_bm25>=0.2.2
+rouge-score>=0.1.2
+bert_score>=0.3.13
+igraph>=0.11
+leidenalg>=0.10
+requests>=2.31
+pyyaml>=6.0
+tqdm>=4.66
+joblib>=1.3
+pytest>=7
+bertopic>=0.17    # item 6 official baseline (optional)
+umap-learn>=0.5
