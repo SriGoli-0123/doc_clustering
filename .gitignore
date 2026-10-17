@@ -1,11 +1,13 @@
+# Python / tooling
 *.egg-info/
 *.pyc
-.DS_Store
-.pytest_cache/
-.venv/
 __pycache__/
-data/
-data/cache/
-data/raw/
-logs/
-results/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.DS_Store
+
+# Generated outputs — anchored to the repo root (a bare "data/" also matched the ccst/data/ package)
+/data/
+/results/
+/logs/
