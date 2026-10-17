@@ -1,0 +1,140 @@
+{
+  "rows": [
+    {
+      "index": "original + topic blocking",
+      "k": 2,
+      "pairs": 2021,
+      "pair_fraction": 0.016200400801603208,
+      "seconds": 0.24284433596767485,
+      "recall@5": 0.22844243792325056
+    },
+    {
+      "index": "original",
+      "k": 2,
+      "pairs": 2471,
+      "pair_fraction": 0.019807615230460922,
+      "seconds": 0.33576058503240347,
+      "recall@5": 0.24424379232505644
+    },
+    {
+      "index": "combined, learned weights",
+      "k": 2,
+      "pairs": 1410,
+      "pair_fraction": 0.011302605210420842,
+      "seconds": 0.19158960302593186,
+      "recall@5": 0.18961625282167044
+    },
+    {
+      "index": "combined, uniform weights",
+      "k": 2,
+      "pairs": 1439,
+      "pair_fraction": 0.011535070140280561,
+      "seconds": 0.19240278599318117,
+      "recall@5": 0.13679458239277653
+    },
+    {
+      "index": "original + topic blocking",
+      "k": 5,
+      "pairs": 3541,
+      "pair_fraction": 0.028384769539078158,
+      "seconds": 0.2784787470009178,
+      "recall@5": 0.39367945823927764
+    },
+    {
+      "index": "original",
+      "k": 5,
+      "pairs": 4647,
+      "pair_fraction": 0.037250501002004006,
+      "seconds": 0.260220610012766,
+      "recall@5": 0.4203160270880361
+    },
+    {
+      "index": "combined, learned weights",
+      "k": 5,
+      "pairs": 2222,
+      "pair_fraction": 0.017811623246492984,
+      "seconds": 0.31684977700933814,
+      "recall@5": 0.3291196388261851
+    },
+    {
+      "index": "combined, uniform weights",
+      "k": 5,
+      "pairs": 2355,
+      "pair_fraction": 0.018877755511022044,
+      "seconds": 0.19083029200555757,
+      "recall@5": 0.255079006772009
+    },
+    {
+      "index": "original + topic blocking",
+      "k": 10,
+      "pairs": 5931,
+      "pair_fraction": 0.04754308617234469,
+      "seconds": 0.2847175700007938,
+      "recall@5": 0.5598194130925508
+    },
+    {
+      "index": "original",
+      "k": 10,
+      "pairs": 8493,
+      "pair_fraction": 0.06808016032064128,
+      "seconds": 0.27398890198674053,
+      "recall@5": 0.6054176072234763
+    },
+    {
+      "index": "combined, learned weights",
+      "k": 10,
+      "pairs": 3571,
+      "pair_fraction": 0.028625250501002005,
+      "seconds": 0.1929092209902592,
+      "recall@5": 0.48577878103837474
+    },
+    {
+      "index": "combined, uniform weights",
+      "k": 10,
+      "pairs": 3836,
+      "pair_fraction": 0.03074949899799599,
+      "seconds": 0.19559378299163654,
+      "recall@5": 0.39548532731376973
+    },
+    {
+      "index": "original + topic blocking",
+      "k": 20,
+      "pairs": 9963,
+      "pair_fraction": 0.07986372745490981,
+      "seconds": 0.2970790790277533,
+      "recall@5": 0.7051918735891648
+    },
+    {
+      "index": "original",
+      "k": 20,
+      "pairs": 15121,
+      "pair_fraction": 0.12121042084168336,
+      "seconds": 0.25762337300693616,
+      "recall@5": 0.7625282167042889
+    },
+    {
+      "index": "combined, learned weights",
+      "k": 20,
+      "pairs": 6284,
+      "pair_fraction": 0.05037274549098197,
+      "seconds": 0.19967770302901044,
+      "recall@5": 0.6537246049661399
+    },
+    {
+      "index": "combined, uniform weights",
+      "k": 20,
+      "pairs": 6686,
+      "pair_fraction": 0.05359519038076152,
+      "seconds": 0.2005888510029763,
+      "recall@5": 0.5720090293453725
+    }
+  ],
+  "learned_weights": {
+    "sem": 0.5,
+    "concept": 0.0,
+    "mech": 1.0,
+    "ctx": 0.0
+  },
+  "train_recall@5": 0.49798657718120803,
+  "learn_seconds": 916.9576935369987
+}

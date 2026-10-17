@@ -1,0 +1,1520 @@
+{
+  "topics": {
+    "sweep": [
+      {
+        "K": 10,
+        "C_v": 0.6429255610475528,
+        "NPMI": 0.10586872002513395,
+        "diversity": 0.832,
+        "perplexity": 1745.5930767612656
+      },
+      {
+        "K": 20,
+        "C_v": 0.665475820631776,
+        "NPMI": 0.11343819316791519,
+        "diversity": 0.742,
+        "perplexity": 1527.9870295373635
+      },
+      {
+        "K": 30,
+        "C_v": 0.666231309877498,
+        "NPMI": 0.11363355790765722,
+        "diversity": 0.74,
+        "perplexity": 1430.1347928011662
+      },
+      {
+        "K": 50,
+        "C_v": 0.6395923282616723,
+        "NPMI": 0.10501158177985997,
+        "diversity": 0.7128,
+        "perplexity": 1347.2766214627422
+      }
+    ],
+    "K": 30,
+    "top_words": [
+      [
+        "design",
+        "algorithm",
+        "optimization",
+        "search",
+        "adaptive",
+        "multi",
+        "improve",
+        "spike",
+        "solution",
+        "framework"
+      ],
+      [
+        "induce",
+        "gene",
+        "response",
+        "pathway",
+        "protein",
+        "expression",
+        "metabolic",
+        "mouse",
+        "function",
+        "activation"
+      ],
+      [
+        "cell",
+        "growth",
+        "cellular",
+        "type",
+        "tissue",
+        "signal",
+        "experimental",
+        "single_cell",
+        "process",
+        "surface"
+      ],
+      [
+        "brain",
+        "neural",
+        "temporal",
+        "neuron",
+        "memory",
+        "response",
+        "cognitive",
+        "activity",
+        "visual",
+        "functional"
+      ],
+      [
+        "dynamic",
+        "phase",
+        "noise",
+        "dynamical",
+        "stability",
+        "transition",
+        "synchronization",
+        "interaction",
+        "coupling",
+        "frequency"
+      ],
+      [
+        "population",
+        "level",
+        "age",
+        "estimate",
+        "individual",
+        "relate",
+        "adult",
+        "prevalence",
+        "survey",
+        "people"
+      ],
+      [
+        "economic",
+        "market",
+        "price",
+        "policy",
+        "country",
+        "firm",
+        "rise",
+        "public",
+        "measure",
+        "change"
+      ],
+      [
+        "metformin",
+        "cancer",
+        "drug",
+        "treatment",
+        "survival",
+        "aging",
+        "age",
+        "dementia",
+        "diabetic",
+        "clinical"
+      ],
+      [
+        "information",
+        "source",
+        "knowledge",
+        "field",
+        "physical",
+        "self",
+        "form",
+        "require",
+        "define",
+        "generate"
+      ],
+      [
+        "control",
+        "condition",
+        "constraint",
+        "parameter",
+        "trajectory",
+        "error",
+        "linear",
+        "dynamic",
+        "bound",
+        "optimal"
+      ],
+      [
+        "evolution",
+        "framework",
+        "dynamic",
+        "interaction",
+        "specie",
+        "biological",
+        "process",
+        "evolve",
+        "behavior",
+        "evolutionary"
+      ],
+      [
+        "role",
+        "recent",
+        "human",
+        "research",
+        "health",
+        "discuss",
+        "potential",
+        "evidence",
+        "development",
+        "important"
+      ],
+      [
+        "woman",
+        "risk",
+        "therapy",
+        "mht",
+        "breast_cancer",
+        "menopausal_hormone",
+        "treatment",
+        "menopause",
+        "hormone_replacement",
+        "symptom"
+      ],
+      [
+        "evidence",
+        "outcome",
+        "meta",
+        "intervention",
+        "identify",
+        "reduce",
+        "assess",
+        "support",
+        "quality",
+        "conduct"
+      ],
+      [
+        "mortality",
+        "risk",
+        "consumption",
+        "coffee",
+        "cardiovascular_disease",
+        "cardiovascular",
+        "coffee_consumption",
+        "alcohol_consumption",
+        "cause",
+        "cause_mortality"
+      ],
+      [
+        "energy",
+        "cost",
+        "power",
+        "reduce",
+        "load",
+        "framework",
+        "capacity",
+        "grid",
+        "operation",
+        "demand"
+      ],
+      [
+        "vitamin",
+        "supplementation",
+        "vitamin_supplementation",
+        "supplement",
+        "level",
+        "month",
+        "intake",
+        "serum",
+        "vitamin_supplement",
+        "daily"
+      ],
+      [
+        "population",
+        "distribution",
+        "individual",
+        "threshold",
+        "spatial",
+        "dynamic",
+        "collective",
+        "social",
+        "depend",
+        "stochastic"
+      ],
+      [
+        "agent",
+        "decision",
+        "test",
+        "rule",
+        "policy",
+        "choice",
+        "value",
+        "fix",
+        "behavior",
+        "behavioral"
+      ],
+      [
+        "index",
+        "follow",
+        "non",
+        "score",
+        "control",
+        "difference",
+        "ratio",
+        "baseline",
+        "factor",
+        "measure"
+      ],
+      [
+        "attack",
+        "llm",
+        "security",
+        "detection",
+        "tool",
+        "task",
+        "evaluation",
+        "code",
+        "vulnerability",
+        "large_language"
+      ],
+      [
+        "statin",
+        "stroke",
+        "risk",
+        "cardiovascular",
+        "outcome",
+        "statin_therapy",
+        "myocardial_infarction",
+        "cardiovascular_event",
+        "reduce",
+        "event"
+      ],
+      [
+        "aspirin",
+        "risk",
+        "prevention",
+        "primary_prevention",
+        "cardiovascular_disease",
+        "cvd",
+        "benefit",
+        "disease",
+        "aspirin_primary",
+        "event"
+      ],
+      [
+        "vitamin",
+        "antioxidant",
+        "supplementation",
+        "level",
+        "plasma",
+        "concentration",
+        "beta_carotene",
+        "oxidative_stress",
+        "diet",
+        "day"
+      ],
+      [
+        "network",
+        "structure",
+        "node",
+        "graph",
+        "local",
+        "class",
+        "identify",
+        "global",
+        "structural",
+        "property"
+      ],
+      [
+        "fish_oil",
+        "fatty_acid",
+        "reduce",
+        "inflammation",
+        "cardiovascular",
+        "disease",
+        "acid",
+        "clinical",
+        "obesity",
+        "lipid"
+      ],
+      [
+        "rate",
+        "number",
+        "control",
+        "change",
+        "infection",
+        "early",
+        "disease",
+        "epidemic",
+        "transmission",
+        "area"
+      ],
+      [
+        "target",
+        "interaction",
+        "strategy",
+        "specific",
+        "identify",
+        "key",
+        "influence",
+        "potential",
+        "mechanism",
+        "multiple"
+      ],
+      [
+        "hypertension",
+        "blood_pressure",
+        "salt_intake",
+        "salt",
+        "sodium",
+        "intake",
+        "sodium_intake",
+        "pressure",
+        "salt_sensitive",
+        "renal"
+      ],
+      [
+        "learn",
+        "dataset",
+        "feature",
+        "prediction",
+        "task",
+        "representation",
+        "inference",
+        "training",
+        "train",
+        "learning"
+      ]
+    ],
+    "gensim_C_v": 0.4896423331231432,
+    "gensim_NPMI": -0.04805006500757742
+  },
+  "clustering": [
+    {
+      "method": "K-Means SBERT (k=20)",
+      "NMI": 0.8309924033011464,
+      "ARI": 0.7579266488579247,
+      "purity": 0.85119166833567,
+      "n_clusters": 20,
+      "silhouette": 0.14957164227962494
+    },
+    {
+      "method": "K-Means SPECTER (k=20)",
+      "NMI": 0.7862170891458996,
+      "ARI": 0.6869892837952698,
+      "purity": 0.8193470859202884,
+      "n_clusters": 20,
+      "silhouette": 0.1632186323404312
+    },
+    {
+      "method": "K-Means SPECTER (k=30)",
+      "NMI": 0.7722447491880665,
+      "ARI": 0.6689105772727502,
+      "purity": 0.8595033046264771,
+      "n_clusters": 30,
+      "silhouette": 0.1708790361881256
+    },
+    {
+      "method": "HDBSCAN SBERT",
+      "NMI": 0.7093506613804783,
+      "ARI": 0.23094428952320575,
+      "purity": 0.48908471860604846,
+      "n_clusters": 10,
+      "silhouette": 0.2000667303800583
+    },
+    {
+      "method": "LDA Gibbs argmax \u03b8 (K=30)",
+      "NMI": 0.663709000747671,
+      "ARI": 0.5707886373033733,
+      "purity": 0.7127979170839175,
+      "n_clusters": 30,
+      "silhouette": 0.09143492579460144
+    },
+    {
+      "method": "LDA Gibbs argmax \u03b8 (K=20, closest to #labels)",
+      "NMI": 0.6432111288539993,
+      "ARI": 0.5074034221210935,
+      "purity": 0.6177648708191468,
+      "n_clusters": 20,
+      "silhouette": 0.09546619653701782
+    },
+    {
+      "method": "LDA variational argmax \u03b8 (K=30)",
+      "NMI": 0.42378372784276225,
+      "ARI": 0.20592635556551084,
+      "purity": 0.37212096935709993,
+      "n_clusters": 30,
+      "silhouette": -0.07940438389778137
+    },
+    {
+      "method": "HDBSCAN SPECTER",
+      "NMI": 0.3615724405802866,
+      "ARI": 0.0978241323954048,
+      "purity": 0.1001401962747847,
+      "n_clusters": 2,
+      "silhouette": 0.29637855291366577
+    },
+    {
+      "method": "BERTopic-style (HDBSCAN + c-TF-IDF)",
+      "NMI": 0.3608497906871506,
+      "ARI": 0.09767267216881191,
+      "purity": 0.1001401962747847,
+      "n_clusters": 2,
+      "silhouette": 0.29637017846107483
+    }
+  ],
+  "summaries_lda": [
+    {
+      "system": "TextRank + centroid + MMR",
+      "rouge1": 0.2190257442736214,
+      "rouge2": 0.025943124424174943,
+      "rougeL": 0.116580296303961,
+      "bertscore_f1": 0.7504758636156718,
+      "clusters": 30
+    },
+    {
+      "system": "first-sentence baseline",
+      "rouge1": 0.14780124682219795,
+      "rouge2": 0.018038238299361322,
+      "rougeL": 0.09473611777526449,
+      "bertscore_f1": 0.7235520442326864,
+      "clusters": 30
+    },
+    {
+      "system": "random-sentence baseline",
+      "rouge1": 0.19670780049198802,
+      "rouge2": 0.022041536719648844,
+      "rougeL": 0.11120999742777658,
+      "bertscore_f1": 0.7391304135322571,
+      "clusters": 30
+    }
+  ],
+  "summaries_embedding": [
+    {
+      "system": "TextRank + centroid + MMR",
+      "rouge1": 0.22577106715211973,
+      "rouge2": 0.031991875659208135,
+      "rougeL": 0.12005348614098167,
+      "bertscore_f1": 0.7552076737085979,
+      "clusters": 30
+    },
+    {
+      "system": "first-sentence baseline",
+      "rouge1": 0.1426534368815967,
+      "rouge2": 0.02125359664404614,
+      "rougeL": 0.09249139991585316,
+      "bertscore_f1": 0.725499176979065,
+      "clusters": 30
+    },
+    {
+      "system": "random-sentence baseline",
+      "rouge1": 0.18726609413616774,
+      "rouge2": 0.020842323207564063,
+      "rougeL": 0.10470617349068725,
+      "bertscore_f1": 0.736799156665802,
+      "clusters": 30
+    }
+  ],
+  "maps": [
+    {
+      "space": "SPECTER",
+      "perplexity": 15,
+      "dims": 2,
+      "trustworthiness": 0.9822932372815101,
+      "continuity": 0.96963963813034,
+      "knn_preservation": 0.4213666666666666,
+      "n": 3000,
+      "k": 10
+    },
+    {
+      "space": "SPECTER",
+      "perplexity": 30,
+      "dims": 2,
+      "trustworthiness": 0.9834655497850002,
+      "continuity": 0.9721807226224382,
+      "knn_preservation": 0.43063333333333337,
+      "n": 3000,
+      "k": 10
+    },
+    {
+      "space": "SPECTER",
+      "perplexity": 50,
+      "dims": 2,
+      "trustworthiness": 0.9836748422404646,
+      "continuity": 0.972638912157257,
+      "knn_preservation": 0.4295,
+      "n": 3000,
+      "k": 10
+    },
+    {
+      "space": "LDA \u03b8",
+      "perplexity": 15,
+      "dims": 2,
+      "trustworthiness": 0.9927329535935667,
+      "continuity": 0.9796060088233651,
+      "knn_preservation": 0.5034333333333334,
+      "n": 3000,
+      "k": 10
+    },
+    {
+      "space": "LDA \u03b8",
+      "perplexity": 30,
+      "dims": 2,
+      "trustworthiness": 0.993225587758977,
+      "continuity": 0.9804405316356732,
+      "knn_preservation": 0.5135333333333333,
+      "n": 3000,
+      "k": 10
+    },
+    {
+      "space": "LDA \u03b8",
+      "perplexity": 50,
+      "dims": 2,
+      "trustworthiness": 0.9936619534260345,
+      "continuity": 0.9813556821354777,
+      "knn_preservation": 0.5124,
+      "n": 3000,
+      "k": 10
+    },
+    {
+      "space": "SPECTER",
+      "perplexity": 50,
+      "dims": 3,
+      "trustworthiness": 0.9886232311386609,
+      "continuity": 0.9764792315854135,
+      "knn_preservation": 0.49966666666666665,
+      "n": 3000,
+      "k": 10
+    }
+  ],
+  "discovery": {
+    "docs": 2000,
+    "candidate_pairs": 24037,
+    "all_pairs": 1999000,
+    "conflict_pairs": 9121,
+    "analogy_pairs": 11941,
+    "explore_pairs": 3030,
+    "predicted": {
+      "incomparable": 15674,
+      "agreement": 2251,
+      "analogy": 4898,
+      "abstain": 747,
+      "heterogeneity": 466,
+      "contradiction": 1
+    },
+    "abstention_rate": 0.0310770894870408,
+    "families": 490,
+    "blocked_by_guards": {
+      "analogy": 5572,
+      "agreement": 179,
+      "heterogeneity": 134,
+      "contradiction": 10
+    },
+    "mean_ms_per_pair": 3.994022943747442
+  },
+  "relation_summaries": {
+    "0": {
+      "relations": [
+        {
+          "relation": "matching raw trajectories --enables--> rugged objective that sparse surrogates cannot learn",
+          "support": 1
+        },
+        {
+          "relation": "annealed --decreases--> -confidence-bound",
+          "support": 1
+        },
+        {
+          "relation": "removing sequential lcb --increases--> six-scene mean",
+          "support": 1
+        },
+        {
+          "relation": "\\texttt{naspaclustpackage --increases--> performance of fuzzy clustering",
+          "support": 1
+        },
+        {
+          "relation": "non-convex landscapes with --associated--> parameters",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 284,
+        "analogy": 32,
+        "abstain": 13,
+        "agreement": 26
+      }
+    },
+    "1": {
+      "relations": [
+        {
+          "relation": "metformin --enables--> apoptosis",
+          "support": 2
+        },
+        {
+          "relation": "metformin --decreases--> aging-induced genes",
+          "support": 2
+        },
+        {
+          "relation": "study investigates the --associated--> vitamin d supplementation",
+          "support": 1
+        },
+        {
+          "relation": "coffee consumption --inhibits--> bioactive compounds",
+          "support": 1
+        },
+        {
+          "relation": "melanoidins --associated--> cellular metabolism",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 34,
+        "analogy": 6,
+        "agreement": 3,
+        "abstain": 2
+      }
+    },
+    "2": {
+      "relations": [
+        {
+          "relation": "exhibiting a stronger --associated--> on pca",
+          "support": 1
+        },
+        {
+          "relation": "dha --associated--> stromal components",
+          "support": 1
+        },
+        {
+          "relation": "cancer-associated fibroblast differentiation --enables--> microenvironment favorable to pca initiation",
+          "support": 1
+        },
+        {
+          "relation": "inflammation --enables--> microenvironment favorable to pca initiation",
+          "support": 1
+        },
+        {
+          "relation": "vitamin e --enables--> membrane damage",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "analogy": 34,
+        "incomparable": 244,
+        "agreement": 42,
+        "abstain": 13
+      }
+    },
+    "3": {
+      "relations": [
+        {
+          "relation": "coffee consumption --increases--> auditory neuropathy",
+          "support": 1
+        },
+        {
+          "relation": "auditory neuropathy --enables--> by diabetes",
+          "support": 1
+        },
+        {
+          "relation": "coffee consumption --decreases--> hearing threshold shift of the auditory evoked potential",
+          "support": 1
+        },
+        {
+          "relation": "coffee consumption --decreases--> delayed latency",
+          "support": 1
+        },
+        {
+          "relation": "trigonelline --decreases--> hearing threshold shift of the auditory evoked potential",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 209,
+        "analogy": 21,
+        "abstain": 9,
+        "agreement": 16,
+        "heterogeneity": 2
+      }
+    },
+    "4": {
+      "relations": [
+        {
+          "relation": "noise --enables--> transitions",
+          "support": 2
+        },
+        {
+          "relation": "spatially structured network noise fields --enables--> partially overlapping subnetworks",
+          "support": 1
+        },
+        {
+          "relation": "mismatch --decreases--> capacity",
+          "support": 1
+        },
+        {
+          "relation": "slow dynamical regimes --associated--> computational ability",
+          "support": 1
+        },
+        {
+          "relation": "frequency-comb states --increases--> spectral description",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 474,
+        "analogy": 41,
+        "abstain": 14,
+        "agreement": 19
+      }
+    },
+    "5": {
+      "relations": [
+        {
+          "relation": "ssb consumption --enables--> difficulty",
+          "support": 1
+        },
+        {
+          "relation": "how different aspects of social relationships --associated--> mortality",
+          "support": 1
+        },
+        {
+          "relation": "how different aspects of social relationships --associated--> all-cause mortality",
+          "support": 1
+        },
+        {
+          "relation": "lack of financial --enables--> mortality",
+          "support": 1
+        },
+        {
+          "relation": "lack of social integration --associated--> mortality",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 2
+      }
+    },
+    "6": {
+      "relations": [
+        {
+          "relation": "study seeks to understand --enables--> mortality",
+          "support": 1
+        },
+        {
+          "relation": "leading --enables--> of death were vehicle accidents",
+          "support": 1
+        },
+        {
+          "relation": "all-cause mortality --no_effect--> annual fluctuations",
+          "support": 1
+        },
+        {
+          "relation": "mortality --associated--> unemployment",
+          "support": 1
+        },
+        {
+          "relation": "suicide --no_effect--> economy",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 264,
+        "analogy": 28,
+        "agreement": 33,
+        "abstain": 8,
+        "heterogeneity": 4
+      }
+    },
+    "7": {
+      "relations": [
+        {
+          "relation": "metformin --decreases--> all-cause mortality",
+          "support": 4
+        },
+        {
+          "relation": "metformin --associated--> of death",
+          "support": 4
+        },
+        {
+          "relation": "metformin --associated--> cancer incidence",
+          "support": 3
+        },
+        {
+          "relation": "metformin --decreases--> mortality",
+          "support": 3
+        },
+        {
+          "relation": "metformin --increases--> lifespan",
+          "support": 3
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 304,
+        "analogy": 40,
+        "abstain": 39,
+        "agreement": 158,
+        "heterogeneity": 55
+      }
+    },
+    "8": {
+      "relations": [
+        {
+          "relation": "menopausal hormone therapy --no_effect--> conversion to either",
+          "support": 1
+        },
+        {
+          "relation": "omega-3 fatty acids --increases--> cardiovascular outcomes",
+          "support": 1
+        },
+        {
+          "relation": "kalshimultivariate-event architecture --enables--> market objects",
+          "support": 1
+        },
+        {
+          "relation": "190 independently validated temporal shards --enables--> 7,611,594 unique rest mve market tickers",
+          "support": 1
+        },
+        {
+          "relation": "population --enables--> strong hourly burstiness",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "analogy": 10,
+        "incomparable": 19,
+        "agreement": 2
+      }
+    },
+    "9": {
+      "relations": [
+        {
+          "relation": "penalty --decreases--> concentrations",
+          "support": 1
+        },
+        {
+          "relation": "penalty --associated--> relative prominence of centers",
+          "support": 1
+        },
+        {
+          "relation": "distinct converged states --enables--> multi-start sweeps on three synthetic two-dimensional landscapes",
+          "support": 1
+        },
+        {
+          "relation": "states --associated--> centers",
+          "support": 1
+        },
+        {
+          "relation": "boundary correction --increases--> model fit",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 186,
+        "analogy": 17,
+        "agreement": 12,
+        "abstain": 1
+      }
+    },
+    "10": {
+      "relations": [
+        {
+          "relation": "generation z showed --decreases--> excitement seeking",
+          "support": 1
+        },
+        {
+          "relation": "dispositions --enables--> contemporary cultural conditions",
+          "support": 1
+        },
+        {
+          "relation": "developmental encoding --increases--> phenotypic diversity",
+          "support": 1
+        },
+        {
+          "relation": "structured genotype-tophenotype process --increases--> evolvability",
+          "support": 1
+        },
+        {
+          "relation": "structured genotype-tophenotype process --increases--> robustness",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 43,
+        "agreement": 4,
+        "analogy": 11
+      }
+    },
+    "11": {
+      "relations": [
+        {
+          "relation": "interest --increases--> past decade",
+          "support": 1
+        },
+        {
+          "relation": "papers --increases--> past decade",
+          "support": 1
+        },
+        {
+          "relation": "vitamin d supplementation --associated--> colorectal cancer",
+          "support": 1
+        },
+        {
+          "relation": "screenings --increases--> past decade",
+          "support": 1
+        },
+        {
+          "relation": "vitamin d supplementation --increases--> past decade",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "agreement": 5,
+        "analogy": 2,
+        "incomparable": 7
+      }
+    },
+    "12": {
+      "relations": [
+        {
+          "relation": "menopausal hormone therapy --increases--> quality of life",
+          "support": 2
+        },
+        {
+          "relation": "calcium supplementation --inhibits--> womenhealth initiative",
+          "support": 1
+        },
+        {
+          "relation": "adverse events --inhibits--> womenhealth initiative",
+          "support": 1
+        },
+        {
+          "relation": "intervention --inhibits--> womenhealth initiative",
+          "support": 1
+        },
+        {
+          "relation": "has a --increases--> invasive cancer",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 312,
+        "analogy": 24,
+        "agreement": 102,
+        "heterogeneity": 10,
+        "abstain": 8
+      }
+    },
+    "13": {
+      "relations": [
+        {
+          "relation": "vitamin d supplementation --increases--> inflammation",
+          "support": 2
+        },
+        {
+          "relation": "statins --associated--> all-cause mortality",
+          "support": 1
+        },
+        {
+          "relation": "relative risks --enables--> mortality",
+          "support": 1
+        },
+        {
+          "relation": "statins --associated--> with a 14",
+          "support": 1
+        },
+        {
+          "relation": "feasible solution --increases--> patients",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "heterogeneity": 1,
+        "agreement": 15,
+        "incomparable": 13,
+        "analogy": 1
+      }
+    },
+    "14": {
+      "relations": [
+        {
+          "relation": "coffee consumption --associated--> mortality",
+          "support": 8
+        },
+        {
+          "relation": "coffee consumption --associated--> all-cause mortality",
+          "support": 5
+        },
+        {
+          "relation": "alcohol consumption --associated--> mortality",
+          "support": 4
+        },
+        {
+          "relation": "coffee consumption --no_effect--> mortality",
+          "support": 3
+        },
+        {
+          "relation": "coffee consumption --associated--> risk",
+          "support": 3
+        }
+      ],
+      "pair_counts": {
+        "analogy": 145,
+        "abstain": 92,
+        "incomparable": 699,
+        "agreement": 237,
+        "heterogeneity": 48,
+        "contradiction": 1
+      }
+    },
+    "15": {
+      "relations": [
+        {
+          "relation": "tighter spatiotemporal constraints --decreases--> emissions",
+          "support": 1
+        },
+        {
+          "relation": "tighter spatiotemporal constraints --increases--> compliance costs",
+          "support": 1
+        },
+        {
+          "relation": "geographically narrower deliverability zones --associated--> scenarios",
+          "support": 1
+        },
+        {
+          "relation": "with the highest eac prices occurring under --inhibits--> technology assumptions",
+          "support": 1
+        },
+        {
+          "relation": "can --enables--> decision",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "abstain": 3,
+        "incomparable": 102,
+        "analogy": 10
+      }
+    },
+    "16": {
+      "relations": [
+        {
+          "relation": "vitamin d supplementation --increases--> serum 25 d",
+          "support": 2
+        },
+        {
+          "relation": "vitamin d supplementation --associated--> lung function",
+          "support": 2
+        },
+        {
+          "relation": "vitamin d supplementation --associated--> musculoskeletal development homeostasis",
+          "support": 1
+        },
+        {
+          "relation": "anabolic hormone analogues --associated--> delayed union treatment",
+          "support": 1
+        },
+        {
+          "relation": "vitamin d supplementation --decreases--> respiratory infection",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 295,
+        "agreement": 109,
+        "abstain": 22,
+        "heterogeneity": 26,
+        "analogy": 15
+      }
+    },
+    "17": {
+      "relations": [
+        {
+          "relation": "learning agents --enables--> one another",
+          "support": 1
+        },
+        {
+          "relation": "selfish learning --no_effect--> good outcome",
+          "support": 1
+        },
+        {
+          "relation": "learner --associated--> strategies",
+          "support": 1
+        },
+        {
+          "relation": "direction --increases--> payoff",
+          "support": 1
+        },
+        {
+          "relation": "heterogeneity --associated--> long-term outcome",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "analogy": 20,
+        "incomparable": 122,
+        "agreement": 7,
+        "abstain": 3
+      }
+    },
+    "18": {
+      "relations": [
+        {
+          "relation": "what --enables--> favoritism",
+          "support": 1
+        },
+        {
+          "relation": "agent --inhibits--> point",
+          "support": 1
+        },
+        {
+          "relation": "round --increases--> history effect",
+          "support": 1
+        },
+        {
+          "relation": "history effect --increases--> labeled strangers",
+          "support": 1
+        },
+        {
+          "relation": "favoritism --decreases--> models",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 21,
+        "analogy": 1,
+        "agreement": 2
+      }
+    },
+    "19": {
+      "relations": [
+        {
+          "relation": "lifestyle factors --associated--> recurrent cardiovascular events",
+          "support": 1
+        },
+        {
+          "relation": "0.35 for all- --enables--> mortality",
+          "support": 1
+        },
+        {
+          "relation": "incremental value --associated--> mortality",
+          "support": 1
+        },
+        {
+          "relation": "adherence to certain dietary regimens --associated--> recurrent cardiovascular events",
+          "support": 1
+        },
+        {
+          "relation": "aspirin --associated--> cancer",
+          "support": 1
+        }
+      ],
+      "pair_counts": {}
+    },
+    "20": {
+      "relations": [
+        {
+          "relation": "retrieval --increases--> generation",
+          "support": 2
+        },
+        {
+          "relation": "watermark --enables--> provenance",
+          "support": 2
+        },
+        {
+          "relation": "measured asymmetry --increases--> next-token evaluation",
+          "support": 1
+        },
+        {
+          "relation": "targeted patching of eap-ranked edges --decreases--> bias score",
+          "support": 1
+        },
+        {
+          "relation": "esricascade.jl --enables--> repeated analyses of larger production networks practical",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 548,
+        "analogy": 22,
+        "agreement": 12,
+        "abstain": 15
+      }
+    },
+    "21": {
+      "relations": [
+        {
+          "relation": "statins --decreases--> mortality",
+          "support": 8
+        },
+        {
+          "relation": "statins --associated--> mortality",
+          "support": 8
+        },
+        {
+          "relation": "statins --associated--> outcomes",
+          "support": 3
+        },
+        {
+          "relation": "statins --no_effect--> mortality",
+          "support": 2
+        },
+        {
+          "relation": "statins --decreases--> stroke",
+          "support": 2
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 363,
+        "agreement": 171,
+        "abstain": 53,
+        "analogy": 21,
+        "heterogeneity": 99
+      }
+    },
+    "22": {
+      "relations": [
+        {
+          "relation": "aspirin --increases--> bleeding",
+          "support": 3
+        },
+        {
+          "relation": "aspirin --inhibits--> mortality",
+          "support": 3
+        },
+        {
+          "relation": "aspirin --decreases--> stroke",
+          "support": 2
+        },
+        {
+          "relation": "aspirin --decreases--> myocardial infarction",
+          "support": 2
+        },
+        {
+          "relation": "aspirin --inhibits--> many premature deaths",
+          "support": 2
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 332,
+        "agreement": 106,
+        "heterogeneity": 44,
+        "abstain": 26,
+        "analogy": 5
+      }
+    },
+    "23": {
+      "relations": [
+        {
+          "relation": "vitamin e --decreases--> oxidative damage",
+          "support": 2
+        },
+        {
+          "relation": "vitamin e --decreases--> mortality",
+          "support": 2
+        },
+        {
+          "relation": "vitamin e --increases--> ldl oxidation",
+          "support": 2
+        },
+        {
+          "relation": "vitamin e --increases--> inflammation",
+          "support": 2
+        },
+        {
+          "relation": "because of their potential to --associated--> inflammation",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "agreement": 101,
+        "incomparable": 395,
+        "analogy": 36,
+        "heterogeneity": 38,
+        "abstain": 21
+      }
+    },
+    "24": {
+      "relations": [
+        {
+          "relation": "panoramic network overview of shortcut --associated--> on power grids",
+          "support": 1
+        },
+        {
+          "relation": "added transmission link --associated--> stability",
+          "support": 1
+        },
+        {
+          "relation": "center-to-center shortcuts --no_effect--> mean basin stability",
+          "support": 1
+        },
+        {
+          "relation": "peripheral shortcuts --decreases--> mean basin stability",
+          "support": 1
+        },
+        {
+          "relation": "in alternating multi- --inhibits--> network",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 94,
+        "analogy": 7,
+        "agreement": 2,
+        "abstain": 1
+      }
+    },
+    "25": {
+      "relations": [
+        {
+          "relation": "omega-3 fatty acids --associated--> mortality",
+          "support": 6
+        },
+        {
+          "relation": "pufa --decreases--> triglycerides",
+          "support": 2
+        },
+        {
+          "relation": "omega-3 fatty acids --inhibits--> epa",
+          "support": 2
+        },
+        {
+          "relation": "inflammation --associated--> mortality",
+          "support": 2
+        },
+        {
+          "relation": "omega-3 fatty acids --decreases--> inflammation",
+          "support": 2
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 311,
+        "analogy": 40,
+        "agreement": 91,
+        "abstain": 39,
+        "heterogeneity": 44
+      }
+    },
+    "26": {
+      "relations": [
+        {
+          "relation": "statins --decreases--> efficacy of influenza vaccine",
+          "support": 1
+        },
+        {
+          "relation": "aim was to examine the --associated--> of statins on influenza",
+          "support": 1
+        },
+        {
+          "relation": "aged \u226540 years were --enables--> from tertiary hospitals",
+          "support": 1
+        },
+        {
+          "relation": "statins --increases--> influenza",
+          "support": 1
+        },
+        {
+          "relation": "single-stranded rna virus --associated--> life",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 112,
+        "agreement": 22,
+        "analogy": 18,
+        "abstain": 5
+      }
+    },
+    "27": {
+      "relations": [
+        {
+          "relation": "gallic acid --decreases--> inflammation",
+          "support": 1
+        },
+        {
+          "relation": "gallic acid --decreases--> oxidative status",
+          "support": 1
+        },
+        {
+          "relation": "gallic acid --decreases--> stress",
+          "support": 1
+        },
+        {
+          "relation": "omega-3 fatty acids --decreases--> inflammation",
+          "support": 1
+        },
+        {
+          "relation": "omega-3 fatty acids --decreases--> oxidative status",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 5,
+        "agreement": 1
+      }
+    },
+    "28": {
+      "relations": [
+        {
+          "relation": "salt intake --decreases--> blood pressure",
+          "support": 5
+        },
+        {
+          "relation": "salt intake --associated--> mortality",
+          "support": 4
+        },
+        {
+          "relation": "salt intake --associated--> blood pressure",
+          "support": 3
+        },
+        {
+          "relation": "salt intake --enables--> mortality",
+          "support": 3
+        },
+        {
+          "relation": "salt intake --associated--> inflammation",
+          "support": 2
+        }
+      ],
+      "pair_counts": {
+        "incomparable": 476,
+        "analogy": 64,
+        "abstain": 50,
+        "agreement": 110,
+        "heterogeneity": 44
+      }
+    },
+    "29": {
+      "relations": [
+        {
+          "relation": "risk --enables--> transmission dynamics govern epidemic trajectories beyond physical mobility",
+          "support": 1
+        },
+        {
+          "relation": "risk --enables--> model significantly outperforms traditional frameworks",
+          "support": 1
+        },
+        {
+          "relation": "many modelling approaches --inhibits--> subsystems",
+          "support": 1
+        },
+        {
+          "relation": "illustrating the conditional nature of --increases--> decarbonising energy systems",
+          "support": 1
+        },
+        {
+          "relation": "sharing modelling experience --increases--> learning efficiency",
+          "support": 1
+        }
+      ],
+      "pair_counts": {
+        "analogy": 4,
+        "incomparable": 23,
+        "abstain": 1
+      }
+    }
+  }
+}

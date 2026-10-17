@@ -1,0 +1,1396 @@
+{
+  "alignment": {
+    "alignment": [
+      {
+        "variant": "paraphrase",
+        "method": "CCST (partial)",
+        "align_p": 0.942003367003367,
+        "align_r": 0.919853294853295,
+        "align_f1": 0.9241597067354642,
+        "gold_mass": 0.9456212273986475,
+        "n": 198
+      },
+      {
+        "variant": "paraphrase",
+        "method": "CCST forced full",
+        "align_p": 0.8614919031585697,
+        "align_r": 0.9578162578162579,
+        "align_f1": 0.8971923418893115,
+        "gold_mass": 0.8284186743241101,
+        "n": 198
+      },
+      {
+        "variant": "paraphrase",
+        "method": "FGW (POT)",
+        "align_p": 0.8840537408719228,
+        "align_r": 0.9898027898027898,
+        "align_f1": 0.9187232866822885,
+        "gold_mass": 0.8994709038072162,
+        "n": 198
+      },
+      {
+        "variant": "paraphrase",
+        "method": "Hungarian (role-constrained)",
+        "align_p": 0.9341750841750842,
+        "align_r": 0.9433381433381434,
+        "align_f1": 0.9365359948693281,
+        "gold_mass": 0.9341750855397697,
+        "n": 198
+      },
+      {
+        "variant": "disjoint-vocabulary synonyms",
+        "method": "CCST (partial)",
+        "align_p": 0.932741116751269,
+        "align_r": 0.8725163161711386,
+        "align_f1": 0.8926165205353024,
+        "gold_mass": 0.9374502964011306,
+        "n": 197
+      },
+      {
+        "variant": "disjoint-vocabulary synonyms",
+        "method": "CCST forced full",
+        "align_p": 0.8768370800096688,
+        "align_r": 0.9620377084844092,
+        "align_f1": 0.908334079907684,
+        "gold_mass": 0.8355039160749592,
+        "n": 197
+      },
+      {
+        "variant": "disjoint-vocabulary synonyms",
+        "method": "FGW (POT)",
+        "align_p": 0.8969795855582657,
+        "align_r": 0.9824268793811942,
+        "align_f1": 0.9256041476853659,
+        "gold_mass": 0.9075537856460223,
+        "n": 197
+      },
+      {
+        "variant": "disjoint-vocabulary synonyms",
+        "method": "Hungarian (role-constrained)",
+        "align_p": 0.9328257191201355,
+        "align_r": 0.9247643219724437,
+        "align_f1": 0.9267673105236556,
+        "gold_mass": 0.932825721006103,
+        "n": 197
+      },
+      {
+        "variant": "+ extra mechanism",
+        "method": "CCST (partial)",
+        "align_p": 0.8927609427609426,
+        "align_r": 0.8640812890812892,
+        "align_f1": 0.8722524669494367,
+        "gold_mass": 0.8906007490119785,
+        "n": 396
+      },
+      {
+        "variant": "+ extra mechanism",
+        "method": "CCST forced full",
+        "align_p": 0.5441879108545774,
+        "align_r": 0.9345779220779221,
+        "align_f1": 0.6792456561395955,
+        "gold_mass": 0.514978226075502,
+        "n": 396
+      },
+      {
+        "variant": "+ extra mechanism",
+        "method": "FGW (POT)",
+        "align_p": 0.528747795414462,
+        "align_r": 0.9893819143819145,
+        "align_f1": 0.6803570587661498,
+        "gold_mass": 0.5360960905073267,
+        "n": 396
+      },
+      {
+        "variant": "+ extra mechanism",
+        "method": "Hungarian (role-constrained)",
+        "align_p": 0.8562590187590188,
+        "align_r": 0.8996933621933623,
+        "align_f1": 0.87262214497063,
+        "gold_mass": 0.8562590222090783,
+        "n": 396
+      },
+      {
+        "variant": "sign flip",
+        "method": "CCST (partial)",
+        "align_p": 0.969535864978903,
+        "align_r": 0.9358529234478602,
+        "align_f1": 0.9472409447092992,
+        "gold_mass": 0.9700782841029236,
+        "n": 395
+      },
+      {
+        "variant": "sign flip",
+        "method": "CCST forced full",
+        "align_p": 0.8860206951979104,
+        "align_r": 0.9782640144665461,
+        "align_f1": 0.9205521974509316,
+        "gold_mass": 0.8543055176744655,
+        "n": 395
+      },
+      {
+        "variant": "sign flip",
+        "method": "FGW (POT)",
+        "align_p": 0.9008992273549237,
+        "align_r": 0.9937793851717901,
+        "align_f1": 0.9325343292431899,
+        "gold_mass": 0.9155093457879899,
+        "n": 395
+      },
+      {
+        "variant": "sign flip",
+        "method": "Hungarian (role-constrained)",
+        "align_p": 0.940295358649789,
+        "align_r": 0.9460096443640746,
+        "align_f1": 0.9414703159006955,
+        "gold_mass": 0.9402953603599645,
+        "n": 395
+      },
+      {
+        "variant": "context shift",
+        "method": "CCST (partial)",
+        "align_p": 0.9661195286195288,
+        "align_r": 0.9160834535834536,
+        "align_f1": 0.9323509262903203,
+        "gold_mass": 0.9627293421672707,
+        "n": 396
+      },
+      {
+        "variant": "context shift",
+        "method": "CCST forced full",
+        "align_p": 0.8849767516434184,
+        "align_r": 0.9724627224627224,
+        "align_f1": 0.9179302669832973,
+        "gold_mass": 0.8488625480480936,
+        "n": 396
+      },
+      {
+        "variant": "context shift",
+        "method": "FGW (POT)",
+        "align_p": 0.8959330862739954,
+        "align_r": 0.9936147186147186,
+        "align_f1": 0.9294853855459916,
+        "gold_mass": 0.9119228024524871,
+        "n": 396
+      },
+      {
+        "variant": "context shift",
+        "method": "Hungarian (role-constrained)",
+        "align_p": 0.9353956228956228,
+        "align_r": 0.940602453102453,
+        "align_f1": 0.9354470024924569,
+        "gold_mass": 0.9353956246014797,
+        "n": 396
+      },
+      {
+        "variant": "cross-domain analogy",
+        "method": "CCST (partial)",
+        "align_p": 0.8007369614512472,
+        "align_r": 0.7264172335600907,
+        "align_f1": 0.754132923010474,
+        "gold_mass": 0.8048197520205218,
+        "n": 294
+      },
+      {
+        "variant": "cross-domain analogy",
+        "method": "CCST forced full",
+        "align_p": 0.8133827340459994,
+        "align_r": 0.8876984126984128,
+        "align_f1": 0.8423061920961081,
+        "gold_mass": 0.7865353898810925,
+        "n": 294
+      },
+      {
+        "variant": "cross-domain analogy",
+        "method": "FGW (POT)",
+        "align_p": 0.43599233344131305,
+        "align_r": 0.49072724327826367,
+        "align_f1": 0.45570072184718047,
+        "gold_mass": 0.43990930110266824,
+        "n": 294
+      },
+      {
+        "variant": "cross-domain analogy",
+        "method": "Hungarian (role-constrained)",
+        "align_p": 0.6393424036281179,
+        "align_r": 0.6413589245221898,
+        "align_f1": 0.6391550343080955,
+        "gold_mass": 0.6393424077402978,
+        "n": 294
+      }
+    ],
+    "unmatched": [
+      {
+        "method": "CCST (partial)",
+        "unmatched_extra_accuracy": 0.8629020700487041,
+        "n": 395
+      },
+      {
+        "method": "CCST forced full",
+        "unmatched_extra_accuracy": 0.03881136336630978,
+        "n": 395
+      },
+      {
+        "method": "FGW (POT)",
+        "unmatched_extra_accuracy": 5.130526385729826e-09,
+        "n": 395
+      },
+      {
+        "method": "Hungarian (role-constrained)",
+        "unmatched_extra_accuracy": 0.7602667277372336,
+        "n": 395
+      }
+    ]
+  },
+  "certificates": {
+    "summary": {
+      "flip_precision": 0.7416666666666667,
+      "flip_recall": 0.75,
+      "minimality_ratio": 0.8,
+      "localised_top1": 0.7416666666666667,
+      "context_no_false_incompatibility": 1.0,
+      "evidence_iou": 0.967741935483871,
+      "prob_drop_cited": 0.46540379235335766,
+      "prob_drop_random": 0.025353881955698102,
+      "context_field_correct": 0.75,
+      "n": 240,
+      "faithfulness_rate": 0.7043010752688172,
+      "faithfulness_rate_random": 0.12021857923497267
+    },
+    "examples": [
+      {
+        "doc1": "t1_security_base",
+        "doc2": "t1_security_contra_flip",
+        "label": "agreement",
+        "prob": 0.8169129803838937,
+        "A": {
+          "nodes": [
+            {
+              "node1": "incident response time",
+              "node2": "incident response time",
+              "mass": 0.8,
+              "role1": "mediator",
+              "role2": "outcome"
+            },
+            {
+              "node1": "packet loss",
+              "node2": "packet loss",
+              "mass": 0.7,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "multi-factor authentication",
+              "node2": "multi-factor authentication",
+              "mass": 0.36000000000000004,
+              "role1": "action",
+              "role2": "action"
+            }
+          ],
+          "relations": [
+            {
+              "rel1": "packet loss --increases--> incident response time",
+              "rel2": "packet loss --increases--> incident response time",
+              "mass": 0.5599999999999999
+            },
+            {
+              "rel1": "multi-factor authentication --decreases--> packet loss",
+              "rel2": "multi-factor authentication --decreases--> packet loss",
+              "mass": 0.252
+            }
+          ]
+        },
+        "K": {
+          "population": {
+            "doc1": "home networks",
+            "doc2": "residential networks",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "dose": {
+            "doc1": "100 requests per second",
+            "doc2": "31%",
+            "compat": 0.5,
+            "status": "partial",
+            "material": true
+          },
+          "time": {
+            "doc1": "48 hours",
+            "doc2": "forty-eight hours",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "environment": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "design": {
+            "doc1": "measurement study",
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "other": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          }
+        },
+        "F": [],
+        "U": [
+          {
+            "doc": "doc1",
+            "node": "false alarm rate",
+            "unmatched_mass": 0.8
+          }
+        ],
+        "P": [],
+        "scores": {
+          "S_mech": 0.4550468771155713,
+          "S_ctx": 0.7199961614080634,
+          "F_flip_frac": 0.0,
+          "F_hetero_frac": 0.0,
+          "ctx_min_material": 0.5
+        },
+        "text": "Verdict: AGREEMENT (p=0.82). 3 mechanism nodes align (S_mech=0.46). Matched context: population, time. Unknown context: environment, design, other. Strongest aligned relation: doc1 'packet loss --increases--> incident response time' <-> doc2 'packet loss --increases--> incident response time'. Unmatched: false alarm rate [doc1]."
+      },
+      {
+        "doc1": "t1_security_base",
+        "doc2": "t1_security_contra_null",
+        "label": "contradiction",
+        "prob": 0.7670305424177362,
+        "A": {
+          "nodes": [
+            {
+              "node1": "incident response time",
+              "node2": "incident response time",
+              "mass": 0.8,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "false alarm rate",
+              "node2": "false alarm rate",
+              "mass": 0.8,
+              "role1": "outcome",
+              "role2": "outcome"
+            },
+            {
+              "node1": "multi-factor authentication",
+              "node2": "multi-factor authentication",
+              "mass": 0.36000000000000004,
+              "role1": "action",
+              "role2": "action"
+            }
+          ],
+          "relations": [
+            {
+              "rel1": "incident response time --associated--> false alarm rate",
+              "rel2": "incident response time --no_effect--> false alarm rate",
+              "mass": 0.6400000000000001
+            }
+          ]
+        },
+        "K": {
+          "population": {
+            "doc1": "home networks",
+            "doc2": "household networks",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "dose": {
+            "doc1": "40%",
+            "doc2": "23%",
+            "compat": 0.731626661613718,
+            "status": "partial",
+            "material": true
+          },
+          "time": {
+            "doc1": "48 hours",
+            "doc2": "2880 minutes",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "environment": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "design": {
+            "doc1": "measurement study",
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "other": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          }
+        },
+        "F": [
+          {
+            "rel1": "incident response time --associated--> false alarm rate",
+            "rel2": "incident response time --no_effect--> false alarm rate",
+            "kind": "exclusive_assertion",
+            "contribution": 1.0,
+            "context_distance": 0.25367466767725644,
+            "edge1": 2,
+            "edge2": 2,
+            "claim1": "t1_security_base:2",
+            "claim2": "t1_security_contra_null:2"
+          }
+        ],
+        "U": [
+          {
+            "doc": "doc1",
+            "node": "packet loss",
+            "unmatched_mass": 0.7
+          },
+          {
+            "doc": "doc2",
+            "node": "multi-factor authentication",
+            "unmatched_mass": 0.54
+          },
+          {
+            "doc": "doc2",
+            "node": "reduction",
+            "unmatched_mass": 0.9
+          },
+          {
+            "doc": "doc2",
+            "node": "packet loss",
+            "unmatched_mass": 0.7
+          }
+        ],
+        "P": [
+          {
+            "doc": "t1_security_base",
+            "claim": "t1_security_base:2",
+            "sentence": "Our results show that incident response time was associated with a 40% lower false alarm rate.",
+            "span": [
+              229,
+              323
+            ],
+            "epistemic": "observed"
+          },
+          {
+            "doc": "t1_security_contra_null",
+            "claim": "t1_security_contra_null:2",
+            "sentence": "Incident response time did not inhibit false alarm rate.",
+            "span": [
+              274,
+              330
+            ],
+            "epistemic": "observed"
+          }
+        ],
+        "scores": {
+          "S_mech": 0.33469667260316976,
+          "S_ctx": 0.7289927249911048,
+          "F_flip_frac": 0.3749999999983008,
+          "F_hetero_frac": 0.3749999999983008,
+          "ctx_min_material": 0.49999999999999994
+        },
+        "text": "Verdict: CONTRADICTION (p=0.77). 3 mechanism nodes align (S_mech=0.33). Matched context: population, time. Unknown context: environment, design, other. Smallest disagreement: doc1 reports 'incident response time --associated--> false alarm rate' while doc2 reports 'incident response time --no_effect--> false alarm rate' (exclusive assertion, 100% of the disagreement). Unmatched: packet loss [doc1], multi-factor authentication [doc2], reduction [doc2]. Evidence: [t1_security_base] \"Our results show that incident response time was associated with a 40% lower false alarm rate.\" | [t1_security_contra_null] \"Incident response time did not inhibit false alarm rate.\""
+      },
+      {
+        "doc1": "t1_security_base",
+        "doc2": "t1_security_contra_extra",
+        "label": "contradiction",
+        "prob": 0.813493049780406,
+        "A": {
+          "nodes": [
+            {
+              "node1": "incident response time",
+              "node2": "incident response time",
+              "mass": 0.8,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "false alarm rate",
+              "node2": "false alarm rate",
+              "mass": 0.8,
+              "role1": "outcome",
+              "role2": "outcome"
+            },
+            {
+              "node1": "packet loss",
+              "node2": "packet loss",
+              "mass": 0.7,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "multi-factor authentication",
+              "node2": "multi-factor authentication",
+              "mass": 0.36000000000000004,
+              "role1": "action",
+              "role2": "action"
+            }
+          ],
+          "relations": [
+            {
+              "rel1": "incident response time --associated--> false alarm rate",
+              "rel2": "incident response time --enables--> false alarm rate",
+              "mass": 0.6400000000000001
+            },
+            {
+              "rel1": "packet loss --increases--> incident response time",
+              "rel2": "packet loss --increases--> incident response time",
+              "mass": 0.5599999999999999
+            },
+            {
+              "rel1": "multi-factor authentication --decreases--> packet loss",
+              "rel2": "multi-factor authentication --associated--> packet loss",
+              "mass": 0.252
+            }
+          ]
+        },
+        "K": {
+          "population": {
+            "doc1": "home networks",
+            "doc2": "household networks",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "dose": {
+            "doc1": "40%",
+            "doc2": "23%",
+            "compat": 0.731626661613718,
+            "status": "partial",
+            "material": true
+          },
+          "time": {
+            "doc1": "48 hours",
+            "doc2": "forty-eight hours",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "environment": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "design": {
+            "doc1": "measurement study",
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "other": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          }
+        },
+        "F": [
+          {
+            "rel1": "incident response time --associated--> false alarm rate",
+            "rel2": "incident response time --enables--> false alarm rate",
+            "kind": "sign_flip",
+            "contribution": 1.0,
+            "context_distance": 0.25367466767725644,
+            "edge1": 2,
+            "edge2": 2,
+            "claim1": "t1_security_base:2",
+            "claim2": "t1_security_contra_extra:2"
+          }
+        ],
+        "U": [
+          {
+            "doc": "doc2",
+            "node": "multi-factor authentication",
+            "unmatched_mass": 0.44
+          },
+          {
+            "doc": "doc2",
+            "node": "host",
+            "unmatched_mass": 0.7
+          },
+          {
+            "doc": "doc2",
+            "node": "increases malware propagation",
+            "unmatched_mass": 0.9
+          },
+          {
+            "doc": "doc2",
+            "node": "lateral movement",
+            "unmatched_mass": 0.9
+          }
+        ],
+        "P": [
+          {
+            "doc": "t1_security_base",
+            "claim": "t1_security_base:2",
+            "sentence": "Our results show that incident response time was associated with a 40% lower false alarm rate.",
+            "span": [
+              229,
+              323
+            ],
+            "epistemic": "observed"
+          },
+          {
+            "doc": "t1_security_contra_extra",
+            "claim": "t1_security_contra_extra:2",
+            "sentence": "False alarm rate was triggered by incident response time.",
+            "span": [
+              259,
+              316
+            ],
+            "epistemic": "observed"
+          }
+        ],
+        "scores": {
+          "S_mech": 0.39578416442778197,
+          "S_ctx": 0.7213630605197614,
+          "F_flip_frac": 0.25999350016158873,
+          "F_hetero_frac": 0.25999350016158873,
+          "ctx_min_material": 0.5
+        },
+        "text": "Verdict: CONTRADICTION (p=0.81). 4 mechanism nodes align (S_mech=0.40). Matched context: population, time. Unknown context: environment, design, other. Smallest disagreement: doc1 reports 'incident response time --associated--> false alarm rate' while doc2 reports 'incident response time --enables--> false alarm rate' (sign flip, 100% of the disagreement). Unmatched: multi-factor authentication [doc2], host [doc2], increases malware propagation [doc2]. Evidence: [t1_security_base] \"Our results show that incident response time was associated with a 40% lower false alarm rate.\" | [t1_security_contra_extra] \"False alarm rate was triggered by incident response time.\""
+      },
+      {
+        "doc1": "t1_security_base",
+        "doc2": "t1_security_hetero_ctx",
+        "label": "heterogeneity",
+        "prob": 0.9671779592500755,
+        "A": {
+          "nodes": [
+            {
+              "node1": "false alarm rate",
+              "node2": "false alarm rate",
+              "mass": 0.8,
+              "role1": "outcome",
+              "role2": "outcome"
+            },
+            {
+              "node1": "multi-factor authentication",
+              "node2": "multi-factor authentication",
+              "mass": 0.36000000000000004,
+              "role1": "action",
+              "role2": "action"
+            }
+          ],
+          "relations": []
+        },
+        "K": {},
+        "F": [],
+        "U": [
+          {
+            "doc": "doc1",
+            "node": "packet loss",
+            "unmatched_mass": 0.7
+          },
+          {
+            "doc": "doc1",
+            "node": "incident response time",
+            "unmatched_mass": 0.8
+          },
+          {
+            "doc": "doc2",
+            "node": "multi-factor authentication",
+            "unmatched_mass": 0.54
+          },
+          {
+            "doc": "doc2",
+            "node": "packet loss",
+            "unmatched_mass": 0.9
+          },
+          {
+            "doc": "doc2",
+            "node": "incident response time",
+            "unmatched_mass": 0.9
+          }
+        ],
+        "P": [],
+        "scores": {
+          "S_mech": 0.1302980142911567,
+          "S_ctx": 0.5810344827586207,
+          "F_flip_frac": 0.0,
+          "F_hetero_frac": 0.0,
+          "ctx_min_material": 0.0
+        },
+        "text": "Verdict: HETEROGENEITY (p=0.97). 2 mechanism nodes align (S_mech=0.13). Unmatched: packet loss [doc1], incident response time [doc1], multi-factor authentication [doc2]."
+      },
+      {
+        "doc1": "t1_security_base",
+        "doc2": "t1_security_contra_ctxpara",
+        "label": "contradiction",
+        "prob": 0.43657760599101836,
+        "A": {
+          "nodes": [
+            {
+              "node1": "incident response time",
+              "node2": "incident response time",
+              "mass": 0.8,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "false alarm rate",
+              "node2": "false alarm rate 0.04",
+              "mass": 0.8,
+              "role1": "outcome",
+              "role2": "outcome"
+            },
+            {
+              "node1": "packet loss",
+              "node2": "packet loss",
+              "mass": 0.7,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "multi-factor authentication",
+              "node2": "multi-factor authentication",
+              "mass": 0.36000000000000004,
+              "role1": "action",
+              "role2": "action"
+            }
+          ],
+          "relations": [
+            {
+              "rel1": "incident response time --associated--> false alarm rate",
+              "rel2": "incident response time --enables--> false alarm rate 0.04",
+              "mass": 0.6400000000000001
+            },
+            {
+              "rel1": "packet loss --increases--> incident response time",
+              "rel2": "packet loss --increases--> incident response time",
+              "mass": 0.5599999999999999
+            },
+            {
+              "rel1": "multi-factor authentication --decreases--> packet loss",
+              "rel2": "multi-factor authentication --decreases--> packet loss",
+              "mass": 0.252
+            }
+          ]
+        },
+        "K": {
+          "population": {
+            "doc1": "home networks",
+            "doc2": "household networks",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "dose": {
+            "doc1": "40%",
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "time": {
+            "doc1": "48 hours",
+            "doc2": "2880 minutes",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "environment": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "design": {
+            "doc1": "measurement study",
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "other": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          }
+        },
+        "F": [
+          {
+            "rel1": "incident response time --associated--> false alarm rate",
+            "rel2": "incident response time --enables--> false alarm rate 0.04",
+            "kind": "sign_flip",
+            "contribution": 1.0,
+            "context_distance": 0.3,
+            "edge1": 2,
+            "edge2": 1,
+            "claim1": "t1_security_base:2",
+            "claim2": "t1_security_contra_ctxpara:1"
+          }
+        ],
+        "U": [
+          {
+            "doc": "doc2",
+            "node": "multi-factor authentication",
+            "unmatched_mass": 0.54
+          }
+        ],
+        "P": [
+          {
+            "doc": "t1_security_base",
+            "claim": "t1_security_base:2",
+            "sentence": "Our results show that incident response time was associated with a 40% lower false alarm rate.",
+            "span": [
+              229,
+              323
+            ],
+            "epistemic": "observed"
+          },
+          {
+            "doc": "t1_security_contra_ctxpara",
+            "claim": "t1_security_contra_ctxpara:1",
+            "sentence": "Incident response time promotes false alarm rate (p = 0.04).",
+            "span": [
+              207,
+              267
+            ],
+            "epistemic": "observed"
+          }
+        ],
+        "scores": {
+          "S_mech": 0.7117551670322623,
+          "S_ctx": 0.7000000000000001,
+          "F_flip_frac": 0.25735885475220127,
+          "F_hetero_frac": 0.25735885475220127,
+          "ctx_min_material": 0.5
+        },
+        "text": "Verdict: CONTRADICTION (p=0.44). 4 mechanism nodes align (S_mech=0.71). Matched context: population, time. Unknown context: dose, environment, design, other. Smallest disagreement: doc1 reports 'incident response time --associated--> false alarm rate' while doc2 reports 'incident response time --enables--> false alarm rate 0.04' (sign flip, 100% of the disagreement). Unmatched: multi-factor authentication [doc2]. Evidence: [t1_security_base] \"Our results show that incident response time was associated with a 40% lower false alarm rate.\" | [t1_security_contra_ctxpara] \"Incident response time promotes false alarm rate (p = 0.04).\""
+      },
+      {
+        "doc1": "t1_security_base",
+        "doc2": "t1_security_hetero_sim",
+        "label": "heterogeneity",
+        "prob": 0.9897024248757409,
+        "A": {
+          "nodes": [
+            {
+              "node1": "incident response time",
+              "node2": "incident response time",
+              "mass": 0.8,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "false alarm rate",
+              "node2": "false alarm rate",
+              "mass": 0.8,
+              "role1": "outcome",
+              "role2": "outcome"
+            },
+            {
+              "node1": "packet loss",
+              "node2": "packet loss",
+              "mass": 0.7,
+              "role1": "mediator",
+              "role2": "mediator"
+            },
+            {
+              "node1": "multi-factor authentication",
+              "node2": "multi-factor authentication",
+              "mass": 0.36000000000000004,
+              "role1": "action",
+              "role2": "action"
+            }
+          ],
+          "relations": [
+            {
+              "rel1": "incident response time --associated--> false alarm rate",
+              "rel2": "incident response time --associated--> false alarm rate",
+              "mass": 0.6400000000000001
+            },
+            {
+              "rel1": "packet loss --increases--> incident response time",
+              "rel2": "packet loss --increases--> incident response time",
+              "mass": 0.5599999999999999
+            },
+            {
+              "rel1": "multi-factor authentication --decreases--> packet loss",
+              "rel2": "multi-factor authentication --decreases--> packet loss",
+              "mass": 0.252
+            }
+          ]
+        },
+        "K": {
+          "population": {
+            "doc1": "home networks",
+            "doc2": "household networks",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "dose": {
+            "doc1": "40%",
+            "doc2": "40%",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "time": {
+            "doc1": "48 hours",
+            "doc2": "2880 minutes",
+            "compat": 1.0,
+            "status": "matched",
+            "material": true
+          },
+          "environment": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          },
+          "design": {
+            "doc1": "measurement study",
+            "doc2": "simulation study",
+            "compat": 0.1,
+            "status": "incompatible",
+            "material": true
+          },
+          "other": {
+            "doc1": null,
+            "doc2": null,
+            "compat": 0.5,
+            "status": "unknown",
+            "material": true
+          }
+        },
+        "F": [
+          {
+            "rel1": "incident response time --associated--> false alarm rate",
+            "rel2": "incident response time --associated--> false alarm rate",
+            "kind": "sign_flip",
+            "contribution": 1.0,
+            "context_distance": 0.24,
+            "edge1": 2,
+            "edge2": 2,
+            "claim1": "t1_security_base:2",
+            "claim2": "t1_security_hetero_sim:2"
+          }
+        ],
+        "U": [
+          {
+            "doc": "doc2",
+            "node": "multi-factor authentication",
+            "unmatched_mass": 0.40499999999999997
+          }
+        ],
+        "P": [
+          {
+            "doc": "t1_security_base",
+            "claim": "t1_security_base:2",
+            "sentence": "Our results show that incident response time was associated with a 40% lower false alarm rate.",
+            "span": [
+              229,
+              323
+            ],
+            "epistemic": "observed"
+          },
+          {
+            "doc": "t1_security_hetero_sim",
+            "claim": "t1_security_hetero_sim:2",
+            "sentence": "Incident response time was associated with a 40% higher false alarm rate.",
+            "span": [
+              255,
+              328
+            ],
+            "epistemic": "observed"
+          }
+        ],
+        "scores": {
+          "S_mech": 0.8488993855790484,
+          "S_ctx": 0.7061152882205515,
+          "F_flip_frac": 0.04924255903558684,
+          "F_hetero_frac": 0.44318303132028164,
+          "ctx_min_material": 0.1
+        },
+        "text": "Verdict: HETEROGENEITY (p=0.99). 4 mechanism nodes align (S_mech=0.85). Matched context: population, dose, time. Materially different context: design (measurement study vs simulation study). Unknown context: environment, other. Smallest disagreement: doc1 reports 'incident response time --associated--> false alarm rate' while doc2 reports 'incident response time --associated--> false alarm rate' (sign flip, 100% of the disagreement). Unmatched: multi-factor authentication [doc2]. Evidence: [t1_security_base] \"Our results show that incident response time was associated with a 40% lower false alarm rate.\" | [t1_security_hetero_sim] \"Incident response time was associated with a 40% higher false alarm rate.\""
+      }
+    ]
+  },
+  "retrieval": {
+    "SBERT": {
+      "MRR": 0.10148561513404522,
+      "Recall@1": 0.016666666666666666,
+      "nDCG@1": 0.05,
+      "Recall@5": 0.03,
+      "nDCG@5": 0.03303578836621354,
+      "Recall@10": 0.06,
+      "nDCG@10": 0.04669792195547088
+    },
+    "LDA \u03b8": {
+      "MRR": 0.08235898746822173,
+      "Recall@1": 0.01,
+      "nDCG@1": 0.03,
+      "Recall@5": 0.03,
+      "nDCG@5": 0.02826379079823644,
+      "Recall@10": 0.05333333333333333,
+      "nDCG@10": 0.03851866357460077
+    },
+    "SPECTER": {
+      "MRR": 0.0804466271670417,
+      "Recall@1": 0.006666666666666666,
+      "nDCG@1": 0.02,
+      "Recall@5": 0.03,
+      "nDCG@5": 0.026103674712743247,
+      "Recall@10": 0.055,
+      "nDCG@10": 0.037323817174470454
+    },
+    "FGW (POT)": {
+      "MRR": 0.18408511647727244,
+      "Recall@1": 0.023333333333333334,
+      "nDCG@1": 0.07,
+      "Recall@5": 0.095,
+      "nDCG@5": 0.08290770293669762,
+      "Recall@10": 0.17833333333333332,
+      "nDCG@10": 0.12037485250345421
+    },
+    "CCST signed mechanism": {
+      "MRR": 0.6654910362719397,
+      "Recall@1": 0.19166666666666665,
+      "nDCG@1": 0.575,
+      "Recall@5": 0.51,
+      "nDCG@5": 0.5079835086683411,
+      "Recall@10": 0.635,
+      "nDCG@10": 0.5645496267748719
+    },
+    "BM25": {
+      "MRR": 0.12065558429348584,
+      "Recall@1": 0.01,
+      "nDCG@1": 0.03,
+      "Recall@5": 0.065,
+      "nDCG@5": 0.053705866405651684,
+      "Recall@10": 0.1,
+      "nDCG@10": 0.06958027795595469
+    }
+  },
+  "acquisition": {
+    "budgets": [
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150
+    ],
+    "curves": {
+      "random": [
+        0.5308479832093702,
+        0.6506746736116434,
+        0.6619379481097792,
+        0.7013891908013186,
+        0.6989505945968162,
+        0.7161985921947464,
+        0.7308492117502289,
+        0.746264370994218,
+        0.7524924379111819,
+        0.7584921950768543,
+        0.7639463610747286,
+        0.7713368347716566,
+        0.7782669691017606,
+        0.7798965625440315,
+        0.7840396460285115
+      ],
+      "uncertainty": [
+        0.5308479832093702,
+        0.6145864292547484,
+        0.6561435583626891,
+        0.6527413530571381,
+        0.6732916212254607,
+        0.6824366495533913,
+        0.6933878642588458,
+        0.6955518424348844,
+        0.6994613450101372,
+        0.7030817450503068,
+        0.712787070981093,
+        0.7132990474116134,
+        0.7170787955734644,
+        0.7210355080553726,
+        0.7226319650363829
+      ],
+      "expected change": [
+        0.5308479832093702,
+        0.5509561051574348,
+        0.5549217678214063,
+        0.5476042187147468,
+        0.5494180641800387,
+        0.5586252287006447,
+        0.5891229695772668,
+        0.5846975074198915,
+        0.6178530266330263,
+        0.6269310062764876,
+        0.6327784991920786,
+        0.642423960017333,
+        0.6554454024454917,
+        0.6623889354950493,
+        0.6646385848768568
+      ],
+      "diversity (k-center)": [
+        0.5308479832093702,
+        0.6409857020132375,
+        0.6722698327727813,
+        0.7273948931267633,
+        0.7370247087445835,
+        0.743369428730935,
+        0.7468725510510674,
+        0.7508443763832775,
+        0.7483060710079552,
+        0.7602521241816793,
+        0.7527121760698667,
+        0.7561262072705079,
+        0.7611230011398794,
+        0.7570721797294894,
+        0.7643246985218719
+      ],
+      "DiverseTopB": [
+        0.5308479832093702,
+        0.6412750163285814,
+        0.6669558494757706,
+        0.7051154395228509,
+        0.717224195802428,
+        0.7419843516648847,
+        0.7517554561056284,
+        0.7517294535075638,
+        0.7596493778288124,
+        0.7680612176498942,
+        0.7658469413883497,
+        0.7661700502346454,
+        0.7728547315399916,
+        0.7687072350856894,
+        0.7775483011877866
+      ],
+      "uncertainty + curvature": [
+        0.5308479832093702,
+        0.5632878367553051,
+        0.5995410528813329,
+        0.6463144407911725,
+        0.6820477863782147,
+        0.7191177151626345,
+        0.7343190063946297,
+        0.7400491309839052,
+        0.7427514077430791,
+        0.7567162759649833,
+        0.7554773841383501,
+        0.7613543264590492,
+        0.767897961670139,
+        0.7661746497392368,
+        0.7679684019079225
+      ]
+    },
+    "std": {
+      "random": [
+        0.09699503447833806,
+        0.06041364632424594,
+        0.06730134244901184,
+        0.04627434442576247,
+        0.06157840410865742,
+        0.04959885849987104,
+        0.029022486646799538,
+        0.024773922944534968,
+        0.02651682842667294,
+        0.025356862403679604,
+        0.02066287529924996,
+        0.019495764618870072,
+        0.022478224877664932,
+        0.022919668964896875,
+        0.01783714027156856
+      ],
+      "uncertainty": [
+        0.09699503447833806,
+        0.09703217931017732,
+        0.09751667833432255,
+        0.08899946574325193,
+        0.09393841494315826,
+        0.10156841925906311,
+        0.09145495398384404,
+        0.09062807312685443,
+        0.08427218333154304,
+        0.08026977087832865,
+        0.08102128957739878,
+        0.07924312108539472,
+        0.08530211667143035,
+        0.0867669314702685,
+        0.08945644899542056
+      ],
+      "expected change": [
+        0.09699503447833806,
+        0.1180389243969809,
+        0.08670674659471071,
+        0.10592209072212164,
+        0.09242295333012403,
+        0.09155244706916796,
+        0.11401497898889902,
+        0.12362357618764501,
+        0.11759574528281434,
+        0.11924960134192765,
+        0.11872098886435749,
+        0.11413250551155116,
+        0.10541622933415094,
+        0.10440216331534653,
+        0.10341857931967263
+      ],
+      "diversity (k-center)": [
+        0.09699503447833806,
+        0.04904329021763782,
+        0.040829321604900465,
+        0.03985667722072144,
+        0.031016078138233184,
+        0.02257321120882642,
+        0.033105981888700946,
+        0.02938236060240648,
+        0.0198162518758941,
+        0.013947009630152229,
+        0.019745181011864166,
+        0.023884167688898464,
+        0.019007430031792765,
+        0.02076869544353901,
+        0.019621308489134223
+      ],
+      "DiverseTopB": [
+        0.09699503447833806,
+        0.09991127801603358,
+        0.09446856879557368,
+        0.08762988360617165,
+        0.08655115420111557,
+        0.08560054635598666,
+        0.07915397492324454,
+        0.07936158220177958,
+        0.0757168503976508,
+        0.08141727809509068,
+        0.07967926710264778,
+        0.08060673740640403,
+        0.07284949529149468,
+        0.08229404197722419,
+        0.06803422629740921
+      ],
+      "uncertainty + curvature": [
+        0.09699503447833806,
+        0.08468160259030363,
+        0.10604553584102279,
+        0.10737301146821425,
+        0.0706231928950461,
+        0.048463086105994396,
+        0.048751809238645624,
+        0.04647182522349548,
+        0.03908351853578669,
+        0.0368061925297483,
+        0.03324379374492802,
+        0.03516564348766627,
+        0.031718410604605674,
+        0.03461514118254589,
+        0.03592115262194496
+      ]
+    },
+    "full_pool_f1": 0.8173952632328486
+  },
+  "signed_clustering": {
+    "Signed Leiden (CCST relations)": {
+      "NMI": 0.789650568100707,
+      "ARI": 0.3209734124132131,
+      "purity": 0.8,
+      "n_clusters": 1688
+    },
+    "Correlation clustering (CCST relations)": {
+      "NMI": 0.8008707337691252,
+      "ARI": 0.23877184363594872,
+      "purity": 0.9471428571428572,
+      "n_clusters": 1793
+    },
+    "Leiden, positive edges only": {
+      "NMI": 0.7950808973733982,
+      "ARI": 0.34207582453120516,
+      "purity": 0.8217857142857142,
+      "n_clusters": 1691
+    },
+    "Leiden on SBERT kNN graph": {
+      "NMI": 0.5840496790555915,
+      "ARI": 0.10670590340959578,
+      "purity": 0.15785714285714286,
+      "n_clusters": 70
+    },
+    "Signed Leiden: SBERT kNN + CCST (+/-)": {
+      "NMI": 0.5827455944717502,
+      "ARI": 0.10953163178431301,
+      "purity": 0.15714285714285714,
+      "n_clusters": 65
+    },
+    "Leiden: SBERT kNN + CCST (+ only)": {
+      "NMI": 0.592207023687874,
+      "ARI": 0.11781221567487396,
+      "purity": 0.16178571428571428,
+      "n_clusters": 68
+    },
+    "Spectral on SBERT (K = #families)": {
+      "NMI": 0.650506920016851,
+      "ARI": 0.1445114608420846,
+      "purity": 0.32785714285714285,
+      "n_clusters": 192
+    },
+    "_n_families": 192
+  },
+  "guards": {
+    "changed": 281,
+    "unguarded": {
+      "macro_f1": 0.798869397618252,
+      "P_agreement": 0.8363273453093812,
+      "P_analogy": 0.7507163323782235,
+      "P_contradiction": 0.7969348659003831,
+      "P_heterogeneity": 0.9183098591549296,
+      "P_incomparable": 0.6912521440823327,
+      "R_agreement": 0.838,
+      "R_analogy": 0.8733333333333333,
+      "R_contradiction": 0.78,
+      "R_heterogeneity": 0.815,
+      "R_incomparable": 0.7045454545454546
+    },
+    "guarded": {
+      "macro_f1": 0.7677915006712601,
+      "P_agreement": 0.8537344398340249,
+      "P_analogy": 0.910377358490566,
+      "P_contradiction": 0.8187830687830688,
+      "P_heterogeneity": 0.9347826086956522,
+      "P_incomparable": 0.5717592592592593,
+      "R_agreement": 0.823,
+      "R_analogy": 0.6433333333333333,
+      "R_contradiction": 0.77375,
+      "R_heterogeneity": 0.645,
+      "R_incomparable": 0.8636363636363636
+    }
+  }
+}

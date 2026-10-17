@@ -1,0 +1,3339 @@
+[
+  {
+    "doc1": "pm40596198",
+    "doc2": "pm21852630",
+    "label": "contradiction",
+    "prob": 0.6036897733364746,
+    "A": {
+      "nodes": [
+        {
+          "node1": "mortality",
+          "node2": "mortality",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "epwv",
+          "node2": "low-risk lifestyle behaviors and all-",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "individuals with higher epwv had significantly",
+          "node2": "who had all 4 experienced",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "risks of all-cause mortality",
+          "node2": "all-cause mortality",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "epwv --associated--> mortality",
+          "rel2": "low-risk lifestyle behaviors and all- --associated--> mortality",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "individuals with higher epwv had significantly --increases--> risks of all-cause mortality",
+          "rel2": "who had all 4 experienced --decreases--> all-cause mortality",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "us adults",
+        "doc2": "a representative sample of people",
+        "compat": 0.6,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": "16.6%",
+        "doc2": "95%",
+        "compat": 0.044811246002355754,
+        "status": "incompatible",
+        "material": true
+      },
+      "time": {
+        "doc1": "94.42 months",
+        "doc2": "11.1 years",
+        "compat": 0.8858517879262763,
+        "status": "matched",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "survey",
+        "doc2": "survey",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": "no low-risk behaviors",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "individuals with higher epwv had significantly --increases--> risks of all-cause mortality",
+        "rel2": "who had all 4 experienced --decreases--> all-cause mortality",
+        "kind": "sign_flip",
+        "contribution": 1.0,
+        "context_distance": 0.25282964241474476,
+        "edge1": 1,
+        "edge2": 1,
+        "claim1": "pm40596198:1",
+        "claim2": "pm21852630:1"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "arterial stiffness has emerged as a potential marker",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc1",
+        "node": "with adverse outcomes",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc1",
+        "node": "with significant interactions observed for all-",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc1",
+        "node": "for all-",
+        "unmatched_mass": 0.7
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm40596198",
+        "claim": "pm40596198:1",
+        "sentence": "The weighted Cox proportional hazards model showed that after comprehensive adjustment for covariates, individuals with higher ePWV had significantly increased risks of all-cause mortality (HR 2.67, 95% confidence interval",
+        "span": [
+          1603,
+          1825
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm21852630",
+        "claim": "pm21852630:1",
+        "sentence": "Compared with participants who had no low-risk behaviors, those who had all 4 experienced reduced all-cause mortality (adjusted hazard ratio [AHR]=0.37; 95% confidence interval [CI]=0.28, 0.49), mortality from malignant neoplasms (AHR=0.34; 95% CI=0.20, 0.56), major cardiovascular disease (AHR=0.35; 95% CI=0.24, 0.50), and other causes (AHR=0.43; 95% CI=0.25, 0.74).",
+        "span": [
+          600,
+          968
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.5430173299061912,
+      "S_ctx": 0.6302968713805717,
+      "F_flip_frac": 0.16641714491598125,
+      "F_hetero_frac": 0.16641714491598125,
+      "ctx_min_material": 0.4905659978679231
+    },
+    "text": "Verdict: CONTRADICTION (p=0.60). 4 mechanism nodes align (S_mech=0.54). Matched context: time, design. Materially different context: dose (16.6% vs 95%). Unknown context: environment, other. Smallest disagreement: doc1 reports 'individuals with higher epwv had significantly --increases--> risks of all-cause mortality' while doc2 reports 'who had all 4 experienced --decreases--> all-cause mortality' (sign flip, 100% of the disagreement). Unmatched: arterial stiffness has emerged as a potential marker [doc1], with adverse outcomes [doc1], with significant interactions observed for all- [doc1]. Evidence: [pm40596198] \"The weighted Cox proportional hazards model showed that after comprehensive adjustment for covariates, individuals with higher ePWV had significantly increased risks of all-cause mortality (HR 2.67, 95% confidence interval\" | [pm21852630] \"Compared with participants who had no low-risk behaviors, those who had all 4 experienced reduced all-cause mortality (adjusted hazard ratio [AHR]=0.37; 95% confidence interval [CI]=0.28, 0.49), mortality from malignant neoplasms (AHR=0.34; 95% CI=0.20, 0.56), major cardiovascular disease (AHR=0.35; 95% CI=0.24, 0.50), and other causes (AHR=0.43; 95% CI=0.25, 0.74).\""
+  },
+  {
+    "doc1": "pm29137124",
+    "doc2": "pm38751303",
+    "label": "heterogeneity",
+    "prob": 0.9999660162870104,
+    "A": {
+      "nodes": [
+        {
+          "node1": "asthmatic patients with vitamin d deficiency have",
+          "node2": "vitamin d deficiency",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "exacerbations",
+          "node2": "exacerbation",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "asthmatic patients with vitamin d deficiency have --decreases--> exacerbations",
+          "rel2": "vitamin d deficiency --associated--> exacerbation",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "in asthmatic patients",
+        "doc2": "adults",
+        "compat": 0.6,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": null,
+        "doc2": "125 \u03bcg/d",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "long term",
+        "doc2": "12-week",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "cohort",
+        "doc2": "randomised",
+        "compat": 0.6,
+        "status": "partial",
+        "material": true
+      },
+      "other": {
+        "doc1": "actual vitamin d deficiency",
+        "doc2": "asthma",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "asthmatic patients with vitamin d deficiency have --decreases--> exacerbations",
+        "rel2": "vitamin d deficiency --associated--> exacerbation",
+        "kind": "sign_flip",
+        "contribution": 1.0,
+        "context_distance": 0.41999999999999993,
+        "edge1": 0,
+        "edge2": 0,
+        "claim1": "pm29137124:0",
+        "claim2": "pm38751303:0"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc2",
+        "node": "slightly improved lung function",
+        "unmatched_mass": 0.32000000000000006
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm29137124",
+        "claim": "pm29137124:0",
+        "sentence": "Asthmatic Patients with Vitamin D Deficiency have Decreased Exacerbations after Vitamin Replacement.",
+        "span": [
+          0,
+          100
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm38751303",
+        "claim": "pm38751303:0",
+        "sentence": "Vitamin D deficiency has previously been linked to higher rates of exacerbation and reduced lung function in asthmatics.",
+        "span": [
+          150,
+          270
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.6712879201862147,
+      "S_ctx": 0.5871428571428572,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.9999999999936773,
+      "ctx_min_material": 0.07142857142857144
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 2 mechanism nodes align (S_mech=0.67). Matched context: time. Materially different context: other (actual vitamin d deficiency vs asthma). Unknown context: dose, environment. Smallest disagreement: doc1 reports 'asthmatic patients with vitamin d deficiency have --decreases--> exacerbations' while doc2 reports 'vitamin d deficiency --associated--> exacerbation' (sign flip, 100% of the disagreement). Unmatched: slightly improved lung function [doc2]. Evidence: [pm29137124] \"Asthmatic Patients with Vitamin D Deficiency have Decreased Exacerbations after Vitamin Replacement.\" | [pm38751303] \"Vitamin D deficiency has previously been linked to higher rates of exacerbation and reduced lung function in asthmatics.\""
+  },
+  {
+    "doc1": "pm37314979",
+    "doc2": "pm37627162",
+    "label": "heterogeneity",
+    "prob": 0.9999345249536816,
+    "A": {
+      "nodes": [
+        {
+          "node1": "survival of esophageal cancer",
+          "node2": "with reduced risk of mortality",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "all-",
+          "node2": "all-",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "mortality was indicated",
+          "node2": "death",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "all-cause mortality",
+          "node2": "cumulative incidence of all-cause death",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "survival",
+          "node2": "occurrences of disease-specific death",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "all-cause mortality",
+          "node2": "occurrences of disease-specific death",
+          "mass": 0.10000000000000009,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "all- --inhibits--> mortality was indicated",
+          "rel2": "all- --enables--> death",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "nondiabetic patients",
+        "doc2": "death in diabetic patients",
+        "compat": 0.7,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": "95%",
+        "doc2": "27.5%",
+        "compat": 0.20842053364034205,
+        "status": "incompatible",
+        "material": true
+      },
+      "time": {
+        "doc1": null,
+        "doc2": "5-year",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "cohort",
+        "doc2": "retrospective",
+        "compat": 0.8,
+        "status": "matched",
+        "material": true
+      },
+      "other": {
+        "doc1": "diabetes but not using metformin",
+        "doc2": "concomitant gastric cancer",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "all- --inhibits--> mortality was indicated",
+        "rel2": "all- --enables--> death",
+        "kind": "sign_flip",
+        "contribution": 1.0,
+        "context_distance": 0.5383158932719316,
+        "edge1": 2,
+        "edge2": 0,
+        "claim1": "pm37314979:2",
+        "claim2": "pm37627162:0"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "how diabetes",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc1",
+        "node": "metformin use",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "metformin treatment group exhibited a",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "relative hazards",
+        "unmatched_mass": 0.7555555555555555
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm37314979",
+        "claim": "pm37314979:2",
+        "sentence": "Compared with esophageal cancer patients with diabetes but not using metformin, decreased all-cause mortality was indicated among nondiabetic patients (without metformin) (HR = 0.86, 95% CI = 0.77 to 0.96) and diabetic patients who used metformin (HR = 0.86, 95% CI = 0.75 to 1.00).",
+        "span": [
+          876,
+          1158
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm37627162",
+        "claim": "pm37627162:0",
+        "sentence": "All-cause death, disease-specific death, cardiovascular death.",
+        "span": [
+          1375,
+          1437
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.5812393803617877,
+      "S_ctx": 0.4866841067280684,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.999999999992978,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 6 mechanism nodes align (S_mech=0.58). Matched context: design. Materially different context: dose (95% vs 27.5%); other (diabetes but not using metformin vs concomitant gastric cancer). Unknown context: time, environment. Smallest disagreement: doc1 reports 'all- --inhibits--> mortality was indicated' while doc2 reports 'all- --enables--> death' (sign flip, 100% of the disagreement). Unmatched: how diabetes [doc1], metformin use [doc1], metformin treatment group exhibited a [doc2]. Evidence: [pm37314979] \"Compared with esophageal cancer patients with diabetes but not using metformin, decreased all-cause mortality was indicated among nondiabetic patients (without metformin) (HR = 0.86, 95% CI = 0.77 to 0.96) and diabetic patients who used metformin (HR = 0.86, 95% CI = 0.75 to 1.00).\" | [pm37627162] \"All-cause death, disease-specific death, cardiovascular death.\""
+  },
+  {
+    "doc1": "pm23186103",
+    "doc2": "pm35188949",
+    "label": "heterogeneity",
+    "prob": 0.9998543765572692,
+    "A": {
+      "nodes": [
+        {
+          "node1": "statins",
+          "node2": "intensive ldlc-lowering statin-based therapies",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "significant relative risk rrreduction",
+          "node2": "major cardiovascular events",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "fatalnon-fatal stroke",
+          "node2": "recurrent stroke",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "developing cardiovascular disease",
+          "node2": "with intensive low-density lipoprotein cholesterol",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "controlling lipid levels",
+          "node2": "benefits and risks",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "statins --enables--> significant relative risk rrreduction",
+          "rel2": "intensive ldlc-lowering statin-based therapies --associated--> major cardiovascular events",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "statins --enables--> fatalnon-fatal stroke",
+          "rel2": "intensive ldlc-lowering statin-based therapies --associated--> recurrent stroke",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "controlling lipid levels --associated--> developing cardiovascular disease",
+          "rel2": "benefits and risks --associated--> with intensive low-density lipoprotein cholesterol",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "diabetic patients",
+        "doc2": "patients",
+        "compat": 0.7,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": "95%",
+        "doc2": "95%",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "time": {
+        "doc1": "2 years",
+        "doc2": "4 years",
+        "compat": 0.6124682482691441,
+        "status": "partial",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "meta-analysis",
+        "doc2": "meta-analysis",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "other": {
+        "doc1": "diabetes mellitus are",
+        "doc2": "ischemic stroke",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "statins --enables--> fatalnon-fatal stroke",
+        "rel2": "intensive ldlc-lowering statin-based therapies --associated--> recurrent stroke",
+        "kind": "sign_flip",
+        "contribution": 0.5000000000001563,
+        "context_distance": 0.5370944171286673,
+        "edge1": 4,
+        "edge2": 1,
+        "claim1": "pm23186103:4",
+        "claim2": "pm35188949:1"
+      },
+      {
+        "rel1": "statins --enables--> significant relative risk rrreduction",
+        "rel2": "intensive ldlc-lowering statin-based therapies --associated--> major cardiovascular events",
+        "kind": "sign_flip",
+        "contribution": 0.4999999999998438,
+        "context_distance": 0.33750635034617116,
+        "edge1": 3,
+        "edge2": 2,
+        "claim1": "pm23186103:3",
+        "claim2": "pm35188949:2"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "patients with diabetes mellitus are at",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc1",
+        "node": "fatal/non-fatal myocardial infarction and all-",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc1",
+        "node": "non-significant rr reduction",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc1",
+        "node": "non",
+        "unmatched_mass": 0.32000000000000006
+      },
+      {
+        "doc": "doc1",
+        "node": "risk reductions",
+        "unmatched_mass": 0.32000000000000006
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm23186103",
+        "claim": "pm23186103:4",
+        "sentence": "Treatment with statins in the primary prevention of major cardiovascular and cerebrovascular events in diabetic patients resulted in a significant relative risk (RR) reduction in the first-time occurrence of major cardiovascular or cerebrovascular events (RR 0.75, 95% CI 0.67-0.85), fatal/non-fatal stroke (RR 0.69, 95% CI 0.51-0.92) and fatal/non-fatal myocardial infarction (RR 0.70, 95% CI 0.54-0.90) and a non-significant RR reduction in all-cause mortality (RR 0.84, 95% CI 0.65-1.09).",
+        "span": [
+          1752,
+          2243
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm35188949",
+        "claim": "pm35188949:1",
+        "sentence": "Pooled results showed that more intensive LDL-C-lowering statin-based therapies were associated with a reduced risk of recurrent stroke compared with less intensive LDL-C-lowering statin-based therapies (absolute risk, 8.1% vs 9.3%; RR, 0.88; 95% CI, 0.80-0.96) and that the benefit associated with these LDL-C-lowering therapies was not different among LDL-C-lowering strategies (statins vs no statins: RR, 0.90; 95% CI, 0.81-1.01; more statins or ezetimibe vs less statins or ezetimibe: RR, 0.77; 95% CI, 0.62-0.96; and proprotein convertase subtilisin/kexin type 9 inhibitors plus statins vs placebo plus statins: RR, 0.90; 95% CI, 0.71-1.15; P\u2009=\u2009.42 for interaction).",
+        "span": [
+          1600,
+          2271
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm23186103",
+        "claim": "pm23186103:3",
+        "sentence": "Treatment with statins in the primary prevention of major cardiovascular and cerebrovascular events in diabetic patients resulted in a significant relative risk (RR) reduction in the first-time occurrence of major cardiovascular or cerebrovascular events (RR 0.75, 95% CI 0.67-0.85), fatal/non-fatal stroke (RR 0.69, 95% CI 0.51-0.92) and fatal/non-fatal myocardial infarction (RR 0.70, 95% CI 0.54-0.90) and a non-significant RR reduction in all-cause mortality (RR 0.84, 95% CI 0.65-1.09).",
+        "span": [
+          1752,
+          2243
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm35188949",
+        "claim": "pm35188949:2",
+        "sentence": "More intensive LDL-C-lowering statin-based therapies were associated with a reduced risk of major cardiovascular events, but with an increased risk of hemorrhagic stroke, compared with less intensive LDL-C-lowering statin-based therapies.",
+        "span": [
+          2272,
+          2510
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.5141034666282932,
+      "S_ctx": 0.6274781993411102,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.7665713896805566,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 5 mechanism nodes align (S_mech=0.51). Matched context: dose, design. Materially different context: other (diabetes mellitus are vs ischemic stroke). Unknown context: environment. Smallest disagreement: doc1 reports 'statins --enables--> fatalnon-fatal stroke' while doc2 reports 'intensive ldlc-lowering statin-based therapies --associated--> recurrent stroke' (sign flip, 50% of the disagreement). Unmatched: patients with diabetes mellitus are at [doc1], fatal/non-fatal myocardial infarction and all- [doc1], non-significant rr reduction [doc1]. Evidence: [pm23186103] \"Treatment with statins in the primary prevention of major cardiovascular and cerebrovascular events in diabetic patients resulted in a significant relative risk (RR) reduction in the first-time occurrence of major cardiovascular or cerebrovascular events (RR 0.75, 95% CI 0.67-0.85), fatal/non-fatal stroke (RR 0.69, 95% CI 0.51-0.92) and fatal/non-fatal myocardial infarction (RR 0.70, 95% CI 0.54-0.90) and a non-significant RR reduction in all-cause mortality (RR 0.84, 95% CI 0.65-1.09).\" | [pm35188949] \"Pooled results showed that more intensive LDL-C-lowering statin-based therapies were associated with a reduced risk of recurrent stroke compared with less intensive LDL-C-lowering statin-based therapies (absolute risk, 8.1% vs 9.3%; RR, 0.88; 95% CI, 0.80-0.96) and that the benefit associated with these LDL-C-lowering therapies was not different among LDL-C-lowering strategies (statins vs no statins: RR, 0.90; 95% CI, 0.81-1.01; more statins or ezetimibe vs less statins or ezetimibe: RR, 0.77; 95% CI, 0.62-0.96; and proprotein convertase subtilisin/kexin type 9 inhibitors plus statins vs placebo plus statins: RR, 0.90; 95% CI, 0.71-1.15; P\u2009=\u2009.42 for interaction).\""
+  },
+  {
+    "doc1": "pm6629466",
+    "doc2": "pm7437746",
+    "label": "heterogeneity",
+    "prob": 0.9998307260853649,
+    "A": {
+      "nodes": [
+        {
+          "node1": "if high sodium intake is an important",
+          "node2": "dietary salt is a major",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "of high blood pressure",
+          "node2": "of hypertension",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "together with evidence for a",
+          "node2": "only significant relations found were a",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "inhibitor of sodium transport",
+          "node2": "sodium excretion",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "if high sodium intake is an important --decreases--> of high blood pressure",
+          "rel2": "dietary salt is a major --enables--> of hypertension",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "together with evidence for a --increases--> inhibitor of sodium transport",
+          "rel2": "only significant relations found were a --decreases--> sodium excretion",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "patients",
+        "doc2": "normotensive and hypertensive subjects",
+        "compat": 0.6,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "long-term",
+        "doc2": "24-hour",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": "established hypertension",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "together with evidence for a --increases--> inhibitor of sodium transport",
+        "rel2": "only significant relations found were a --decreases--> sodium excretion",
+        "kind": "sign_flip",
+        "contribution": 0.5833333333332341,
+        "context_distance": 0.58,
+        "edge1": 1,
+        "edge2": 0,
+        "claim1": "pm6629466:1",
+        "claim2": "pm7437746:0"
+      },
+      {
+        "rel1": "if high sodium intake is an important --decreases--> of high blood pressure",
+        "rel2": "dietary salt is a major --enables--> of hypertension",
+        "kind": "sign_flip",
+        "contribution": 0.4166666666667659,
+        "context_distance": 0.58,
+        "edge1": 0,
+        "edge2": 1,
+        "claim1": "pm6629466:2",
+        "claim2": "pm7437746:1"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "regimen could obviate or",
+        "unmatched_mass": 0.27999999999999997
+      },
+      {
+        "doc": "doc1",
+        "node": "need",
+        "unmatched_mass": 0.27999999999999997
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm6629466",
+        "claim": "pm6629466:1",
+        "sentence": "In this report, evidence is reviewed for one hypothesis suggesting an inherited defect in the kidney's ability to excrete sodium in patients who are going to develop essential hypertension, together with evidence for a raised concentration of an inhibitor of sodium transport.",
+        "span": [
+          565,
+          841
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm7437746",
+        "claim": "pm7437746:0",
+        "sentence": "The only significant relations found were a lower sodium excretion in hypertensive women than in normotensive women (p < 0.02) and a lower urinary sodium concentration in hypertensive men than in normotensive men (p < 0.05).",
+        "span": [
+          304,
+          528
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm6629466",
+        "claim": "pm6629466:2",
+        "sentence": "In patients with established hypertension, moderate restriction of sodium intake appears to lower blood pressure and moderate potassium supplementation to also lower blood pressure.",
+        "span": [
+          842,
+          1023
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm7437746",
+        "claim": "pm7437746:1",
+        "sentence": "These data provide no support for the hypothesis that dietary salt is a major cause of hypertension.",
+        "span": [
+          529,
+          629
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.8329789060539651,
+      "S_ctx": 0.4028571428571429,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.8490566037696452,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 4 mechanism nodes align (S_mech=0.83). Materially different context: time (long-term vs 24-hour). Unknown context: dose, environment, design, other. Smallest disagreement: doc1 reports 'together with evidence for a --increases--> inhibitor of sodium transport' while doc2 reports 'only significant relations found were a --decreases--> sodium excretion' (sign flip, 58% of the disagreement). Unmatched: regimen could obviate or [doc1], need [doc1]. Evidence: [pm6629466] \"In this report, evidence is reviewed for one hypothesis suggesting an inherited defect in the kidney's ability to excrete sodium in patients who are going to develop essential hypertension, together with evidence for a raised concentration of an inhibitor of sodium transport.\" | [pm7437746] \"The only significant relations found were a lower sodium excretion in hypertensive women than in normotensive women (p < 0.02) and a lower urinary sodium concentration in hypertensive men than in normotensive men (p < 0.05).\""
+  },
+  {
+    "doc1": "pm19342842",
+    "doc2": "pm24239201",
+    "label": "heterogeneity",
+    "prob": 0.999808303110639,
+    "A": {
+      "nodes": [
+        {
+          "node1": "pretreatment with statins",
+          "node2": "statins",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "mortality",
+          "node2": "relative efficacy of prasugrel",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "long treatment with atorvastatin",
+          "node2": "atorvastatin 80 mg daily",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "stroke recurrences",
+          "node2": "cv death",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "outcomes",
+          "node2": "patients",
+          "mass": 0.7555555555555555,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "lipid-lowering drugs in ischemic stroke prevention and their",
+          "node2": "calcium-channel blockers",
+          "mass": 0.27,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "effect",
+          "node2": "relative efficacy of prasugrel",
+          "mass": 0.09999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "pretreatment with statins --associated--> mortality",
+          "rel2": "statins --no_effect--> relative efficacy of prasugrel",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "long treatment with atorvastatin --associated--> stroke recurrences",
+          "rel2": "atorvastatin 80 mg daily --no_effect--> cv death",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "pretreatment with statins --associated--> outcomes",
+          "rel2": "statins --no_effect--> patients",
+          "mass": 0.6044444444444445
+        },
+        {
+          "rel1": "pretreatment with statins --associated--> effect",
+          "rel2": "statins --no_effect--> relative efficacy of prasugrel",
+          "mass": 0.07999999999999999
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "patients",
+        "doc2": "clopidogrel-treated patients",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "dose": {
+        "doc1": "80 mg",
+        "doc2": "70.6%",
+        "compat": 0.5,
+        "status": "partial",
+        "material": true
+      },
+      "time": {
+        "doc1": "1 year",
+        "doc2": "acute",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "cohort",
+        "doc2": "randomized",
+        "compat": 0.6,
+        "status": "partial",
+        "material": true
+      },
+      "other": {
+        "doc1": "prior transient ischemic attack",
+        "doc2": "acs",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "pretreatment with statins --associated--> mortality",
+        "rel2": "statins --no_effect--> relative efficacy of prasugrel",
+        "kind": "exclusive_assertion",
+        "contribution": 0.32579185520359333,
+        "context_distance": 0.33999999999999997,
+        "edge1": 3,
+        "edge2": 4,
+        "claim1": "pm19342842:3",
+        "claim2": "pm24239201:4"
+      },
+      {
+        "rel1": "long treatment with atorvastatin --associated--> stroke recurrences",
+        "rel2": "atorvastatin 80 mg daily --no_effect--> cv death",
+        "kind": "exclusive_assertion",
+        "contribution": 0.3257918552035481,
+        "context_distance": 0.24,
+        "edge1": 4,
+        "edge2": 2,
+        "claim1": "pm19342842:4",
+        "claim2": "pm24239201:2"
+      },
+      {
+        "rel1": "pretreatment with statins --associated--> outcomes",
+        "rel2": "statins --no_effect--> patients",
+        "kind": "exclusive_assertion",
+        "contribution": 0.30769230769240946,
+        "context_distance": 0.33999999999999997,
+        "edge1": 1,
+        "edge2": 5,
+        "claim1": "pm19342842:1",
+        "claim2": "pm24239201:5"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "lipid-lowering drugs in ischemic stroke prevention and their",
+        "unmatched_mass": 0.42999999999999994
+      },
+      {
+        "doc": "doc1",
+        "node": "on acute stroke outcome",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc1",
+        "node": "effect",
+        "unmatched_mass": 0.7000000000000001
+      },
+      {
+        "doc": "doc2",
+        "node": "pharmacodynamic effects of clopidogrel",
+        "unmatched_mass": 0.27
+      },
+      {
+        "doc": "doc2",
+        "node": "ccbproton pump inhibitor",
+        "unmatched_mass": 0.8
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm19342842",
+        "claim": "pm19342842:3",
+        "sentence": "Statin withdrawal during acute stroke is associated with loss of the protective effect, and statin discontinuation after an acute ischemic stroke is also associated with higher mortality at 1 year of follow-up.",
+        "span": [
+          1196,
+          1406
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm24239201",
+        "claim": "pm24239201:4",
+        "sentence": "The use of statins or CCBs did not modify the relative efficacy of prasugrel versus clopidogrel for the primary endpoint (p for interaction\u00a0= 0.43, 0.55, respectively).",
+        "span": [
+          1745,
+          1913
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm19342842",
+        "claim": "pm19342842:4",
+        "sentence": "Long treatment with atorvastatin 80 mg has been associated with reduced risk of stroke recurrences and other cardiovascular events in patients with noncardioembolic transient ischemic attack or ischemic stroke.",
+        "span": [
+          1456,
+          1666
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm24239201",
+        "claim": "pm24239201:2",
+        "sentence": "Further, the combined use of a CCB and atorvastatin 80 mg daily (adjusted HR: 0.82; 95% CI: 0.37 to 1.84), or a CCB, statin, and proton pump inhibitor (adjusted HR: 1.04; 95% CI: 0.70 to 1.54) were not associated with an increased risk of CV death, MI, or stroke.",
+        "span": [
+          1481,
+          1744
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm19342842",
+        "claim": "pm19342842:1",
+        "sentence": "Pretreatment with statins in stroke patients is associated with better outcomes.",
+        "span": [
+          1031,
+          1111
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm24239201",
+        "claim": "pm24239201:5",
+        "sentence": "In patients with ACS undergoing PCI, the use of statins or CCBs was not associated with an increased risk of CV events in clopidogrel-treated patients.",
+        "span": [
+          1914,
+          2065
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.6455397270917055,
+      "S_ctx": 0.6828530027633306,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.7499999999977484,
+      "ctx_min_material": 0.04417645472832191
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 7 mechanism nodes align (S_mech=0.65). Matched context: population, time. Materially different context: other (prior transient ischemic attack vs acs). Unknown context: environment. Smallest disagreement: doc1 reports 'pretreatment with statins --associated--> mortality' while doc2 reports 'statins --no_effect--> relative efficacy of prasugrel' (exclusive assertion, 33% of the disagreement). Unmatched: lipid-lowering drugs in ischemic stroke prevention and their [doc1], on acute stroke outcome [doc1], effect [doc1]. Evidence: [pm19342842] \"Statin withdrawal during acute stroke is associated with loss of the protective effect, and statin discontinuation after an acute ischemic stroke is also associated with higher mortality at 1 year of follow-up.\" | [pm24239201] \"The use of statins or CCBs did not modify the relative efficacy of prasugrel versus clopidogrel for the primary endpoint (p for interaction\u00a0= 0.43, 0.55, respectively).\""
+  },
+  {
+    "doc1": "pm32826077",
+    "doc2": "pm37368941",
+    "label": "heterogeneity",
+    "prob": 0.9998011014651872,
+    "A": {
+      "nodes": [
+        {
+          "node1": "statins",
+          "node2": "treatment effect of statins was significant for all-",
+          "mass": 0.8000000000000002,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "major cardiovascular events",
+          "node2": "mortality",
+          "mass": 0.6999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "significantly lower incidence of stroke recurrence",
+          "node2": "all-cause mortality",
+          "mass": 0.6,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "major cardiovascular events",
+          "node2": "all-cause mortality",
+          "mass": 0.20000000000000018,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "statins --no_effect--> major cardiovascular events",
+          "rel2": "treatment effect of statins was significant for all- --enables--> mortality",
+          "mass": 0.5599999999999999
+        },
+        {
+          "rel1": "statins --no_effect--> significantly lower incidence of stroke recurrence",
+          "rel2": "treatment effect of statins was significant for all- --associated--> all-cause mortality",
+          "mass": 0.4800000000000001
+        },
+        {
+          "rel1": "statins --no_effect--> major cardiovascular events",
+          "rel2": "treatment effect of statins was significant for all- --associated--> all-cause mortality",
+          "mass": 0.16000000000000017
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "statins in patients",
+        "doc2": "primary care hypertensive patients",
+        "compat": 0.7,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": "20mg",
+        "doc2": "95%",
+        "compat": 0.5,
+        "status": "partial",
+        "material": true
+      },
+      "time": {
+        "doc1": "2 years",
+        "doc2": "4.2 years",
+        "compat": 0.5702359103190638,
+        "status": "partial",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": "primary care",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "prospective",
+        "doc2": "observational",
+        "compat": 0.8,
+        "status": "matched",
+        "material": true
+      },
+      "other": {
+        "doc1": "a stroke due to cad",
+        "doc2": "hypertension without cvd or diabetes",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "statins --no_effect--> major cardiovascular events",
+        "rel2": "treatment effect of statins was significant for all- --enables--> mortality",
+        "kind": "exclusive_assertion",
+        "contribution": 0.4666666666664665,
+        "context_distance": 0.46595281793618726,
+        "edge1": 3,
+        "edge2": 0,
+        "claim1": "pm32826077:3",
+        "claim2": "pm37368941:0"
+      },
+      {
+        "rel1": "statins --no_effect--> significantly lower incidence of stroke recurrence",
+        "rel2": "treatment effect of statins was significant for all- --associated--> all-cause mortality",
+        "kind": "exclusive_assertion",
+        "contribution": 0.40000000000014996,
+        "context_distance": 0.4859528179361872,
+        "edge1": 2,
+        "edge2": 1,
+        "claim1": "pm32826077:2",
+        "claim2": "pm37368941:1"
+      },
+      {
+        "rel1": "statins --no_effect--> major cardiovascular events",
+        "rel2": "treatment effect of statins was significant for all- --associated--> all-cause mortality",
+        "kind": "exclusive_assertion",
+        "contribution": 0.13333333333338343,
+        "context_distance": 0.4859528179361872,
+        "edge1": 3,
+        "edge2": 1,
+        "claim1": "pm32826077:3",
+        "claim2": "pm37368941:1"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "using simvastatin 40mg",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc1",
+        "node": "functional outcomes",
+        "unmatched_mass": 0.36000000000000004
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm32826077",
+        "claim": "pm32826077:3",
+        "sentence": "Statins do not prevent stroke recurrence and major cardiovascular events in this type of stroke.",
+        "span": [
+          1334,
+          1430
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm37368941",
+        "claim": "pm37368941:0",
+        "sentence": "The treatment effect of statins was significant for all-cause mortality [hazard ratio (HR) 0.83, 95% confidence interval (CI) 0.74-0.93] and cardiovascular mortality (HR 0.85, 95% CI 0.72-0.998).",
+        "span": [
+          1228,
+          1423
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm32826077",
+        "claim": "pm32826077:2",
+        "sentence": "Statins do not prevent stroke recurrence and major cardiovascular events in this type of stroke.",
+        "span": [
+          1334,
+          1430
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm37368941",
+        "claim": "pm37368941:1",
+        "sentence": "Primary prevention with statins in PHC was associated with reduced risk of all-cause mortality, cardiovascular mortality, and in women, lower risk of MI.",
+        "span": [
+          1693,
+          1846
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm32826077",
+        "claim": "pm32826077:3",
+        "sentence": "Statins do not prevent stroke recurrence and major cardiovascular events in this type of stroke.",
+        "span": [
+          1334,
+          1430
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm37368941",
+        "claim": "pm37368941:1",
+        "sentence": "Primary prevention with statins in PHC was associated with reduced risk of all-cause mortality, cardiovascular mortality, and in women, lower risk of MI.",
+        "span": [
+          1693,
+          1846
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.5779689506015543,
+      "S_ctx": 0.5222513408539828,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.7499999999976352,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 4 mechanism nodes align (S_mech=0.58). Matched context: design. Materially different context: other (a stroke due to cad vs hypertension without cvd or diabetes). Unknown context: environment. Smallest disagreement: doc1 reports 'statins --no_effect--> major cardiovascular events' while doc2 reports 'treatment effect of statins was significant for all- --enables--> mortality' (exclusive assertion, 47% of the disagreement). Unmatched: using simvastatin 40mg [doc1], functional outcomes [doc1]. Evidence: [pm32826077] \"Statins do not prevent stroke recurrence and major cardiovascular events in this type of stroke.\" | [pm37368941] \"The treatment effect of statins was significant for all-cause mortality [hazard ratio (HR) 0.83, 95% confidence interval (CI) 0.74-0.93] and cardiovascular mortality (HR 0.85, 95% CI 0.72-0.998).\""
+  },
+  {
+    "doc1": "pm25277614",
+    "doc2": "pm30392424",
+    "label": "heterogeneity",
+    "prob": 0.9996734371029602,
+    "A": {
+      "nodes": [
+        {
+          "node1": "high-dose fish oil",
+          "node2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment",
+          "mass": 0.9,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "crp",
+          "node2": "control group crp levels",
+          "mass": 0.7555555555555555,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "similar degree",
+          "node2": "day 4",
+          "mass": 0.7555555555555555,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "mpo",
+          "node2": "intervention group c-reactive protein",
+          "mass": 0.7555555555555555,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "primary endpoint",
+          "node2": "\u03c9-3 fish-oil pn",
+          "mass": 0.6510924763149686,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "of patients",
+          "node2": "death",
+          "mass": 0.6510924763149686,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "af recurrence",
+          "node2": "inflammatory response",
+          "mass": 0.54,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "inflammation",
+          "node2": "inflammatory response",
+          "mass": 0.36000000000000004,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "oxidative stress markers",
+          "node2": "nutritional state",
+          "mass": 0.36000000000000004,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "af recurrence",
+          "node2": "significantly improved 90-day survival",
+          "mass": 0.35999999999999993,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "crp --decreases--> similar degree",
+          "rel2": "control group crp levels --increases--> day 4",
+          "mass": 0.5708641975308641
+        },
+        {
+          "rel1": "mpo --decreases--> similar degree",
+          "rel2": "intervention group c-reactive protein --increases--> day 4",
+          "mass": 0.5708641975308641
+        },
+        {
+          "rel1": "high-dose fish oil --no_effect--> af recurrence",
+          "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --decreases--> inflammatory response",
+          "mass": 0.48600000000000004
+        },
+        {
+          "rel1": "primary endpoint --enables--> of patients",
+          "rel2": "\u03c9-3 fish-oil pn --associated--> death",
+          "mass": 0.42392141271395795
+        },
+        {
+          "rel1": "high-dose fish oil --no_effect--> inflammation",
+          "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --decreases--> inflammatory response",
+          "mass": 0.32400000000000007
+        },
+        {
+          "rel1": "high-dose fish oil --no_effect--> oxidative stress markers",
+          "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --associated--> nutritional state",
+          "mass": 0.32400000000000007
+        },
+        {
+          "rel1": "high-dose fish oil --no_effect--> af recurrence",
+          "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --associated--> significantly improved 90-day survival",
+          "mass": 0.32399999999999995
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "fish",
+        "doc2": "\u03c9-3 fish",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "dose": {
+        "doc1": "11%",
+        "doc2": "36.6%",
+        "compat": 0.22885536732258324,
+        "status": "incompatible",
+        "material": true
+      },
+      "time": {
+        "doc1": "6 months",
+        "doc2": "acute",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "randomized",
+        "doc2": "randomized",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "other": {
+        "doc1": "paroxysmal or persistent af not",
+        "doc2": "acute paraquat poisoning",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "crp --decreases--> similar degree",
+        "rel2": "control group crp levels --increases--> day 4",
+        "kind": "sign_flip",
+        "contribution": 0.23627019967625076,
+        "context_distance": 0.5542289265354834,
+        "edge1": 2,
+        "edge2": 2,
+        "claim1": "pm25277614:2",
+        "claim2": "pm30392424:2"
+      },
+      {
+        "rel1": "mpo --decreases--> similar degree",
+        "rel2": "intervention group c-reactive protein --increases--> day 4",
+        "kind": "sign_flip",
+        "contribution": 0.23627019967625076,
+        "context_distance": 0.5542289265354834,
+        "edge1": 3,
+        "edge2": 0,
+        "claim1": "pm25277614:3",
+        "claim2": "pm30392424:0"
+      },
+      {
+        "rel1": "primary endpoint --enables--> of patients",
+        "rel2": "\u03c9-3 fish-oil pn --associated--> death",
+        "kind": "sign_flip",
+        "contribution": 0.1754532816424103,
+        "context_distance": 0.6292211831744986,
+        "edge1": 1,
+        "edge2": 3,
+        "claim1": "pm25277614:1",
+        "claim2": "pm30392424:3"
+      },
+      {
+        "rel1": "high-dose fish oil --no_effect--> af recurrence",
+        "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --decreases--> inflammatory response",
+        "kind": "exclusive_assertion",
+        "contribution": 0.15085985100225846,
+        "context_distance": 0.37980160619821807,
+        "edge1": 4,
+        "edge2": 4,
+        "claim1": "pm25277614:4",
+        "claim2": "pm30392424:4"
+      },
+      {
+        "rel1": "high-dose fish oil --no_effect--> af recurrence",
+        "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --associated--> significantly improved 90-day survival",
+        "kind": "exclusive_assertion",
+        "contribution": 0.10057323400149165,
+        "context_distance": 0.37980160619821807,
+        "edge1": 4,
+        "edge2": 6,
+        "claim1": "pm25277614:4",
+        "claim2": "pm30392424:6"
+      },
+      {
+        "rel1": "high-dose fish oil --no_effect--> inflammation",
+        "rel2": "mct/lct with \u03c9-3 fish-oil emulsion combination treatment --decreases--> inflammatory response",
+        "kind": "exclusive_assertion",
+        "contribution": 0.10057323400133805,
+        "context_distance": 0.4598016061982181,
+        "edge1": 5,
+        "edge2": 4,
+        "claim1": "pm25277614:5",
+        "claim2": "pm30392424:4"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "aim of this study was to evaluate the",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc1",
+        "node": "of high-dose fish oil on af recurrence",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc2",
+        "node": "baseline",
+        "unmatched_mass": 0.7555555555555555
+      },
+      {
+        "doc": "doc2",
+        "node": "nutritional state",
+        "unmatched_mass": 0.54
+      },
+      {
+        "doc": "doc2",
+        "node": "significantly improved 90-day survival",
+        "unmatched_mass": 0.4400000000000001
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm25277614",
+        "claim": "pm25277614:2",
+        "sentence": "hs-CRP and MPO were within normal limits at baseline and decreased to a similar degree at 6 months (\u0394hs-CRP, 11% vs.\u00a0-11%; \u0394MPO,\u00a0-5% vs.\u00a0-9% for fish oil vs. placebo, respectively; p value for interaction\u00a0= NS).",
+        "span": [
+          1231,
+          1442
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm30392424",
+        "claim": "pm30392424:2",
+        "sentence": "Control group CRP levels were significantly increased on days 4 and 7 versus baseline, and returned to baseline levels on day 10.",
+        "span": [
+          912,
+          1041
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm25277614",
+        "claim": "pm25277614:3",
+        "sentence": "hs-CRP and MPO were within normal limits at baseline and decreased to a similar degree at 6 months (\u0394hs-CRP, 11% vs.\u00a0-11%; \u0394MPO,\u00a0-5% vs.\u00a0-9% for fish oil vs. placebo, respectively; p value for interaction\u00a0= NS).",
+        "span": [
+          1231,
+          1442
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm30392424",
+        "claim": "pm30392424:0",
+        "sentence": "Intervention group C-reactive protein (CRP) levels were significantly increased on day 4, decreased to baseline (day 1) levels on day 7, and were significantly lower than baseline on day 10.",
+        "span": [
+          721,
+          911
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm25277614",
+        "claim": "pm25277614:1",
+        "sentence": "The primary endpoint occurred in 64.1% of patients in the fish oil arm and 63.2% of patients in the placebo arm (hazard ratio: 1.10; 95% confidence interval: 0.84 to 1.45; p\u00a0= 0.48).",
+        "span": [
+          1048,
+          1230
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm30392424",
+        "claim": "pm30392424:3",
+        "sentence": "\u03c9-3 fish-oil PN was associated with reduced risk of death (hazard ratio 0.52; 95% confidence interval 0.33, 0.82).",
+        "span": [
+          1230,
+          1344
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm25277614",
+        "claim": "pm25277614:4",
+        "sentence": "High-dose fish oil does not reduce AF recurrence in patients with a history of AF not receiving conventional AA therapy.",
+        "span": [
+          1443,
+          1563
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm30392424",
+        "claim": "pm30392424:4",
+        "sentence": "In patients with acute paraquat poisoning, MCT/LCT with \u03c9-3 fish-oil emulsion PN plus combination treatment advantageously attenuated the inflammatory response, modified the nutritional state, and was associated with significantly improved 90-day survival versus treatment without \u03c9-3 fish oil.",
+        "span": [
+          1345,
+          1639
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm25277614",
+        "claim": "pm25277614:4",
+        "sentence": "High-dose fish oil does not reduce AF recurrence in patients with a history of AF not receiving conventional AA therapy.",
+        "span": [
+          1443,
+          1563
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm30392424",
+        "claim": "pm30392424:6",
+        "sentence": "In patients with acute paraquat poisoning, MCT/LCT with \u03c9-3 fish-oil emulsion PN plus combination treatment advantageously attenuated the inflammatory response, modified the nutritional state, and was associated with significantly improved 90-day survival versus treatment without \u03c9-3 fish oil.",
+        "span": [
+          1345,
+          1639
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm25277614",
+        "claim": "pm25277614:5",
+        "sentence": "Furthermore, fish oil does not reduce inflammation or oxidative stress markers in this population, which may explain its lack of efficacy.",
+        "span": [
+          1564,
+          1702
+        ],
+        "epistemic": "hypothesized"
+      },
+      {
+        "doc": "pm30392424",
+        "claim": "pm30392424:4",
+        "sentence": "In patients with acute paraquat poisoning, MCT/LCT with \u03c9-3 fish-oil emulsion PN plus combination treatment advantageously attenuated the inflammatory response, modified the nutritional state, and was associated with significantly improved 90-day survival versus treatment without \u03c9-3 fish oil.",
+        "span": [
+          1345,
+          1639
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.6485786384480736,
+      "S_ctx": 0.48720796088861307,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.8315533991303281,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 10 mechanism nodes align (S_mech=0.65). Matched context: population, design. Materially different context: dose (11% vs 36.6%); time (6 months vs acute); other (paroxysmal or persistent af not vs acute paraquat poisoning). Unknown context: environment. Smallest disagreement: doc1 reports 'crp --decreases--> similar degree' while doc2 reports 'control group crp levels --increases--> day 4' (sign flip, 24% of the disagreement). Unmatched: aim of this study was to evaluate the [doc1], of high-dose fish oil on af recurrence [doc1], baseline [doc2]. Evidence: [pm25277614] \"hs-CRP and MPO were within normal limits at baseline and decreased to a similar degree at 6 months (\u0394hs-CRP, 11% vs.\u00a0-11%; \u0394MPO,\u00a0-5% vs.\u00a0-9% for fish oil vs. placebo, respectively; p value for interaction\u00a0= NS).\" | [pm30392424] \"Control group CRP levels were significantly increased on days 4 and 7 versus baseline, and returned to baseline levels on day 10.\""
+  },
+  {
+    "doc1": "pm37572209",
+    "doc2": "pm19342842",
+    "label": "heterogeneity",
+    "prob": 0.9996163147859439,
+    "A": {
+      "nodes": [
+        {
+          "node1": "statins",
+          "node2": "pretreatment with statins",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "prevention of cardiovascular events",
+          "node2": "on acute stroke outcome",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "cardiovascular events",
+          "node2": "mortality",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "retinal artery occlusion is a major",
+          "node2": "long treatment with atorvastatin",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "of acute visual loss",
+          "node2": "stroke recurrences",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "was",
+          "node2": "lipid-lowering drugs in ischemic stroke prevention and their",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "statins --associated--> prevention of cardiovascular events",
+          "rel2": "pretreatment with statins --associated--> on acute stroke outcome",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "statins --associated--> cardiovascular events",
+          "rel2": "pretreatment with statins --associated--> mortality",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "was --associated--> prevention of cardiovascular events",
+          "rel2": "lipid-lowering drugs in ischemic stroke prevention and their --associated--> on acute stroke outcome",
+          "mass": 0.5599999999999999
+        },
+        {
+          "rel1": "retinal artery occlusion is a major --enables--> of acute visual loss",
+          "rel2": "long treatment with atorvastatin --associated--> stroke recurrences",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "cardiovascular events in patients",
+        "doc2": "acute ischemic stroke patients",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "dose": {
+        "doc1": "95%",
+        "doc2": "80 mg",
+        "compat": 0.5,
+        "status": "partial",
+        "material": true
+      },
+      "time": {
+        "doc1": "acute",
+        "doc2": "acute",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "cohort",
+        "doc2": "cohort",
+        "compat": 1.0,
+        "status": "matched",
+        "material": true
+      },
+      "other": {
+        "doc1": "rao",
+        "doc2": "prior transient ischemic attack",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      }
+    },
+    "F": [
+      {
+        "rel1": "statins --associated--> cardiovascular events",
+        "rel2": "pretreatment with statins --associated--> mortality",
+        "kind": "sign_flip",
+        "contribution": 0.5663716814161266,
+        "context_distance": 0.3,
+        "edge1": 2,
+        "edge2": 3,
+        "claim1": "pm37572209:2",
+        "claim2": "pm19342842:3"
+      },
+      {
+        "rel1": "retinal artery occlusion is a major --enables--> of acute visual loss",
+        "rel2": "long treatment with atorvastatin --associated--> stroke recurrences",
+        "kind": "sign_flip",
+        "contribution": 0.4336283185838734,
+        "context_distance": 0.3,
+        "edge1": 0,
+        "edge2": 4,
+        "claim1": "pm37572209:0",
+        "claim2": "pm19342842:4"
+      }
+    ],
+    "U": [
+      {
+        "doc": "doc2",
+        "node": "outcomes",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "effect",
+        "unmatched_mass": 0.8
+      }
+    ],
+    "P": [
+      {
+        "doc": "pm37572209",
+        "claim": "pm37572209:2",
+        "sentence": "We investigated whether statin treatment in patients with RAO is associated with a lower risk of cardiovascular events.",
+        "span": [
+          396,
+          515
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm19342842",
+        "claim": "pm19342842:3",
+        "sentence": "Statin withdrawal during acute stroke is associated with loss of the protective effect, and statin discontinuation after an acute ischemic stroke is also associated with higher mortality at 1 year of follow-up.",
+        "span": [
+          1196,
+          1406
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm37572209",
+        "claim": "pm37572209:0",
+        "sentence": "Retinal artery occlusion (RAO) is a major cause of acute visual loss and patients with RAO have an increased risk for subsequent cardiovascular events.",
+        "span": [
+          99,
+          250
+        ],
+        "epistemic": "observed"
+      },
+      {
+        "doc": "pm19342842",
+        "claim": "pm19342842:4",
+        "sentence": "Long treatment with atorvastatin 80 mg has been associated with reduced risk of stroke recurrences and other cardiovascular events in patients with noncardioembolic transient ischemic attack or ischemic stroke.",
+        "span": [
+          1456,
+          1666
+        ],
+        "epistemic": "observed"
+      }
+    ],
+    "scores": {
+      "S_mech": 0.7436992365883707,
+      "S_ctx": 0.6580676328502416,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.4999999999985921,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: HETEROGENEITY (p=1.00). 6 mechanism nodes align (S_mech=0.74). Matched context: population, time, design. Materially different context: other (rao vs prior transient ischemic attack). Unknown context: environment. Smallest disagreement: doc1 reports 'statins --associated--> cardiovascular events' while doc2 reports 'pretreatment with statins --associated--> mortality' (sign flip, 57% of the disagreement). Unmatched: outcomes [doc2], effect [doc2]. Evidence: [pm37572209] \"We investigated whether statin treatment in patients with RAO is associated with a lower risk of cardiovascular events.\" | [pm19342842] \"Statin withdrawal during acute stroke is associated with loss of the protective effect, and statin discontinuation after an acute ischemic stroke is also associated with higher mortality at 1 year of follow-up.\""
+  },
+  {
+    "doc1": "pm29676281",
+    "doc2": "pm22648267",
+    "label": "analogy",
+    "prob": 0.9999999983428558,
+    "A": {
+      "nodes": [
+        {
+          "node1": "alcohol consumption",
+          "node2": "polymorphisms",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "stroke",
+          "node2": "blood pressure",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "disease risk",
+          "node2": "renin response to dietary salt intake",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "low-risk",
+          "node2": "effect of dietary salt intake with hypertension",
+          "mass": 0.7,
+          "role1": "mediator",
+          "role2": "mediator"
+        },
+        {
+          "node1": "to define thresholds",
+          "node2": "glucocorticoid-inducible kinase 1",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "with lowest risk",
+          "node2": "epithelial sodium channel",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "for all-",
+          "node2": "sgk1 gene variants",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "alcohol consumption was log-linearly",
+          "node2": "major alleles",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "with a lower risk of myocardial infarction",
+          "node2": "systolic bp",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "threshold for lowest risk of all-",
+          "node2": "two snps",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "mortality was about 100 g/week",
+          "node2": "plasma renin activity",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "alcohol consumption --associated--> stroke",
+          "rel2": "polymorphisms --associated--> blood pressure",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "alcohol consumption --associated--> disease risk",
+          "rel2": "polymorphisms --associated--> renin response to dietary salt intake",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "to define thresholds --associated--> with lowest risk",
+          "rel2": "glucocorticoid-inducible kinase 1 --associated--> epithelial sodium channel",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "for all- --enables--> low-risk",
+          "rel2": "sgk1 gene variants --enables--> effect of dietary salt intake with hypertension",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "alcohol consumption was log-linearly --associated--> with a lower risk of myocardial infarction",
+          "rel2": "major alleles --associated--> systolic bp",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "threshold for lowest risk of all- --enables--> mortality was about 100 g/week",
+          "rel2": "two snps --associated--> plasma renin activity",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "individual-participant data",
+        "doc2": "the hapmap ceu population",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": "100 g",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "1 year",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "prospective",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "recommended",
+        "unmatched_mass": 0.7
+      },
+      {
+        "doc": "doc2",
+        "node": "renin-angiotensin-aldosterone raasystem activity",
+        "unmatched_mass": 0.36000000000000004
+      },
+      {
+        "doc": "doc2",
+        "node": "genotype differences",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "two salt-sensitive subtypes of hypertension",
+        "unmatched_mass": 0.8
+      }
+    ],
+    "P": [],
+    "scores": {
+      "S_mech": 0.7521937063278576,
+      "S_ctx": 0.40000000000000013,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 11 mechanism nodes align (S_mech=0.75). Materially different context: population (individual-participant data vs the hapmap ceu population). Unknown context: dose, time, environment, design, other. Strongest aligned relation: doc1 'alcohol consumption --associated--> stroke' <-> doc2 'polymorphisms --associated--> blood pressure'. Unmatched: recommended [doc1], renin-angiotensin-aldosterone raasystem activity [doc2], genotype differences [doc2]."
+  },
+  {
+    "doc1": "pm11587158",
+    "doc2": "pm20705127",
+    "label": "analogy",
+    "prob": 0.9999999960339181,
+    "A": {
+      "nodes": [
+        {
+          "node1": "angiotensin ii",
+          "node2": "c supplementation",
+          "mass": 0.9,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "bp measures",
+          "node2": "work output of muscles",
+          "mass": 0.8999999999999999,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "losartan",
+          "node2": "age",
+          "mass": 0.8000000000000002,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "time of day",
+          "node2": "aging",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "lk-1c model",
+          "node2": "post-transcriptional modifications",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "sodium intake aldosterone",
+          "node2": "muscle levels of oxidative stress",
+          "mass": 0.7555555555555555,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "blood pressure",
+          "node2": "malondialdehyde",
+          "mass": 0.7555555555555555,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "high salt group",
+          "node2": "cuznsod",
+          "mass": 0.7555555555555555,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "responses",
+          "node2": "only positive work",
+          "mass": 0.7555555555555555,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "part with renin status level",
+          "node2": "aged animals",
+          "mass": 0.7555555555555555,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "in the 2k-1c model bp was",
+          "node2": "gsh/gssg ratio",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "index",
+          "node2": "gsh",
+          "mass": 0.611111111111111,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "signal the nucleus to",
+          "node2": "repetitive loading exercise",
+          "mass": 0.27999999999999997,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "cell growth",
+          "node2": "catalase activity",
+          "mass": 0.27999999999999997,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "sodium intake aldosterone",
+          "node2": "gsh",
+          "mass": 0.1444444444444445,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "index",
+          "node2": "repetitive loading exercise",
+          "mass": 0.1444444444444445,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "time of day",
+          "node2": "repetitive loading exercise",
+          "mass": 0.09999999999999998,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "blood pressure",
+          "node2": "repetitive loading exercise",
+          "mass": 0.0888888888888889,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "blood pressure",
+          "node2": "gsh/gssg ratio",
+          "mass": 0.05555555555555558,
+          "role1": "action",
+          "role2": "action"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "losartan --associated--> lk-1c model",
+          "rel2": "age --associated--> post-transcriptional modifications",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "responses --associated--> part with renin status level",
+          "rel2": "only positive work --increases--> aged animals",
+          "mass": 0.5708641975308641
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "a selected group of rats",
+        "doc2": "aged rats",
+        "compat": 0.7,
+        "status": "partial",
+        "material": true
+      },
+      "dose": {
+        "doc1": "4%",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": null,
+        "doc2": "chronic",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "development",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc1",
+        "node": "on the reduced salt intake",
+        "unmatched_mass": 0.7555555555555555
+      },
+      {
+        "doc": "doc1",
+        "node": "cardiac weight",
+        "unmatched_mass": 0.7555555555555555
+      },
+      {
+        "doc": "doc1",
+        "node": "captopril group",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc2",
+        "node": "oxidative stress",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc2",
+        "node": "muscle work",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc2",
+        "node": "exercise",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc2",
+        "node": "maximal isometric force",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc2",
+        "node": "tibialis anterior muscles",
+        "unmatched_mass": 0.7555555555555555
+      },
+      {
+        "doc": "doc2",
+        "node": "mnsod activity",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "catalase activity",
+        "unmatched_mass": 0.52
+      }
+    ],
+    "P": [],
+    "scores": {
+      "S_mech": 0.5555601757681077,
+      "S_ctx": 0.5042630870841487,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.5
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 19 mechanism nodes align (S_mech=0.56). Unknown context: dose, time, environment, design, other. Strongest aligned relation: doc1 'losartan --associated--> lk-1c model' <-> doc2 'age --associated--> post-transcriptional modifications'. Unmatched: development [doc1], on the reduced salt intake [doc1], cardiac weight [doc1]."
+  },
+  {
+    "doc1": "pm29676281",
+    "doc2": "pm10772068",
+    "label": "analogy",
+    "prob": 0.9999999958371932,
+    "A": {
+      "nodes": [
+        {
+          "node1": "alcohol consumption",
+          "node2": "fibroblasts with the antioxidants",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "stroke",
+          "node2": "responses",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "low-risk",
+          "node2": "substantial oxidative stress",
+          "mass": 0.7,
+          "role1": "mediator",
+          "role2": "mediator"
+        },
+        {
+          "node1": "recommended",
+          "node2": "uvr-induced cellular oxidative stress",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "to define thresholds",
+          "node2": "ascorbate supplements",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "with lowest risk",
+          "node2": "glutathione content",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "for all-",
+          "node2": "uvr",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "alcohol consumption was log-linearly",
+          "node2": "ascorbic acid",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "with a lower risk of myocardial infarction",
+          "node2": "superoxide release",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "threshold for lowest risk of all-",
+          "node2": "sub-lethal doses of uvr",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "mortality was about 100 g/week",
+          "node2": "adaptive responses",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "alcohol consumption --associated--> stroke",
+          "rel2": "fibroblasts with the antioxidants --associated--> responses",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "low-risk --inhibits--> recommended",
+          "rel2": "substantial oxidative stress --decreases--> uvr-induced cellular oxidative stress",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "to define thresholds --associated--> with lowest risk",
+          "rel2": "ascorbate supplements --increases--> glutathione content",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "for all- --enables--> low-risk",
+          "rel2": "uvr --enables--> substantial oxidative stress",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "alcohol consumption was log-linearly --associated--> with a lower risk of myocardial infarction",
+          "rel2": "ascorbic acid --increases--> superoxide release",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "threshold for lowest risk of all- --enables--> mortality was about 100 g/week",
+          "rel2": "sub-lethal doses of uvr --enables--> adaptive responses",
+          "mass": 0.48999999999999994
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "individual-participant data",
+        "doc2": "the fibroblasts",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": "100 g",
+        "doc2": "low dose",
+        "compat": 0.5,
+        "status": "partial",
+        "material": true
+      },
+      "time": {
+        "doc1": "1 year",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": "in vitro",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "prospective",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "disease risk",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "trolox supplementation",
+        "unmatched_mass": 0.9
+      }
+    ],
+    "P": [],
+    "scores": {
+      "S_mech": 0.7118552054611116,
+      "S_ctx": 0.4060759493670887,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.03037974683544304
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 11 mechanism nodes align (S_mech=0.71). Materially different context: population (individual-participant data vs the fibroblasts). Unknown context: time, environment, design, other. Strongest aligned relation: doc1 'alcohol consumption --associated--> stroke' <-> doc2 'fibroblasts with the antioxidants --associated--> responses'. Unmatched: disease risk [doc1], trolox supplementation [doc2]."
+  },
+  {
+    "doc1": "pm39776171",
+    "doc2": "ax2608.09479v1",
+    "label": "analogy",
+    "prob": 0.9999999950534304,
+    "A": {
+      "nodes": [
+        {
+          "node1": "coffee drinking timing",
+          "node2": "leaving unclear how path degeneracy",
+          "mass": 0.9,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "association",
+          "node2": "fragmentation",
+          "mass": 0.9,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "coffee intake amounts",
+          "node2": "routing details",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "all-cause mortality",
+          "node2": "non-universal quantities",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "of 4295 all-",
+          "node2": "traffic-",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "deaths",
+          "node2": "failures",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "was significantly",
+          "node2": "the",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "with lower risks of all-cause",
+          "node2": "of the path ensemble on path percolation",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "mortality",
+          "node2": "non-universal quantities",
+          "mass": 0.09999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "coffee drinking timing --associated--> association",
+          "rel2": "leaving unclear how path degeneracy --associated--> fragmentation",
+          "mass": 0.81
+        },
+        {
+          "rel1": "coffee intake amounts --associated--> all-cause mortality",
+          "rel2": "routing details --associated--> non-universal quantities",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "of 4295 all- --enables--> deaths",
+          "rel2": "traffic- --enables--> failures",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "was significantly --associated--> with lower risks of all-cause",
+          "rel2": "the --associated--> of the path ensemble on path percolation",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "coffee intake amounts --associated--> mortality",
+          "rel2": "routing details --associated--> non-universal quantities",
+          "mass": 0.07999999999999999
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "all-cause mortality in participants",
+        "doc2": "the clustered networks",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": "36%",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "7-day",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "survey",
+        "doc2": "experiments",
+        "compat": 0.5,
+        "status": "partial",
+        "material": true
+      },
+      "other": {
+        "doc1": "morning-type pattern but not",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "mortality",
+        "unmatched_mass": 0.22000000000000008
+      }
+    ],
+    "P": [],
+    "scores": {
+      "S_mech": 0.9689582881659801,
+      "S_ctx": 0.3999999999999999,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 9 mechanism nodes align (S_mech=0.97). Materially different context: population (all-cause mortality in participants vs the clustered networks). Unknown context: dose, time, environment, other. Strongest aligned relation: doc1 'coffee drinking timing --associated--> association' <-> doc2 'leaving unclear how path degeneracy --associated--> fragmentation'. Unmatched: mortality [doc1]."
+  },
+  {
+    "doc1": "pm42377354",
+    "doc2": "ax2512.18387v1",
+    "label": "analogy",
+    "prob": 0.9999999888482899,
+    "A": {
+      "nodes": [
+        {
+          "node1": "cardiovascular health",
+          "node2": "therapeutic outcomes",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "long-chain omega-3 fatty acids",
+          "node2": "infusion intensity",
+          "mass": 0.7999999999999985,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "omega-3 index values",
+          "node2": "numerical bifurcation analysis explores the",
+          "mass": 0.6999999999999998,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "cardioprotective effects",
+          "node2": "of parameter variations",
+          "mass": 0.6999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "thanks to its ability to",
+          "node2": "followed by sensitivity analyses to quantify parameter",
+          "mass": 0.6999999999999998,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "all-cause mortality",
+          "node2": "on tumour mass",
+          "mass": 0.6999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "levels",
+          "node2": "tumour location",
+          "mass": 0.6999999999999986,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "levels",
+          "node2": "infusion intensity",
+          "mass": 0.10000000000000142,
+          "role1": "action",
+          "role2": "action"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "long-chain omega-3 fatty acids --associated--> cardiovascular health",
+          "rel2": "infusion intensity --associated--> therapeutic outcomes",
+          "mass": 0.6399999999999988
+        },
+        {
+          "rel1": "levels --associated--> cardiovascular health",
+          "rel2": "tumour location --associated--> therapeutic outcomes",
+          "mass": 0.5599999999999989
+        },
+        {
+          "rel1": "omega-3 index values --associated--> cardioprotective effects",
+          "rel2": "numerical bifurcation analysis explores the --associated--> of parameter variations",
+          "mass": 0.48999999999999977
+        },
+        {
+          "rel1": "thanks to its ability to --associated--> all-cause mortality",
+          "rel2": "followed by sensitivity analyses to quantify parameter --associated--> on tumour mass",
+          "mass": 0.48999999999999977
+        },
+        {
+          "rel1": "levels --associated--> cardiovascular health",
+          "rel2": "infusion intensity --associated--> therapeutic outcomes",
+          "mass": 0.08000000000000114
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "omega-3 fatty acids into tissue",
+        "doc2": "patient-specific mri and dti data",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": "4 %",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": null,
+        "doc2": "simulated",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [],
+    "P": [],
+    "scores": {
+      "S_mech": 0.9432979590808753,
+      "S_ctx": 0.3999999999999999,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 8 mechanism nodes align (S_mech=0.94). Materially different context: population (omega-3 fatty acids into tissue vs patient-specific mri and dti data). Unknown context: dose, time, environment, design, other. Strongest aligned relation: doc1 'long-chain omega-3 fatty acids --associated--> cardiovascular health' <-> doc2 'infusion intensity --associated--> therapeutic outcomes'."
+  },
+  {
+    "doc1": "pm29792380",
+    "doc2": "ax2609.02375v1",
+    "label": "analogy",
+    "prob": 0.9999999880813121,
+    "A": {
+      "nodes": [
+        {
+          "node1": "risk",
+          "node2": "disease",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "associated events",
+          "node2": "development",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "atherosclerotic cardiovascular diseases",
+          "node2": "model captures how ecm elasticity and fiber stiffness",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "physical morbidity",
+          "node2": "cell shape",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "plasma low-density lipoprotein cholesterol levels",
+          "node2": "flexible cell-based framework",
+          "mass": 0.6774334907531739,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "pathophysiology of ascvds",
+          "node2": "many biological processes",
+          "mass": 0.6774334907531739,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "ascvd",
+          "node2": "homeostasis",
+          "mass": 0.6000000000000001,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "ascvd",
+          "node2": "ecm remodeling",
+          "mass": 0.29999999999999916,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "review will discuss current knowledge about antibody-",
+          "node2": "model enables explicit simulation of cell-",
+          "mass": 0.27999999999999997,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "pcsk9 inhibition as add-on therapy to statin",
+          "node2": "ecm remodeling",
+          "mass": 0.27999999999999997,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "risk",
+          "node2": "homeostasis",
+          "mass": 0.09999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "associated events",
+          "node2": "homeostasis",
+          "mass": 0.09999999999999998,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "atherosclerotic cardiovascular diseases --associated--> physical morbidity",
+          "rel2": "model captures how ecm elasticity and fiber stiffness --associated--> cell shape",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "plasma low-density lipoprotein cholesterol levels --associated--> pathophysiology of ascvds",
+          "rel2": "flexible cell-based framework --increases--> many biological processes",
+          "mass": 0.4589161343940306
+        },
+        {
+          "rel1": "review will discuss current knowledge about antibody- --enables--> pcsk9 inhibition as add-on therapy to statin",
+          "rel2": "model enables explicit simulation of cell- --enables--> ecm remodeling",
+          "mass": 0.07839999999999998
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "patients",
+        "doc2": "cell",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "15 years",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": null,
+        "doc2": "simulation",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "mental disability",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc1",
+        "node": "statins",
+        "unmatched_mass": 0.9
+      },
+      {
+        "doc": "doc2",
+        "node": "fibrous network",
+        "unmatched_mass": 0.8
+      },
+      {
+        "doc": "doc2",
+        "node": "model enables explicit simulation of cell-",
+        "unmatched_mass": 0.315
+      }
+    ],
+    "P": [],
+    "scores": {
+      "S_mech": 0.6842249789390075,
+      "S_ctx": 0.3999999999999999,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 12 mechanism nodes align (S_mech=0.68). Materially different context: population (patients vs cell). Unknown context: dose, time, environment, design, other. Strongest aligned relation: doc1 'atherosclerotic cardiovascular diseases --associated--> physical morbidity' <-> doc2 'model captures how ecm elasticity and fiber stiffness --associated--> cell shape'. Unmatched: mental disability [doc1], statins [doc1], fibrous network [doc2]."
+  },
+  {
+    "doc1": "pm18559841",
+    "doc2": "pm1473735",
+    "label": "analogy",
+    "prob": 0.9999999857969943,
+    "A": {
+      "nodes": [
+        {
+          "node1": "coffee consumption",
+          "node2": "antioxidant vitamins",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "mortality",
+          "node2": "myocardial ischaemia/reperfusion injury of smoke",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "decaffeinated coffee consumption",
+          "node2": "antioxidant vitamin supplementation of smoke-exposed rats",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "small reduction",
+          "node2": "myocardial ischaemic/reperfusion injury",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "association was mainly due to a moderately",
+          "node2": "rats to limited periods of cigarette smoke",
+          "mass": 0.7,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "risk",
+          "node2": "severe myocardial damage",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "with risk",
+          "node2": "cellular lmwi content",
+          "mass": 0.7,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "various beneficial health effects",
+          "node2": "significantly less mitochondrial functional oxidative damage",
+          "mass": 0.6,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "various beneficial health effects",
+          "node2": "cellular lmwi content",
+          "mass": 0.20000000000000007,
+          "role1": "outcome",
+          "role2": "outcome"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "decaffeinated coffee consumption --associated--> small reduction",
+          "rel2": "antioxidant vitamin supplementation of smoke-exposed rats --inhibits--> myocardial ischaemic/reperfusion injury",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "coffee consumption --no_effect--> mortality",
+          "rel2": "antioxidant vitamins --associated--> myocardial ischaemia/reperfusion injury of smoke",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "coffee consumption --associated--> with risk",
+          "rel2": "antioxidant vitamins --no_effect--> cellular lmwi content",
+          "mass": 0.5599999999999999
+        },
+        {
+          "rel1": "association was mainly due to a moderately --increases--> risk",
+          "rel2": "rats to limited periods of cigarette smoke --enables--> severe myocardial damage",
+          "mass": 0.48999999999999994
+        },
+        {
+          "rel1": "coffee consumption --associated--> various beneficial health effects",
+          "rel2": "antioxidant vitamins --enables--> significantly less mitochondrial functional oxidative damage",
+          "mass": 0.48
+        },
+        {
+          "rel1": "coffee consumption --associated--> various beneficial health effects",
+          "rel2": "antioxidant vitamins --no_effect--> cellular lmwi content",
+          "mass": 0.16000000000000006
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "follow-up in men",
+        "doc2": "smoke-exposed rats",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": "95%",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "18 years",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": null,
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": "prospective",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": null,
+        "doc2": "antioxidant vitamins alpha-tocopherol",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [
+      {
+        "doc": "doc1",
+        "node": "relative risks for all-",
+        "unmatched_mass": 0.7
+      }
+    ],
+    "P": [],
+    "scores": {
+      "S_mech": 0.7780631869176419,
+      "S_ctx": 0.4,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 9 mechanism nodes align (S_mech=0.78). Materially different context: population (follow-up in men vs smoke-exposed rats). Unknown context: dose, time, environment, design, other. Strongest aligned relation: doc1 'decaffeinated coffee consumption --associated--> small reduction' <-> doc2 'antioxidant vitamin supplementation of smoke-exposed rats --inhibits--> myocardial ischaemic/reperfusion injury'. Unmatched: relative risks for all- [doc1]."
+  },
+  {
+    "doc1": "pm31969533",
+    "doc2": "ax2609.23690v1",
+    "label": "analogy",
+    "prob": 0.9999999851672439,
+    "A": {
+      "nodes": [
+        {
+          "node1": "eicosapentaenoic-to-arachidonic acid ratio",
+          "node2": "persistence",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        },
+        {
+          "node1": "mortality",
+          "node2": "global network heterogeneity",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "major adverse events",
+          "node2": "node degree",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "death",
+          "node2": "clustering",
+          "mass": 0.8,
+          "role1": "outcome",
+          "role2": "outcome"
+        },
+        {
+          "node1": "epa/aa ratio 0.26",
+          "node2": "interaction strength",
+          "mass": 0.8,
+          "role1": "action",
+          "role2": "action"
+        }
+      ],
+      "relations": [
+        {
+          "rel1": "eicosapentaenoic-to-arachidonic acid ratio --associated--> mortality",
+          "rel2": "persistence --associated--> global network heterogeneity",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "eicosapentaenoic-to-arachidonic acid ratio --associated--> major adverse events",
+          "rel2": "persistence --associated--> node degree",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "eicosapentaenoic-to-arachidonic acid ratio --associated--> death",
+          "rel2": "persistence --associated--> clustering",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "epa/aa ratio 0.26 --associated--> mortality",
+          "rel2": "interaction strength --associated--> global network heterogeneity",
+          "mass": 0.6400000000000001
+        },
+        {
+          "rel1": "epa/aa ratio 0.26 --associated--> death",
+          "rel2": "interaction strength --associated--> clustering",
+          "mass": 0.6400000000000001
+        }
+      ]
+    },
+    "K": {
+      "population": {
+        "doc1": "ischemic stroke patients",
+        "doc2": "a year-long online social network",
+        "compat": 0.0,
+        "status": "incompatible",
+        "material": true
+      },
+      "dose": {
+        "doc1": "10.5%",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "time": {
+        "doc1": "long-term",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "environment": {
+        "doc1": "laboratory",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "design": {
+        "doc1": null,
+        "doc2": "simulations",
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      },
+      "other": {
+        "doc1": "undergone blood examinations",
+        "doc2": null,
+        "compat": 0.5,
+        "status": "unknown",
+        "material": true
+      }
+    },
+    "F": [],
+    "U": [],
+    "P": [],
+    "scores": {
+      "S_mech": 0.9995142300234752,
+      "S_ctx": 0.4,
+      "F_flip_frac": 0.0,
+      "F_hetero_frac": 0.0,
+      "ctx_min_material": 0.0
+    },
+    "text": "Verdict: ANALOGY (p=1.00). 5 mechanism nodes align (S_mech=1.00). Materially different context: population (ischemic stroke patients vs a year-long online social network). Unknown context: dose, time, environment, design, other. Strongest aligned relation: doc1 'eicosapentaenoic-to-arachidonic acid ratio --associated--> mortality' <-> doc2 'persistence --associated--> global network heterogeneity'."
+  }
+]

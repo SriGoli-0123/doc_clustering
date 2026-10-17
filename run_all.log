@@ -1,0 +1,1075 @@
+python -m pytest -q
+...................................                                      [100%]
+=============================== warnings summary ===============================
+tests/test_components.py::test_svo_patterns[Statin therapy reduced LDL cholesterol.-statin therapy-decreases--1-ldl cholesterol]
+  /home/sgoli125/.local/lib/python3.12/site-packages/typer/__init__.py:24: DeprecationWarning: 'click.utils.get_binary_stream' is deprecated and will be removed in Click 9.0.
+    from click.utils import get_binary_stream as get_binary_stream
+
+tests/test_components.py::test_svo_patterns[Statin therapy reduced LDL cholesterol.-statin therapy-decreases--1-ldl cholesterol]
+  /home/sgoli125/.local/lib/python3.12/site-packages/typer/__init__.py:25: DeprecationWarning: 'click.utils.get_text_stream' is deprecated and will be removed in Click 9.0.
+    from click.utils import get_text_stream as get_text_stream
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+35 passed, 2 warnings in 11.37s
+python -m ccst --jobs 8 download
+03:57:53 | INFO | ccst | ManConCorpus: 259 claims, 1774 within-question pairs
+03:57:53 | INFO | ccst | /scratch/sgoli125/doc_clustering/data/raw/pubmed.jsonl exists; skipping download
+03:57:53 | INFO | ccst | /scratch/sgoli125/doc_clustering/data/raw/arxiv.jsonl complete; skipping download
+python -m ccst --jobs 8 synthetic
+03:57:58 | INFO | ccst | benchmark: 2400 docs, 2672 pairs, 50 templates
+03:58:06 | INFO | ccst | vocabulary: 462 terms, 63407 tokens in 2400 docs
+03:58:07 | INFO | ccst | LDA theta for S_domain: 9.56s
+03:58:08 | INFO | ccst | extracting claims from 2400 documents
+03:58:13 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+03:58:28 | INFO | ccst | claim extraction: 20.04s
+03:58:28 | INFO | ccst | generalised 392 phrases into 245 concepts
+03:58:28 | INFO | ccst | graph construction: 0.30s
+03:58:29 | INFO | ccst | extraction quality vs gold: {'edge_recall': 0.9958373803246844, 'sign_accuracy': 0.9892712832659886, 'gold_edges': 7207, 'ctx_detect_design': 1.0, 'ctx_detect_dose': 1.0, 'ctx_detect_environment': 1.0, 'ctx_detect_population': 1.0, 'ctx_detect_time': 1.0}
+03:58:50 | INFO | ccst | generalised 392 phrases into 245 concepts
+03:58:51 | INFO | ccst | generalised 392 phrases into 245 concepts
+03:58:52 | INFO | ccst | generalised 392 phrases into 392 concepts
+03:58:53 | INFO | ccst | extracting claims from 2400 documents
+03:59:06 | INFO | ccst | generalised 417 phrases into 252 concepts
+03:59:06 | INFO | ccst | ablation graphs: 16.14s
+03:59:11 | INFO | ccst | CCST family + ablations: 42.00s
+03:59:14 | INFO | ccst | BM25: 3.52s
+03:59:14 | INFO | ccst | embedding 2400 texts with sentence-transformers/all-MiniLM-L6-v2
+Batches:   0%|          | 0/38 [00:00<?, ?it/s]Batches:  16%|█▌        | 6/38 [00:00<00:00, 55.78it/s]Batches:  34%|███▍      | 13/38 [00:00<00:00, 60.50it/s]Batches:  53%|█████▎    | 20/38 [00:00<00:00, 64.40it/s]Batches:  74%|███████▎  | 28/38 [00:00<00:00, 68.37it/s]Batches:  97%|█████████▋| 37/38 [00:00<00:00, 74.47it/s]Batches: 100%|██████████| 38/38 [00:00<00:00, 70.86it/s]
+03:59:15 | INFO | ccst | SBERT: 0.61s
+03:59:15 | INFO | ccst | embedding 2400 texts with sentence-transformers/allenai-specter
+03:59:15 | INFO | ccst | loading embedding model sentence-transformers/allenai-specter on cuda
+Batches:   0%|          | 0/38 [00:00<?, ?it/s]Batches:   5%|▌         | 2/38 [00:00<00:02, 13.69it/s]Batches:  11%|█         | 4/38 [00:00<00:02, 14.17it/s]Batches:  16%|█▌        | 6/38 [00:00<00:02, 14.74it/s]Batches:  21%|██        | 8/38 [00:00<00:01, 15.33it/s]Batches:  26%|██▋       | 10/38 [00:00<00:01, 15.68it/s]Batches:  32%|███▏      | 12/38 [00:00<00:01, 16.03it/s]Batches:  37%|███▋      | 14/38 [00:00<00:01, 16.26it/s]Batches:  42%|████▏     | 16/38 [00:01<00:01, 16.42it/s]Batches:  47%|████▋     | 18/38 [00:01<00:01, 16.62it/s]Batches:  53%|█████▎    | 20/38 [00:01<00:01, 17.05it/s]Batches:  58%|█████▊    | 22/38 [00:01<00:00, 17.35it/s]Batches:  63%|██████▎   | 24/38 [00:01<00:00, 17.87it/s]Batches:  68%|██████▊   | 26/38 [00:01<00:00, 18.36it/s]Batches:  76%|███████▋  | 29/38 [00:01<00:00, 19.33it/s]Batches:  84%|████████▍ | 32/38 [00:01<00:00, 20.09it/s]Batches:  92%|█████████▏| 35/38 [00:01<00:00, 21.05it/s]Batches: 100%|██████████| 38/38 [00:02<00:00, 18.45it/s]
+03:59:56 | INFO | ccst | SPECTER: 41.14s
+04:00:18 | INFO | ccst | NLI scoring 2672 pairs in both directions on cuda
+04:00:59 | INFO | ccst | NLI: 57.26s
+04:01:03 | INFO | ccst | standard FGW: 3.88s
+04:01:04 | INFO | ccst | graph edit distance: 1.16s
+04:01:05 | INFO | ccst | LinearFGW: 0.90s
+04:01:09 | INFO | ccst | baselines: 118.00s
+04:11:49 | INFO | ccst | generalised 392 phrases into 245 concepts
+04:12:14 | INFO | ccst | generalised 387 phrases into 245 concepts
+04:12:39 | INFO | ccst | generalised 380 phrases into 241 concepts
+04:13:04 | INFO | ccst | generalised 367 phrases into 240 concepts
+04:13:32 | INFO | ccst | synthetic results written to /scratch/sgoli125/doc_clustering/results/synthetic
+python -m ccst --jobs 8 synthetic-analysis
+04:13:49 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+04:13:51 | INFO | ccst | generalised 392 phrases into 245 concepts
+04:14:00 | INFO | ccst | alignment evaluation: 8.30s
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:00 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:01 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:02 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:03 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | extracting claims from 1 documents
+04:14:04 | INFO | ccst | certificate evaluation: 4.85s
+04:14:05 | INFO | ccst | loading embedding model sentence-transformers/allenai-specter on cuda
+04:17:15 | INFO | ccst | analogy retrieval: 190.20s
+04:17:32 | INFO | ccst | budgeted acquisition: 17.07s
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+04:17:36 | INFO | ccst | signed clustering: 4.27s
+04:17:42 | INFO | ccst | comparability guards: 5.88s
+04:17:43 | INFO | ccst | analysis written to /scratch/sgoli125/doc_clustering/results/synthetic/ANALYSIS.md
+python -m ccst --jobs 8 synthetic --realism
+04:17:50 | INFO | ccst | benchmark: 2800 docs, 3072 pairs, 50 templates
+04:18:01 | INFO | ccst | vocabulary: 511 terms, 75236 tokens in 2800 docs
+04:18:02 | INFO | ccst | LDA theta for S_domain: 12.25s
+04:18:03 | INFO | ccst | extracting claims from 2800 documents
+04:18:08 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+04:18:26 | INFO | ccst | claim extraction: 23.51s
+04:18:26 | INFO | ccst | generalised 530 phrases into 267 concepts
+04:18:26 | INFO | ccst | graph construction: 0.35s
+04:18:27 | INFO | ccst | extraction quality vs gold: {'edge_recall': 0.8999643154514095, 'sign_accuracy': 0.985329103885805, 'gold_edges': 8407, 'ctx_detect_design': 0.8992307692307693, 'ctx_detect_dose': 0.8, 'ctx_detect_environment': 0.9968602825745683, 'ctx_detect_population': 0.9526923076923077, 'ctx_detect_time': 0.9984717269485481}
+04:18:51 | INFO | ccst | generalised 530 phrases into 267 concepts
+04:18:52 | INFO | ccst | generalised 530 phrases into 267 concepts
+04:18:53 | INFO | ccst | generalised 530 phrases into 530 concepts
+04:18:53 | INFO | ccst | extracting claims from 2800 documents
+04:19:10 | INFO | ccst | generalised 548 phrases into 271 concepts
+04:19:10 | INFO | ccst | ablation graphs: 20.17s
+04:19:16 | INFO | ccst | CCST family + ablations: 48.44s
+04:19:20 | INFO | ccst | BM25: 4.53s
+04:19:20 | INFO | ccst | embedding 2800 texts with sentence-transformers/all-MiniLM-L6-v2
+Batches:   0%|          | 0/44 [00:00<?, ?it/s]Batches:  11%|█▏        | 5/44 [00:00<00:00, 47.54it/s]Batches:  25%|██▌       | 11/44 [00:00<00:00, 52.38it/s]Batches:  39%|███▊      | 17/44 [00:00<00:00, 54.39it/s]Batches:  55%|█████▍    | 24/44 [00:00<00:00, 57.30it/s]Batches:  70%|███████   | 31/44 [00:00<00:00, 60.55it/s]Batches:  89%|████████▊ | 39/44 [00:00<00:00, 65.26it/s]Batches: 100%|██████████| 44/44 [00:00<00:00, 62.97it/s]
+04:19:21 | INFO | ccst | SBERT: 0.75s
+04:19:21 | INFO | ccst | embedding 2800 texts with sentence-transformers/allenai-specter
+04:19:21 | INFO | ccst | loading embedding model sentence-transformers/allenai-specter on cuda
+Batches:   0%|          | 0/44 [00:00<?, ?it/s]Batches:   5%|▍         | 2/44 [00:00<00:03, 11.70it/s]Batches:   9%|▉         | 4/44 [00:00<00:03, 12.31it/s]Batches:  14%|█▎        | 6/44 [00:00<00:02, 12.95it/s]Batches:  18%|█▊        | 8/44 [00:00<00:02, 13.42it/s]Batches:  23%|██▎       | 10/44 [00:00<00:02, 13.71it/s]Batches:  27%|██▋       | 12/44 [00:00<00:02, 13.90it/s]Batches:  32%|███▏      | 14/44 [00:01<00:02, 14.01it/s]Batches:  36%|███▋      | 16/44 [00:01<00:01, 14.42it/s]Batches:  41%|████      | 18/44 [00:01<00:01, 14.75it/s]Batches:  45%|████▌     | 20/44 [00:01<00:01, 14.98it/s]Batches:  50%|█████     | 22/44 [00:01<00:01, 15.19it/s]Batches:  55%|█████▍    | 24/44 [00:01<00:01, 15.34it/s]Batches:  59%|█████▉    | 26/44 [00:01<00:01, 15.66it/s]Batches:  64%|██████▎   | 28/44 [00:01<00:00, 16.02it/s]Batches:  68%|██████▊   | 30/44 [00:02<00:00, 16.45it/s]Batches:  73%|███████▎  | 32/44 [00:02<00:00, 16.68it/s]Batches:  77%|███████▋  | 34/44 [00:02<00:00, 17.37it/s]Batches:  82%|████████▏ | 36/44 [00:02<00:00, 17.97it/s]Batches:  86%|████████▋ | 38/44 [00:02<00:00, 18.41it/s]Batches:  91%|█████████ | 40/44 [00:02<00:00, 18.81it/s]Batches:  98%|█████████▊| 43/44 [00:02<00:00, 20.08it/s]Batches: 100%|██████████| 44/44 [00:02<00:00, 16.20it/s]
+04:19:25 | INFO | ccst | SPECTER: 4.12s
+04:19:34 | INFO | ccst | NLI scoring 3072 pairs in both directions on cuda
+04:20:24 | INFO | ccst | NLI: 51.40s
+04:20:38 | INFO | ccst | standard FGW: 13.61s
+04:20:40 | INFO | ccst | graph edit distance: 1.77s
+04:20:42 | INFO | ccst | LinearFGW: 2.12s
+04:20:46 | INFO | ccst | baselines: 90.65s
+04:33:05 | INFO | ccst | generalised 530 phrases into 267 concepts
+04:33:34 | INFO | ccst | generalised 518 phrases into 267 concepts
+04:34:01 | INFO | ccst | generalised 490 phrases into 258 concepts
+04:34:29 | INFO | ccst | generalised 481 phrases into 256 concepts
+04:35:00 | INFO | ccst | synthetic results written to /scratch/sgoli125/doc_clustering/results/synthetic_v2
+python -m ccst --jobs 8 synthetic-analysis --realism
+04:35:21 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+04:35:23 | INFO | ccst | generalised 530 phrases into 267 concepts
+04:35:32 | INFO | ccst | alignment evaluation: 8.98s
+04:35:32 | INFO | ccst | extracting claims from 1 documents
+04:35:32 | INFO | ccst | extracting claims from 1 documents
+04:35:32 | INFO | ccst | extracting claims from 1 documents
+04:35:32 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:33 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:34 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:35 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:36 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | extracting claims from 1 documents
+04:35:37 | INFO | ccst | certificate evaluation: 4.94s
+04:35:37 | INFO | ccst | loading embedding model sentence-transformers/allenai-specter on cuda
+04:39:59 | INFO | ccst | analogy retrieval: 262.18s
+04:40:18 | INFO | ccst | budgeted acquisition: 18.88s
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+/home/sgoli125/.local/lib/python3.12/site-packages/sklearn/metrics/cluster/_supervised.py:50: UserWarning: The number of unique classes is greater than 50% of the number of samples. `y` could represent a regression problem, not a classification problem.
+  type_pred = type_of_target(labels_pred)
+04:40:23 | INFO | ccst | signed clustering: 4.96s
+04:40:30 | INFO | ccst | comparability guards: 7.32s
+04:40:31 | INFO | ccst | analysis written to /scratch/sgoli125/doc_clustering/results/synthetic_v2/ANALYSIS.md
+python -m ccst --jobs 8 tune
+04:41:08 | INFO | ccst | [synthetic] CCST features for 12 configurations: 29.01s
+04:41:34 | INFO | ccst | [synthetic] nested CV for CCST: 25.58s
+04:43:48 | INFO | ccst | [synthetic] CCST (ours): default 0.957 -> nested 0.963
+04:43:48 | INFO | ccst | [synthetic] Context clf. w/o transport: default 0.834 -> nested 0.838
+04:43:48 | INFO | ccst | [synthetic] Signed matcher w/o context: default 0.798 -> nested 0.802
+04:43:48 | INFO | ccst | [synthetic] NLI (BART-MNLI): default 0.539 -> nested 0.552
+04:43:48 | INFO | ccst | [synthetic] SBERT (MiniLM): default 0.480 -> nested 0.487
+04:43:48 | INFO | ccst | [synthetic] SPECTER: default 0.444 -> nested 0.458
+04:44:06 | INFO | ccst | [synthetic_v2] CCST features for 12 configurations: 17.33s
+04:44:50 | INFO | ccst | [synthetic_v2] nested CV for CCST: 44.12s
+04:47:22 | INFO | ccst | [synthetic_v2] CCST (ours): default 0.799 -> nested 0.798
+04:47:22 | INFO | ccst | [synthetic_v2] Context clf. w/o transport: default 0.762 -> nested 0.760
+04:47:22 | INFO | ccst | [synthetic_v2] Signed matcher w/o context: default 0.599 -> nested 0.596
+04:47:22 | INFO | ccst | [synthetic_v2] NLI (BART-MNLI): default 0.503 -> nested 0.515
+04:47:22 | INFO | ccst | [synthetic_v2] SBERT (MiniLM): default 0.435 -> nested 0.437
+04:47:22 | INFO | ccst | [synthetic_v2] SPECTER: default 0.417 -> nested 0.427
+python -m ccst --jobs 8 tiebreak
+04:47:40 | INFO | ccst | [synthetic] eps=0.0: macro-F1 0.956, guarded analogy R 0.827
+04:47:47 | INFO | ccst | [synthetic] eps=0.02: macro-F1 0.958, guarded analogy R 0.897
+04:47:53 | INFO | ccst | [synthetic] eps=0.05: macro-F1 0.957, guarded analogy R 0.913
+04:48:00 | INFO | ccst | [synthetic] eps=0.1: macro-F1 0.959, guarded analogy R 0.933
+04:48:08 | INFO | ccst | [synthetic_v2] eps=0.0: macro-F1 0.798, guarded analogy R 0.600
+04:48:15 | INFO | ccst | [synthetic_v2] eps=0.02: macro-F1 0.799, guarded analogy R 0.623
+04:48:23 | INFO | ccst | [synthetic_v2] eps=0.05: macro-F1 0.799, guarded analogy R 0.643
+04:48:30 | INFO | ccst | [synthetic_v2] eps=0.1: macro-F1 0.795, guarded analogy R 0.657
+python -m ccst --jobs 8 extraction-check
+{
+  "claim_recall": 0.8090909090909091,
+  "claim_sign_accuracy": 1.0,
+  "claim_correct": 0.8090909090909091,
+  "n_claims": 110,
+  "age_accuracy": 1.0,
+  "duration_accuracy": 0.875,
+  "age_misread_as_duration": 1,
+  "dose_accuracy": 1.0,
+  "per_template_correct": {
+    "{O} rose by {p}% after {S}.": 1.0,
+    "{S} raised {O} by {p}%.": 1.0,
+    "Treatment with {S} was followed by a {p}% rise in {O}.": 0.0,
+    "{O} increased significantly with {S} (p < 0.05).": 1.0,
+    "Exposure to {S} resulted in higher {O}.": 0.8,
+    "{S} was linked to elevated {O}.": 1.0,
+    "{S} administration led to an increase in {O}.": 1.0,
+    "{O} was {p}% higher among those receiving {S}.": 0.0,
+    "{O} fell by {p}% after {S}.": 1.0,
+    "{S} lowered {O} by {p}%.": 1.0,
+    "{S} produced a marked decline in {O}.": 1.0,
+    "A significant drop in {O} followed {S}.": 1.0,
+    "{O} decreased with {S} (p = 0.02).": 1.0,
+    "{S} was linked to reduced {O}.": 1.0,
+    "{S} administration led to a reduction in {O}.": 0.0,
+    "{O} was {p}% lower among those receiving {S}.": 0.0,
+    "Compared with placebo, {S} reduced {O}.": 1.0,
+    "{S} attenuated {O}.": 1.0,
+    "{S} did not alter {O}.": 1.0,
+    "No significant change in {O} was observed with {S}.": 1.0,
+    "{O} was unaffected by {S}.": 1.0,
+    "{S} had no measurable impact on {O}.": 1.0
+  }
+}
+python -m ccst --jobs 8 real-pairs
+04:48:42 | INFO | ccst | ManConCorpus: 259 claims, 1774 within-question pairs
+04:48:43 | INFO | ccst | extracting claims from 259 documents
+04:48:51 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+04:49:02 | INFO | ccst | generalised 716 phrases into 493 concepts
+04:49:02 | INFO | ccst | ManConCorpus (claim-focused) extraction: {'docs': 259, 'with_claims': 0.9034749034749034, 'mean_claims': 1.8841698841698842, 'mean_nodes': 3.138996138996139, 'ctx_population': 0.9743589743589743, 'ctx_dose': 0.8461538461538461, 'ctx_time': 0.6666666666666666, 'ctx_environment': 0.2606837606837607, 'ctx_design': 0.6239316239316239}
+04:49:07 | INFO | ccst | CCST features: 4.63s
+04:49:08 | INFO | ccst | embedding 259 texts with sentence-transformers/all-MiniLM-L6-v2
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  60%|██████    | 3/5 [00:00<00:00, 22.75it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 28.06it/s]
+04:49:18 | INFO | ccst | NLI scoring 1774 pairs in both directions on cuda
+04:50:41 | INFO | ccst | NLI: 83.45s
+04:51:32 | INFO | ccst | ManConCorpus: 259 claims, 1774 within-question pairs
+04:51:32 | INFO | ccst | extracting claims from 259 documents
+04:51:41 | INFO | ccst | generalised 1247 phrases into 759 concepts
+04:51:41 | INFO | ccst | ManConCorpus (full abstract) extraction: {'docs': 259, 'with_claims': 0.9034749034749034, 'mean_claims': 3.6254826254826256, 'mean_nodes': 5.401544401544402, 'ctx_population': 0.9786324786324786, 'ctx_dose': 0.8504273504273504, 'ctx_time': 0.6709401709401709, 'ctx_environment': 0.2606837606837607, 'ctx_design': 0.6282051282051282}
+04:51:42 | INFO | ccst | CCST features: 0.96s
+04:51:53 | INFO | ccst | NLI: 0.86s
+04:52:47 | INFO | ccst | SciFact: 1259 claim-abstract pairs
+04:52:47 | INFO | ccst | extracting claims from 1776 documents
+04:53:16 | INFO | ccst | generalised 4904 phrases into 3485 concepts
+04:53:16 | INFO | ccst | SciFact extraction: {'docs': 1776, 'with_claims': 0.670045045045045, 'mean_claims': 1.8586711711711712, 'mean_nodes': 2.999436936936937, 'ctx_population': 0.5588235294117647, 'ctx_dose': 0.2008403361344538, 'ctx_time': 0.20252100840336135, 'ctx_environment': 0.16470588235294117, 'ctx_design': 0.15966386554621848}
+04:53:16 | INFO | ccst | CCST features: 0.50s
+04:53:17 | INFO | ccst | embedding 1776 texts with sentence-transformers/all-MiniLM-L6-v2
+Batches:   0%|          | 0/28 [00:00<?, ?it/s]Batches:  11%|█         | 3/28 [00:00<00:01, 21.42it/s]Batches:  21%|██▏       | 6/28 [00:00<00:00, 22.43it/s]Batches:  32%|███▏      | 9/28 [00:00<00:00, 23.12it/s]Batches:  50%|█████     | 14/28 [00:00<00:00, 31.62it/s]Batches: 100%|██████████| 28/28 [00:00<00:00, 47.47it/s]
+04:53:26 | INFO | ccst | NLI scoring 1259 pairs in both directions on cuda
+04:54:23 | INFO | ccst | NLI: 57.90s
+python -m ccst --jobs 8 corpus
+04:55:05 | INFO | ccst | corpus: 9986 abstracts, 20 subject labels
+04:57:35 | INFO | ccst | lemmatisation: 150.14s
+04:57:36 | INFO | ccst | vocabulary: 11420 terms, 946602 tokens in 9986 docs
+04:57:50 | INFO | ccst | Gibbs LDA K=10: 14.48s
+04:57:58 | INFO | ccst | K=10: C_v=0.643 NPMI=0.106 diversity=0.832
+04:58:19 | INFO | ccst | Gibbs LDA K=20: 21.49s
+04:58:29 | INFO | ccst | K=20: C_v=0.665 NPMI=0.113 diversity=0.742
+04:58:58 | INFO | ccst | Gibbs LDA K=30: 29.33s
+04:59:09 | INFO | ccst | K=30: C_v=0.666 NPMI=0.114 diversity=0.740
+04:59:53 | INFO | ccst | Gibbs LDA K=50: 44.11s
+05:00:07 | INFO | ccst | K=50: C_v=0.640 NPMI=0.105 diversity=0.713
+05:00:26 | INFO | ccst | gensim variational LDA: 18.75s
+05:00:40 | INFO | ccst | topics: 335.25s
+05:00:40 | INFO | ccst | embedding 9986 texts with sentence-transformers/all-MiniLM-L6-v2
+05:00:48 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+Batches:   0%|          | 0/157 [00:00<?, ?it/s]Batches:   1%|          | 1/157 [00:00<00:33,  4.71it/s]Batches:   3%|▎         | 4/157 [00:00<00:12, 12.72it/s]Batches:   4%|▍         | 7/157 [00:00<00:09, 16.48it/s]Batches:   6%|▋         | 10/157 [00:00<00:07, 18.67it/s]Batches:   8%|▊         | 13/157 [00:00<00:07, 20.03it/s]Batches:  10%|█         | 16/157 [00:00<00:06, 21.00it/s]Batches:  12%|█▏        | 19/157 [00:01<00:06, 21.61it/s]Batches:  14%|█▍        | 22/157 [00:01<00:06, 22.05it/s]Batches:  16%|█▌        | 25/157 [00:01<00:05, 22.44it/s]Batches:  18%|█▊        | 28/157 [00:01<00:05, 22.81it/s]Batches:  20%|█▉        | 31/157 [00:01<00:05, 23.09it/s]Batches:  22%|██▏       | 34/157 [00:01<00:05, 23.27it/s]Batches:  24%|██▎       | 37/157 [00:01<00:05, 23.40it/s]Batches:  25%|██▌       | 40/157 [00:01<00:04, 23.52it/s]Batches:  27%|██▋       | 43/157 [00:02<00:04, 23.63it/s]Batches:  29%|██▉       | 46/157 [00:02<00:04, 23.72it/s]Batches:  31%|███       | 49/157 [00:02<00:04, 23.80it/s]Batches:  33%|███▎      | 52/157 [00:02<00:04, 23.89it/s]Batches:  35%|███▌      | 55/157 [00:02<00:04, 21.91it/s]Batches:  37%|███▋      | 58/157 [00:02<00:04, 22.54it/s]Batches:  39%|███▉      | 61/157 [00:02<00:04, 22.99it/s]Batches:  41%|████      | 64/157 [00:02<00:03, 23.36it/s]Batches:  43%|████▎     | 67/157 [00:03<00:03, 23.61it/s]Batches:  45%|████▍     | 70/157 [00:03<00:03, 23.77it/s]Batches:  46%|████▋     | 73/157 [00:03<00:03, 23.89it/s]Batches:  48%|████▊     | 76/157 [00:03<00:03, 23.96it/s]Batches:  50%|█████     | 79/157 [00:03<00:03, 24.02it/s]Batches:  52%|█████▏    | 82/157 [00:03<00:03, 24.07it/s]Batches:  54%|█████▍    | 85/157 [00:03<00:02, 24.07it/s]Batches:  56%|█████▌    | 88/157 [00:03<00:02, 24.13it/s]Batches:  58%|█████▊    | 91/157 [00:04<00:02, 24.17it/s]Batches:  60%|█████▉    | 94/157 [00:04<00:02, 24.23it/s]Batches:  62%|██████▏   | 97/157 [00:04<00:02, 24.29it/s]Batches:  64%|██████▎   | 100/157 [00:04<00:02, 24.35it/s]Batches:  66%|██████▌   | 103/157 [00:04<00:02, 24.41it/s]Batches:  68%|██████▊   | 106/157 [00:04<00:02, 24.46it/s]Batches:  69%|██████▉   | 109/157 [00:04<00:01, 24.51it/s]Batches:  71%|███████▏  | 112/157 [00:04<00:01, 24.58it/s]Batches:  73%|███████▎  | 115/157 [00:05<00:01, 24.64it/s]Batches:  75%|███████▌  | 118/157 [00:05<00:01, 24.68it/s]Batches:  77%|███████▋  | 121/157 [00:05<00:01, 24.75it/s]Batches:  79%|███████▉  | 124/157 [00:05<00:01, 24.82it/s]Batches:  81%|████████  | 127/157 [00:05<00:01, 24.87it/s]Batches:  83%|████████▎ | 130/157 [00:05<00:01, 24.91it/s]Batches:  85%|████████▍ | 133/157 [00:05<00:00, 24.89it/s]Batches:  87%|████████▋ | 136/157 [00:05<00:00, 25.31it/s]Batches:  89%|████████▊ | 139/157 [00:05<00:00, 25.44it/s]Batches:  90%|█████████ | 142/157 [00:06<00:00, 25.75it/s]Batches:  92%|█████████▏| 145/157 [00:06<00:00, 26.79it/s]Batches:  95%|█████████▍| 149/157 [00:06<00:00, 29.27it/s]Batches:  97%|█████████▋| 153/157 [00:06<00:00, 31.67it/s]Batches: 100%|██████████| 157/157 [00:06<00:00, 24.20it/s]
+05:00:57 | INFO | ccst | embedding 9986 texts with sentence-transformers/allenai-specter
+05:00:57 | INFO | ccst | loading embedding model sentence-transformers/allenai-specter on cuda
+Batches:   0%|          | 0/157 [00:00<?, ?it/s]Batches:   1%|          | 1/157 [00:00<00:58,  2.66it/s]Batches:   1%|▏         | 2/157 [00:00<00:57,  2.67it/s]Batches:   2%|▏         | 3/157 [00:01<00:57,  2.68it/s]Batches:   3%|▎         | 4/157 [00:01<00:56,  2.68it/s]Batches:   3%|▎         | 5/157 [00:01<00:56,  2.69it/s]Batches:   4%|▍         | 6/157 [00:02<00:56,  2.69it/s]Batches:   4%|▍         | 7/157 [00:02<00:55,  2.69it/s]Batches:   5%|▌         | 8/157 [00:02<00:55,  2.70it/s]Batches:   6%|▌         | 9/157 [00:03<00:54,  2.70it/s]Batches:   6%|▋         | 10/157 [00:03<00:54,  2.70it/s]Batches:   7%|▋         | 11/157 [00:04<00:54,  2.70it/s]Batches:   8%|▊         | 12/157 [00:04<00:53,  2.70it/s]Batches:   8%|▊         | 13/157 [00:04<00:53,  2.70it/s]Batches:   9%|▉         | 14/157 [00:05<00:52,  2.70it/s]Batches:  10%|▉         | 15/157 [00:05<00:51,  2.73it/s]Batches:  10%|█         | 16/157 [00:05<00:51,  2.72it/s]Batches:  11%|█         | 17/157 [00:06<00:51,  2.72it/s]Batches:  11%|█▏        | 18/157 [00:06<00:51,  2.71it/s]Batches:  12%|█▏        | 19/157 [00:07<00:50,  2.71it/s]Batches:  13%|█▎        | 20/157 [00:07<00:50,  2.73it/s]Batches:  13%|█▎        | 21/157 [00:07<00:49,  2.77it/s]Batches:  14%|█▍        | 22/157 [00:08<00:49,  2.75it/s]Batches:  15%|█▍        | 23/157 [00:08<00:48,  2.77it/s]Batches:  15%|█▌        | 24/157 [00:08<00:48,  2.77it/s]Batches:  16%|█▌        | 25/157 [00:09<00:48,  2.75it/s]Batches:  17%|█▋        | 26/157 [00:09<00:47,  2.79it/s]Batches:  17%|█▋        | 27/157 [00:09<00:46,  2.78it/s]Batches:  18%|█▊        | 28/157 [00:10<00:46,  2.79it/s]Batches:  18%|█▊        | 29/157 [00:10<00:45,  2.79it/s]Batches:  19%|█▉        | 30/157 [00:10<00:45,  2.76it/s]Batches:  20%|█▉        | 31/157 [00:11<00:45,  2.75it/s]Batches:  20%|██        | 32/157 [00:11<00:44,  2.79it/s]Batches:  21%|██        | 33/157 [00:12<00:44,  2.79it/s]Batches:  22%|██▏       | 34/157 [00:12<00:43,  2.84it/s]Batches:  22%|██▏       | 35/157 [00:12<00:42,  2.86it/s]Batches:  23%|██▎       | 36/157 [00:13<00:41,  2.93it/s]Batches:  24%|██▎       | 37/157 [00:13<00:40,  2.93it/s]Batches:  24%|██▍       | 38/157 [00:13<00:40,  2.94it/s]Batches:  25%|██▍       | 39/157 [00:14<00:41,  2.87it/s]Batches:  25%|██▌       | 40/157 [00:14<00:40,  2.90it/s]Batches:  26%|██▌       | 41/157 [00:14<00:39,  2.92it/s]Batches:  27%|██▋       | 42/157 [00:15<00:39,  2.90it/s]Batches:  27%|██▋       | 43/157 [00:15<00:40,  2.84it/s]Batches:  28%|██▊       | 44/157 [00:15<00:38,  2.93it/s]Batches:  29%|██▊       | 45/157 [00:16<00:37,  3.00it/s]Batches:  29%|██▉       | 46/157 [00:16<00:37,  2.96it/s]Batches:  30%|██▉       | 47/157 [00:16<00:37,  2.96it/s]Batches:  31%|███       | 48/157 [00:17<00:36,  2.97it/s]Batches:  31%|███       | 49/157 [00:17<00:37,  2.91it/s]Batches:  32%|███▏      | 50/157 [00:17<00:35,  3.01it/s]Batches:  32%|███▏      | 51/157 [00:18<00:34,  3.10it/s]Batches:  33%|███▎      | 52/157 [00:18<00:34,  3.00it/s]Batches:  34%|███▍      | 53/157 [00:18<00:34,  2.97it/s]Batches:  34%|███▍      | 54/157 [00:19<00:34,  2.97it/s]Batches:  35%|███▌      | 55/157 [00:19<00:34,  2.93it/s]Batches:  36%|███▌      | 56/157 [00:19<00:34,  2.89it/s]Batches:  36%|███▋      | 57/157 [00:20<00:34,  2.91it/s]Batches:  37%|███▋      | 58/157 [00:20<00:32,  3.02it/s]Batches:  38%|███▊      | 59/157 [00:20<00:32,  3.06it/s]Batches:  38%|███▊      | 60/157 [00:21<00:32,  2.95it/s]Batches:  39%|███▉      | 61/157 [00:21<00:32,  2.96it/s]Batches:  39%|███▉      | 62/157 [00:21<00:32,  2.97it/s]Batches:  40%|████      | 63/157 [00:22<00:32,  2.89it/s]Batches:  41%|████      | 64/157 [00:22<00:30,  3.03it/s]Batches:  41%|████▏     | 65/157 [00:22<00:29,  3.14it/s]Batches:  42%|████▏     | 66/157 [00:23<00:28,  3.22it/s]Batches:  43%|████▎     | 67/157 [00:23<00:28,  3.12it/s]Batches:  43%|████▎     | 68/157 [00:23<00:28,  3.11it/s]Batches:  44%|████▍     | 69/157 [00:24<00:28,  3.13it/s]Batches:  45%|████▍     | 70/157 [00:24<00:26,  3.25it/s]Batches:  45%|████▌     | 71/157 [00:24<00:26,  3.29it/s]Batches:  46%|████▌     | 72/157 [00:24<00:25,  3.28it/s]Batches:  46%|████▋     | 73/157 [00:25<00:25,  3.33it/s]Batches:  47%|████▋     | 74/157 [00:25<00:25,  3.32it/s]Batches:  48%|████▊     | 75/157 [00:25<00:24,  3.38it/s]Batches:  48%|████▊     | 76/157 [00:26<00:24,  3.36it/s]Batches:  49%|████▉     | 77/157 [00:26<00:23,  3.39it/s]Batches:  50%|████▉     | 78/157 [00:26<00:23,  3.40it/s]Batches:  50%|█████     | 79/157 [00:27<00:22,  3.44it/s]Batches:  51%|█████     | 80/157 [00:27<00:21,  3.54it/s]Batches:  52%|█████▏    | 81/157 [00:27<00:21,  3.61it/s]Batches:  52%|█████▏    | 82/157 [00:27<00:20,  3.59it/s]Batches:  53%|█████▎    | 83/157 [00:28<00:19,  3.71it/s]Batches:  54%|█████▎    | 84/157 [00:28<00:19,  3.78it/s]Batches:  54%|█████▍    | 85/157 [00:28<00:18,  3.88it/s]Batches:  55%|█████▍    | 86/157 [00:28<00:18,  3.74it/s]Batches:  55%|█████▌    | 87/157 [00:29<00:18,  3.76it/s]Batches:  56%|█████▌    | 88/157 [00:29<00:18,  3.82it/s]Batches:  57%|█████▋    | 89/157 [00:29<00:18,  3.73it/s]Batches:  57%|█████▋    | 90/157 [00:29<00:17,  3.74it/s]Batches:  58%|█████▊    | 91/157 [00:30<00:17,  3.68it/s]Batches:  59%|█████▊    | 92/157 [00:30<00:16,  3.82it/s]Batches:  59%|█████▉    | 93/157 [00:30<00:17,  3.66it/s]Batches:  60%|█████▉    | 94/157 [00:31<00:17,  3.70it/s]Batches:  61%|██████    | 95/157 [00:31<00:16,  3.78it/s]Batches:  61%|██████    | 96/157 [00:31<00:15,  3.89it/s]Batches:  62%|██████▏   | 97/157 [00:31<00:15,  3.93it/s]Batches:  62%|██████▏   | 98/157 [00:31<00:14,  4.07it/s]Batches:  63%|██████▎   | 99/157 [00:32<00:13,  4.24it/s]Batches:  64%|██████▎   | 100/157 [00:32<00:13,  4.21it/s]Batches:  64%|██████▍   | 101/157 [00:32<00:13,  4.08it/s]Batches:  65%|██████▍   | 102/157 [00:32<00:13,  4.10it/s]Batches:  66%|██████▌   | 103/157 [00:33<00:12,  4.20it/s]Batches:  66%|██████▌   | 104/157 [00:33<00:12,  4.19it/s]Batches:  67%|██████▋   | 105/157 [00:33<00:12,  4.28it/s]Batches:  68%|██████▊   | 106/157 [00:33<00:11,  4.40it/s]Batches:  68%|██████▊   | 107/157 [00:34<00:11,  4.39it/s]Batches:  69%|██████▉   | 108/157 [00:34<00:12,  4.06it/s]Batches:  69%|██████▉   | 109/157 [00:34<00:11,  4.18it/s]Batches:  70%|███████   | 110/157 [00:34<00:10,  4.39it/s]Batches:  71%|███████   | 111/157 [00:35<00:10,  4.33it/s]Batches:  71%|███████▏  | 112/157 [00:35<00:10,  4.44it/s]Batches:  72%|███████▏  | 113/157 [00:35<00:09,  4.58it/s]Batches:  73%|███████▎  | 114/157 [00:35<00:09,  4.55it/s]Batches:  73%|███████▎  | 115/157 [00:35<00:08,  4.68it/s]Batches:  74%|███████▍  | 116/157 [00:36<00:08,  4.61it/s]Batches:  75%|███████▍  | 117/157 [00:36<00:09,  4.24it/s]Batches:  75%|███████▌  | 118/157 [00:36<00:09,  4.31it/s]Batches:  76%|███████▌  | 119/157 [00:36<00:08,  4.56it/s]Batches:  76%|███████▋  | 120/157 [00:36<00:08,  4.60it/s]Batches:  77%|███████▋  | 121/157 [00:37<00:07,  4.63it/s]Batches:  78%|███████▊  | 122/157 [00:37<00:07,  4.72it/s]Batches:  78%|███████▊  | 123/157 [00:37<00:07,  4.65it/s]Batches:  79%|███████▉  | 124/157 [00:37<00:06,  4.92it/s]Batches:  80%|███████▉  | 125/157 [00:37<00:06,  4.96it/s]Batches:  80%|████████  | 126/157 [00:38<00:06,  4.97it/s]Batches:  81%|████████  | 127/157 [00:38<00:05,  5.12it/s]Batches:  82%|████████▏ | 128/157 [00:38<00:05,  5.16it/s]Batches:  82%|████████▏ | 129/157 [00:38<00:05,  4.93it/s]Batches:  83%|████████▎ | 130/157 [00:38<00:05,  5.03it/s]Batches:  83%|████████▎ | 131/157 [00:39<00:05,  5.16it/s]Batches:  84%|████████▍ | 132/157 [00:39<00:05,  4.81it/s]Batches:  85%|████████▍ | 133/157 [00:39<00:04,  5.07it/s]Batches:  85%|████████▌ | 134/157 [00:39<00:04,  5.25it/s]Batches:  86%|████████▌ | 135/157 [00:39<00:04,  5.40it/s]Batches:  87%|████████▋ | 136/157 [00:40<00:03,  5.52it/s]Batches:  87%|████████▋ | 137/157 [00:40<00:03,  5.60it/s]Batches:  88%|████████▊ | 138/157 [00:40<00:03,  5.51it/s]Batches:  89%|████████▊ | 139/157 [00:40<00:03,  5.69it/s]Batches:  89%|████████▉ | 140/157 [00:40<00:02,  5.83it/s]Batches:  90%|████████▉ | 141/157 [00:40<00:02,  5.73it/s]Batches:  90%|█████████ | 142/157 [00:41<00:02,  5.77it/s]Batches:  91%|█████████ | 143/157 [00:41<00:02,  6.01it/s]Batches:  92%|█████████▏| 144/157 [00:41<00:02,  6.34it/s]Batches:  92%|█████████▏| 145/157 [00:41<00:01,  6.46it/s]Batches:  93%|█████████▎| 146/157 [00:41<00:01,  6.88it/s]Batches:  94%|█████████▎| 147/157 [00:41<00:01,  7.06it/s]Batches:  94%|█████████▍| 148/157 [00:41<00:01,  7.34it/s]Batches:  95%|█████████▍| 149/157 [00:42<00:01,  7.75it/s]Batches:  96%|█████████▌| 150/157 [00:42<00:00,  8.12it/s]Batches:  96%|█████████▌| 151/157 [00:42<00:00,  8.37it/s]Batches:  97%|█████████▋| 152/157 [00:42<00:00,  8.53it/s]Batches:  97%|█████████▋| 153/157 [00:42<00:00,  8.42it/s]Batches:  99%|█████████▊| 155/157 [00:42<00:00,  9.51it/s]Batches: 100%|██████████| 157/157 [00:42<00:00,  3.67it/s]
+05:02:14 | INFO | ccst | embedding clustering: 31.93s
+05:03:31 | INFO | ccst | summaries: 73.95s
+05:04:13 | INFO | ccst | t-SNE sweep (SPECTER): 41.05s
+05:04:39 | INFO | ccst | t-SNE sweep (LDA theta): 26.34s
+05:05:09 | INFO | ccst | t-SNE 3D: 28.85s
+05:05:11 | INFO | ccst | extracting claims from 2000 documents
+05:06:21 | INFO | ccst | generalised 8608 phrases into 5700 concepts
+05:06:21 | INFO | ccst | subset extraction + graphs: 70.62s
+05:06:22 | INFO | ccst | candidate generation: 0.26s
+05:06:22 | INFO | ccst | 24037 candidate pairs for 2000 docs (all-pairs would be 1999000)
+05:06:40 | INFO | ccst | CCST on candidates: 18.14s
+python -m ccst --jobs 8 bertopic
+05:06:56 | INFO | ccst | corpus: 9986 abstracts, 20 subject labels
+05:06:56 | INFO | ccst | vocabulary: 11420 terms, 946602 tokens in 9986 docs
+05:07:11 | INFO | ccst | Gibbs LDA K=10: 14.28s
+05:07:18 | INFO | ccst | K=10: C_v=0.643 NPMI=0.106 diversity=0.832
+05:07:40 | INFO | ccst | Gibbs LDA K=20: 21.41s
+05:07:49 | INFO | ccst | K=20: C_v=0.665 NPMI=0.113 diversity=0.742
+05:08:18 | INFO | ccst | Gibbs LDA K=30: 29.41s
+05:08:29 | INFO | ccst | K=30: C_v=0.666 NPMI=0.114 diversity=0.740
+05:09:13 | INFO | ccst | Gibbs LDA K=50: 44.71s
+05:09:27 | INFO | ccst | K=50: C_v=0.640 NPMI=0.105 diversity=0.713
+05:09:46 | INFO | ccst | gensim variational LDA: 18.60s
+05:10:00 | INFO | ccst | LDA refit (same settings as the corpus experiment): 184.26s
+05:10:00 | INFO | ccst | vocabulary: 11420 terms, 946602 tokens in 9986 docs
+05:10:11 | INFO | ccst | LDA Gibbs (K* = 30): NMI 0.664, clusters 30, outliers 0.0%
+05:10:11 | INFO | ccst | LDA Gibbs (K = 20): NMI 0.643, clusters 20, outliers 0.0%
+05:10:12 | INFO | ccst | LDA variational (K* = 30): NMI 0.424, clusters 30, outliers 0.0%
+05:10:27 | INFO | ccst | K-Means SBERT (k = 20): NMI 0.831, clusters 20, outliers 0.0%
+05:10:29 | INFO | ccst | HDBSCAN SBERT (ours, PCA): NMI 0.709, clusters 10, outliers 0.0%
+05:10:47 | INFO | ccst | K-Means SPECTER (k = 20): NMI 0.786, clusters 20, outliers 0.0%
+05:10:48 | INFO | ccst | HDBSCAN SPECTER (ours, PCA): NMI 0.362, clusters 2, outliers 0.0%
+05:10:57 | INFO | ccst | BERTopic-style re-implementation (PCA, SPECTER): NMI 0.361, clusters 2, outliers 0.0%
+2026-10-17 05:12:13,791 - BERTopic - WARNING: Using a custom list of topic assignments may lead to errors if topic reduction techniques are used afterwards. Make sure that manually assigning topics is the last step in the pipeline.Note that topic embeddings will also be created through weightedc-TF-IDF embeddings instead of centroid embeddings.
+05:12:14 | INFO | ccst | official BERTopic on SBERT: 77.64s
+05:12:20 | INFO | ccst | Official BERTopic, SBERT (raw, −1 = outliers): NMI 0.785, clusters 30, outliers 12.3%
+05:12:20 | INFO | ccst | Official BERTopic, SBERT (outliers reduced): NMI 0.807, clusters 29, outliers 0.0%
+05:12:28 | INFO | ccst | Official BERTopic, SBERT — stop-word-free topic words (post hoc): NMI 0.785, clusters 30, outliers 12.3%
+2026-10-17 05:12:47,008 - BERTopic - WARNING: Using a custom list of topic assignments may lead to errors if topic reduction techniques are used afterwards. Make sure that manually assigning topics is the last step in the pipeline.Note that topic embeddings will also be created through weightedc-TF-IDF embeddings instead of centroid embeddings.
+05:12:47 | INFO | ccst | official BERTopic on SPECTER: 19.80s
+05:12:54 | INFO | ccst | Official BERTopic, SPECTER (raw, −1 = outliers): NMI 0.695, clusters 45, outliers 18.7%
+05:12:54 | INFO | ccst | Official BERTopic, SPECTER (outliers reduced): NMI 0.749, clusters 44, outliers 0.0%
+05:13:02 | INFO | ccst | Official BERTopic, SPECTER — stop-word-free topic words (post hoc): NMI 0.695, clusters 45, outliers 18.7%
+python -m ccst --jobs 8 scaling
+05:13:09 | INFO | ccst | corpus: 9986 abstracts, 20 subject labels
+05:13:10 | INFO | ccst | extracting claims from 2000 documents
+05:13:17 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+05:14:27 | INFO | ccst | generalised 8618 phrases into 5689 concepts
+05:14:28 | INFO | ccst | extraction for scaling pool: 77.20s
+05:14:59 | INFO | ccst | {'N': 125, 'all_pairs': 7750, 'sparse_pairs': 1131, 'sparse_index_s': 0.0826330779818818, 'sparse_total_s': 4.608156120986678, 'pairs_per_doc': 9.048, 'exact_total_s': 21.80532873404445, 'peak_rss_mb': 2984.65234375}
+05:16:42 | INFO | ccst | {'N': 250, 'all_pairs': 31125, 'sparse_pairs': 2624, 'sparse_index_s': 0.14974628400523216, 'sparse_total_s': 10.68257610098226, 'pairs_per_doc': 10.496, 'exact_total_s': 92.4036297800485, 'peak_rss_mb': 2984.65234375}
+05:23:22 | INFO | ccst | {'N': 500, 'all_pairs': 124750, 'sparse_pairs': 5928, 'sparse_index_s': 0.2806025199824944, 'sparse_total_s': 23.581902116013225, 'pairs_per_doc': 11.856, 'exact_total_s': 376.7775347480201, 'peak_rss_mb': 2984.65234375}
+05:24:13 | INFO | ccst | {'N': 1000, 'all_pairs': 499500, 'sparse_pairs': 12680, 'sparse_index_s': 0.4313023969880305, 'sparse_total_s': 50.899170085962396, 'pairs_per_doc': 12.68, 'exact_total_s_extrapolated': 1508.620269391872, 'peak_rss_mb': 2984.65234375}
+05:25:59 | INFO | ccst | {'N': 2000, 'all_pairs': 1999000, 'sparse_pairs': 26691, 'sparse_index_s': 0.5802867959719151, 'sparse_total_s': 105.90625152597204, 'pairs_per_doc': 13.3455, 'exact_total_s_extrapolated': 6037.501338367071, 'peak_rss_mb': 2984.65234375}
+python -m ccst --jobs 8 candidates
+05:26:41 | INFO | ccst | corpus: 9986 abstracts, 20 subject labels
+05:26:43 | INFO | ccst | extracting claims from 1000 documents
+05:26:50 | INFO | ccst | loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cuda
+05:27:27 | INFO | ccst | generalised 4595 phrases into 3253 concepts
+05:27:27 | INFO | ccst | extraction (eval + train subsets): 46.11s
+05:28:31 | INFO | ccst | exact all-pairs CCST on the eval subset: 62.17s
+05:29:27 | INFO | ccst | exact all-pairs CCST on the train subset: 56.10s
+05:44:44 | INFO | ccst | learned weights {'sem': 0.5, 'concept': 0.0, 'mech': 1.0, 'ctx': 0.0} (training recall@5 0.498) in 917.0s
+python -m ccst --jobs 8 report
+05:45:56 | INFO | ccst | wrote /scratch/sgoli125/doc_clustering/results/SUMMARY.md
